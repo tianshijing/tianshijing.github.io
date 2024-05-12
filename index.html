@@ -4,13 +4,15 @@
     <title>Juanxi Tian's Personal Website</title>
     <style>
       body {
-        background-color: #ffffff;
+        background-color: #f5f5f5;
         color: #333333;
         font-family: Georgia, serif;
         padding: 50px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         margin: 0 auto;
         max-width: 800px;
+        position: relative;
+        overflow: hidden;
       }
 
       header {
@@ -19,6 +21,8 @@
         color: #ffffff;
         text-align: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
       }
 
       footer {
@@ -28,6 +32,7 @@
         text-align: center;
         box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         position: relative;
+        z-index: 1;
       }
 
       h1 {
@@ -37,6 +42,7 @@
         color: #ffffff;
         font-weight: bold;
         text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
 
       p {
@@ -92,6 +98,7 @@
         object-fit: cover;
         border-radius: 50%;
         margin-right: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
 
       .internship-experience p {
@@ -102,6 +109,7 @@
         max-width: 100%;
         height: auto;
         margin-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
 
       .services {
@@ -130,6 +138,7 @@
         position: relative;
         transform-style: preserve-3d;
         animation: rotate 10s infinite linear;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       }
 
       @keyframes rotate {
@@ -140,9 +149,45 @@
           transform: rotateY(360deg);
         }
       }
+
+      .bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle, #ffffff 25%, transparent 25%);
+        background-size: 40px 40px;
+        opacity: 0.1;
+        z-index: -1;
+      }
+
+      .bg-shape {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        opacity: 0.3;
+        filter: blur(50px);
+        z-index: -1;
+      }
+
+      .bg-shape:nth-child(1) {
+        top: -100px;
+        left: -100px;
+      }
+
+      .bg-shape:nth-child(2) {
+        bottom: -100px;
+        right: -100px;
+      }
     </style>
   </head>
   <body>
+    <div class="bg-pattern"></div>
+    <div class="bg-shape"></div>
+    <div class="bg-shape"></div>
     <header>
       <h1>Juanxi Tian/田隽熙</h1>
     </header>
@@ -156,13 +201,8 @@
       You can find me at the following websites:
     </p>
     <ul>
-<<<<<<< HEAD
       <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1">Openreview</a></li>
       <li><a href="https://www.linkedin.com/in/juanxi-tian">Linkedin</a></li>
-=======
-      <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1">OpenReview</a></li>
-      <li><a href="https://www.linkedin.com/in/juanxi-tian-4a4546242/">Linkedin</a></li>
->>>>>>> bc11354578ae98efcbe60014a61b60febba534fc
     </ul>
     <hr>
     <h2>Internship Experience</h2>
@@ -173,7 +213,7 @@
         <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
       </div>
     </div>
-    <div class="internship-experience">
+    <div class="internship -experience">
       <img src="westlakeu.jpg" alt="Westlake University">
       <div>
         <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
