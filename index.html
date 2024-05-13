@@ -43,6 +43,12 @@
       h1 {
         font-size: 36px;
         margin-bottom: 10px;
+        color: #fff; 
+        font-family: 'Brush Script MT', cursive; 
+      }
+
+      h1 span {
+        font-family: 'Xinwei', serif; 
       }
 
       h2 {
@@ -169,7 +175,7 @@
   </head>
   <body>
     <header>
-      <h1>Juanxi Tian/田隽熙</h1>
+      <h1>Juanxi Tian<span>/田隽熙</span></h1>
     </header>
     <div class="content">
       <p>
@@ -248,39 +254,32 @@
     <div id="earth-container"></div>
 
     <script>
-      // 创建场景
       const scene = new THREE.Scene();
 
-      // 创建相机
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       camera.position.z = 5;
 
-      // 创建渲染器
       const renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
-      // 创建地球
       const geometry = new THREE.SphereGeometry(1, 32, 32);
-      const material = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('earth.jpg') });
+      const texture = new THREE.TextureLoader().load('earth.jpg'); // 加载地球纹理图片
+      const material = new THREE.MeshBasicMaterial({ map: texture });
       const earth = new THREE.Mesh(geometry, material);
       scene.add(earth);
 
-      // 设置地球容器大小
       const earthContainer = document.getElementById('earth-container');
       earthContainer.appendChild(renderer.domElement);
 
-      // 渲染函数
       function animate() {
         requestAnimationFrame(animate);
         earth.rotation.y += 0.005;
         renderer.render(scene, camera);
       }
 
-      // 开始动画循环
       animate();
 
-      // 获取网站浏览量
       fetch('https://api.example.com/pageviews')
         .then(response => response.json())
         .then(data => {
