@@ -7,11 +7,18 @@
     <style>
       body {
         background-color: #f5f9fc;
-        color: #333;
+        color: #4d4d4d;
         font-family: 'Roboto', sans-serif;
-        max-width: 800px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 20px 40px;
+        padding: 20px;
+      }
+
+      .content {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
 
       header, footer {
@@ -24,7 +31,8 @@
       h1, h2, h3 {
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
-        color: #4d98c2;
+        color: #4d8cc2;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
       }
 
@@ -54,7 +62,7 @@
       }
 
       a {
-        color: #4d98c2;
+        color: #4d8cc2;
         text-decoration: none;
         position: relative;
       }
@@ -70,7 +78,7 @@
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #4d98c2;
+        background-color: #4d8cc2;
         visibility: hidden;
         transform: scaleX(0);
         transition: all 0.3s ease-in-out;
@@ -99,6 +107,14 @@
         border-radius: 50%;
         margin-right: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .news-item {
+        padding: 20px;
+        background-color: #f5f9fc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
       }
 
       .news-item img {
@@ -130,9 +146,13 @@
         z-index: 1;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         body {
           padding: 10px;
+        }
+        
+        .content {
+          padding: 20px;
         }
         
         .internship-experience {
@@ -151,75 +171,76 @@
     <header>
       <h1>Juanxi Tian/田隽熙</h1>
     </header>
-    <p>
-      I am currently pursuing my undergraduate degree at Hong Kong Baptist University. Previously, I gained valuable research experience as a research intern at the Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences. Currently, I am furthering my research skills as a research intern at the Center for Artificial Intelligence Research and Innovation Lab, Westlake University, under the esteemed supervision of Stan.Z.Li.
-    </p>
-    <p>
-      My areas of interest include Multimodel Large Language Model, Optimization in Deep Learning and Computer Vision.
-    </p>
-    <p>
-      You can find me at the following websites:
-    </p>
-    <ul>
-      <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1">Openreview</a></li>
-      <li><a href="https://www.linkedin.com/in/juanxi-tian">Linkedin</a></li>
-    </ul>
-    <hr>
-    <h2>Internship Experience</h2>
-    <div class="internship-experience">
-      <img src="CAS.jpg" alt="Chinese Academy of Sciences">
-      <div>
-        <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
-        <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
-      </div>
-    </div>
-    <div class="internship-experience">
-      <img src="westlakeu.jpg" alt="Westlake University">
-      <div>
-        <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
-        <p>Start Date: 2023-07-27, End Date: Present</p>
-      </div>
-    </div>
-    <div class="internship-experience">
-      <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
-      <div>
-        <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
-        <p>Start Date: 2024-03-9, End Date: Present</p>
-      </div>
-    </div>
-    <hr>
-    <h2>International Collaboration</h2>
-    <div class="internship-experience">
-      <img src="unc.jpg" alt="UNC">
-      <div>
-        <h3>Collaboration with UNC</h3>
-        <p>Start Date: 2024-04-23, End Date: Present</p>
-        <p>Cooperated with Professor Huaxiu Yao's Lab.</p>
-      </div>
-    </div>
-    <hr>
-    <h2>News</h2>
-    <ul>
-      <li class="news-item">
-        <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness
-        </h3>
-        <img src="sema.jpg" alt="Switch EMA">
-        <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240">arXiv preprint website</a>.</p>
-      </li>
-    </ul>
-    <hr>
-    <div class="services">
-      <h2>Services</h2>
-      <h3>Membership</h3>
+    <div class="content">
+      <p>
+        I am currently pursuing my undergraduate degree at Hong Kong Baptist University. Previously, I gained valuable research experience as a research intern at the Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences. Currently, I am furthering my research skills as a research intern at the Center for Artificial Intelligence Research and Innovation Lab, Westlake University, under the esteemed supervision of Stan.Z.Li.
+      </p>
+      <p>
+        My areas of interest include Multimodel Large Language Model, Optimization in Deep Learning and Computer Vision.
+      </p>
+      <p>
+        You can find me at the following websites:
+      </p>
       <ul>
-        <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
-        <li>2024 - Student Member of IEEE</li>
+        <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1">Openreview</a></li>
+        <li><a href="https://www.linkedin.com/in/juanxi-tian">Linkedin</a></li>
+      </ul>
+      <hr>
+      <h2>Internship Experience</h2>
+      <div class="internship-experience">
+        <img src="CAS.jpg" alt="Chinese Academy of Sciences">
+        <div>
+          <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
+          <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
+        </div>
+      </div>
+      <div class="internship-experience">
+        <img src="westlakeu.jpg" alt="Westlake University">
+        <div>
+          <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
+          <p>Start Date: 2023-07-27, End Date: Present</p>
+        </div>
+      </div>
+      <div class="internship-experience">
+        <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
+        <div>
+          <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
+          <p>Start Date: 2024-03-9, End Date: Present</p>
+        </div>
+      </div>
+      <hr>
+      <h2>International Collaboration</h2>
+      <div class="internship-experience">
+        <img src="unc.jpg" alt="UNC">
+        <div>
+          <h3>Collaboration with UNC</h3>
+          <p>Start Date: 2024-04-23, End Date: Present</p>
+          <p>Cooperated with Professor Huaxiu Yao's Lab.</p>
+        </div>
+      </div>
+      <hr>
+      <h2>News</h2>
+      <ul>
+        <li class="news-item">
+          <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
+          <img src="sema.jpg" alt="Switch EMA">
+          <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240">arXiv preprint website</a>.</p>
+        </li>
+      </ul>
+      <hr>
+      <div class="services">
+        <h2>Services</h2>
+        <h3>Membership</h3>
+        <ul>
+          <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
+          <li>2024 - Student Member of IEEE</li>
+        </ul>
+      </div>
+      <p><strong>Do you want to engage in meaningful cooperation with me? If you are interested, please contact me</strong></p>
+      <ul>
+        <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
       </ul>
     </div>
-    <p><strong>Do you want to engage in meaningful cooperation with me? If you are interested, please contact me</strong></p>
-    <ul>
-      <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
-    </ul>
     <footer>
       <p>&copy; 2024 Juanxi Tian. All rights reserved.</p>
     </footer>
