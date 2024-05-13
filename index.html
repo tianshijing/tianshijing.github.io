@@ -44,11 +44,6 @@
         font-size: 36px;
         margin-bottom: 10px;
         color: #fff; 
-        font-family: 'Brush Script MT', cursive; 
-      }
-
-      h1 span {
-        font-family: 'Xinwei', serif; 
       }
 
       h2 {
@@ -250,51 +245,5 @@
     <footer>
       <p>&copy; 2024 Juanxi Tian. All rights reserved.</p>
     </footer>
-
-    <div id="earth-container"></div>
-
-    <script>
-      const scene = new THREE.Scene();
-
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 5;
-
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      const geometry = new THREE.SphereGeometry(1, 32, 32);
-      const texture = new THREE.TextureLoader().load('earth.jpg'); 
-      const material = new THREE.MeshBasicMaterial({ map: texture });
-      const earth = new THREE.Mesh(geometry, material);
-      scene.add(earth);
-
-      const earthContainer = document.getElementById('earth-container');
-      earthContainer.appendChild(renderer.domElement);
-
-      function animate() {
-        requestAnimationFrame(animate);
-        earth.rotation.y += 0.005;
-        renderer.render(scene, camera);
-      }
-
-      animate();
-
-      fetch('https://api.example.com/pageviews')
-        .then(response => response.json())
-        .then(data => {
-          const viewsElement = document.createElement('div');
-          viewsElement.textContent = `Total Page Views: ${data.pageViews}`;
-          viewsElement.style.position = 'fixed';
-          viewsElement.style.bottom = '20px';
-          viewsElement.style.left = '20px';
-          viewsElement.style.backgroundColor = '#fff';
-          viewsElement.style.padding = '10px';
-          viewsElement.style.borderRadius = '5px';
-          viewsElement.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
-          document.body.appendChild(viewsElement);
-        })
-        .catch(error => console.error('Error fetching page views:', error));
-    </script>
   </body>
 </html>
