@@ -24,16 +24,14 @@
         --box-shadow-hover: 0 0 30px rgba(0, 0, 0, 0.2);
       }
 
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --primary-color: #7092be;
-          --secondary-color: #202020;
-          --background-color: #1e1e1e;
-          --text-color: #ddd;
-          --white-color: #333;
-          --box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-          --box-shadow-hover: 0 0 30px rgba(255, 255, 255, 0.2);
-        }
+      .dark-mode {
+        --primary-color: #7092be;
+        --secondary-color: #202020;
+        --background-color: #1e1e1e;
+        --text-color: #ddd;
+        --white-color: #333;
+        --box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        --box-shadow-hover: 0 0 30px rgba(255, 255, 255, 0.2);
       }
 
       body {
@@ -257,6 +255,24 @@
         box-shadow: var(--box-shadow);
       }
 
+      #mode-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      #mode-toggle:hover {
+        background-color: var(--primary-color);
+      }
+
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -274,6 +290,7 @@
     </style>
   </head>
   <body>
+    <button id="mode-toggle">切换模式</button>
     <div class="container">
       <div class="sidebar">
         <h2>Navigation</h2>
@@ -402,5 +419,13 @@
     <footer>
       <p>&copy; 2024 Juanxi Tian. All rights reserved.</p>
     </footer>
+    <script>
+      const modeToggle = document.getElementById('mode-toggle');
+      const body = document.querySelector('body');
+    
+      modeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+      });
+    </script>
   </body>
 </html>
