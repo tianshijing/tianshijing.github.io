@@ -2,38 +2,56 @@
 <html>
   <head>
     <title>Juanxi Tian's Homepage</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:600" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         background-color: #f5f9fc;
         color: #4d4d4d;
         font-family: 'Roboto', sans-serif;
         display: flex;
-        min-height: 100vh;
         flex-direction: column;
-        margin: 0;
+        min-height: 100vh;
+        line-height: 1.6;
       }
 
       .container {
         display: flex;
         flex: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
       }
 
       .sidebar {
-        width: 200px;
+        width: 250px;
         background-color: #333;
         color: #fff;
         padding: 20px;
-        overflow-y: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sidebar:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
       }
 
       .sidebar a {
         color: #fff;
         text-decoration: none;
         display: block;
-        margin: 10px 0;
-        transition: background 0.3s;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
       }
 
       .sidebar a:hover {
@@ -41,12 +59,17 @@
       }
 
       .content {
-        margin-left: 220px;
         background-color: #fff;
-        padding: 20px;
+        padding: 40px;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         flex: 1;
+        margin-left: 20px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .content:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
       }
 
       header, footer {
@@ -54,12 +77,14 @@
         color: #fff;
         text-align: center;
         padding: 20px;
+        border-radius: 10px;
       }
 
       header {
         position: sticky;
         top: 0;
         z-index: 10;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
 
       h1, h2, h3 {
@@ -67,7 +92,7 @@
         font-weight: 600;
         color: #4d8cc2;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
+        transition: transform 0.3s ease-in-out;
       }
 
       h1:hover, h2:hover, h3:hover {
@@ -77,22 +102,34 @@
       h1 {
         font-size: 36px;
         margin-bottom: 10px;
-        color: #fff; 
+        color: #fff;
       }
 
       h2 {
         font-size: 24px;
         margin-top: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #4d8cc2;
       }
 
       h3 {
         font-size: 18px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
 
       p {
-        line-height: 1.6;
         margin-bottom: 20px;
       }
 
@@ -134,6 +171,15 @@
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        background-color: #f5f9fc;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .internship-experience:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
       }
 
       .internship-experience img {
@@ -147,9 +193,14 @@
       .news-item {
         padding: 20px;
         background-color: #f5f9fc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .news-item:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
       }
 
       .news-item img {
@@ -157,7 +208,12 @@
         height: auto;
         margin-bottom: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        max-height: 100px; /* 调整图片最大高度 */
+        max-height: 200px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .news-item img:hover {
+        transform: scale(1.05);
       }
 
       ul {
@@ -175,6 +231,7 @@
 
       footer {
         margin-top: auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
 
       @media (max-width: 768px) {
@@ -184,13 +241,11 @@
 
         .content {
           margin-left: 0;
-          padding: 20px;
+          margin-top: 20px;
         }
 
         .sidebar {
           width: 100%;
-          height: auto;
-          position: relative;
         }
       }
     </style>
@@ -212,19 +267,19 @@
         </header>
         <section id="about">
           <p>
-            I am currently pursuing my undergraduate degree at Hong Kong Baptist University. Previously, I gained valuable research experience as a research intern at the Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences. Currently, I am furthering my research skills as a research intern at the Center for Artificial Intelligence Research and Innovation Lab, Westlake University, under the esteemed supervision of Stan.Z.Li.
+            I am currently pursuing my undergraduate degree at Hong Kong Baptist University. Previously, I gained valuable research experience as a research intern at the Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences. Currently, I am furthering my research skills as a research intern at the Center for Artificial Intelligence Research and Innovation Lab, Westlake University, under the esteemed supervision of Stan Z. Li.
           </p>
           <p>
-            My areas of interest include Multimodel Large Language Model, Optimization in Deep Learning and Computer Vision.
+            My areas of interest include Multimodel Large Language Model, Optimization in Deep Learning, and Computer Vision.
           </p>
           <p>
             You can find me at the following websites:
           </p>
           <ul>
-            <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1">Openreview</a></li>
-            <li><a href="https://www.linkedin.com/in/juanxi-tian">Linkedin</a></li>
-            <li><a href="https://x.com/Juanxi_Tian">X</a></li>
-            <li><a href="https://www.researchgate.net/profile/Juanxi-Tian">ResearchGate</a></li>
+            <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1" target="_blank" rel="noopener noreferrer">Openreview</a></li>
+            <li><a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://x.com/Juanxi_Tian" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li><a href="https://www.researchgate.net/profile/Juanxi-Tian" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
           </ul>
         </section>
         <hr>
@@ -278,17 +333,23 @@
           <ul>
             <li class="news-item">
               <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
-              <img src="sema.jpg" alt="Switch EMA">
-              <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240">arXiv preprint website</a>.</p>
+              <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">
+                <img src="sema.jpg" alt="Switch EMA">
+              </a>
+              <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
             </li>
             <li class="news-item">
               <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
-              <img src="CARES.jpg" alt="CARES">
-              <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007">arXiv preprint website</a>.</p>
+              <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
+                <img src="CARES.jpg" alt="CARES">
+              </a>
+              <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
             </li>
             <li class="news-item">
               <h3>Joining LMFlow Team</h3>
-              <img src="lmflow.jpg" alt="LMFlow">
+              <a href="https://lmflow.com" target="_blank" rel="noopener noreferrer">
+                <img src="lmflow.jpg" alt="LMFlow">
+              </a>
               <p>On June 30th, I am honored to become a member of the LMFlow team. I have added a custom optimizer fine-tuning feature to LMFlow, allowing for more exploration of custom optimizers. If you have a needed optimizer that is not supported, please contact me.</p>
             </li>
           </ul>
