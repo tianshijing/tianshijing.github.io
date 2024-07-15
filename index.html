@@ -227,17 +227,8 @@
         box-shadow: var(--box-shadow-hover);
       }
 
-      .news-item img {
-        max-width: 100%;
-        height: auto;
+      .news-item p {
         margin-bottom: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        max-height: 200px;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .news-item img:hover {
-        transform: scale(1.05);
       }
 
       ul {
@@ -279,11 +270,11 @@
       <div class="sidebar">
         <h2>Navigation</h2>
         <a href="#about">About</a>
+        <a href="#news">News</a>
         <a href="#internships">Internship Experience</a>
         <a href="#collaboration">International Collaboration</a>
-        <a href="#news">News</a>
+        <a href="#preprints">Preprints</a>
         <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
       </div>
       <div class="content">
         <header>
@@ -304,6 +295,17 @@
             <li><a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://x.com/Juanxi_Tian" target="_blank" rel="noopener noreferrer">X</a></li>
             <li><a href="https://www.researchgate.net/profile/Juanxi-Tian" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+          </ul>
+        </section>
+        <hr>
+        <section id="news">
+          <h2>News</h2>
+          <p>
+            Stay updated with the latest news and achievements:
+          </p>
+          <ul>
+            <li>July 14th, 2024: I maintain an open source repository on the optimizer called <a href="https://github.com/tianshijing/Awesome-Optimizers">Awesome-Optimizers</a>, with <a href="https://jacky1128.github.io">Zedong Wang</a> and <a href="https://lupin1998.github.io">Siyuan Li</a>.</li>
+            <li>July 1th, 2024: <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> supports custom optimization fine-tuning by major optimizers. And it won the Best Demo Paper Award at NAACL 2024</li>
           </ul>
         </section>
         <hr>
@@ -352,31 +354,22 @@
           </div>
         </section>
         <hr>
-        <section id="news">
+        <section id="preprints">
           <h2>Preprints</h2>
-          <ul>
-            <li class="news-item">
-              <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
-              <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">
-                <img src="sema.jpg" alt="Switch EMA">
-              </a>
-              <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-            </li>
-            <li class="news-item">
-              <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
-              <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
-                <img src="CARES.jpg" alt="CARES">
-              </a>
-              <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-            </li>
-            <li class="news-item">
-              <h3>Joining LMFlow Team</h3>
-              <a href="https://lmflow.com" target="_blank" rel="noopener noreferrer">
-                <img src="lmflow.jpg" alt="LMFlow">
-              </a>
-              <p>On June 30th, I am honored to become a member of the LMFlow team. I have added a custom optimizer fine-tuning feature to LMFlow, allowing for more exploration of custom optimizers. If you have a needed optimizer that is not supported, please contact me.</p>
-            </li>
-          </ul>
+          <div class="news-item">
+            <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
+            <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">
+              <img src="sema.jpg" alt="Switch EMA">
+            </a>
+            <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+          </div>
+          <div class="news-item">
+            <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
+            <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
+              <img src="CARES.jpg" alt="CARES">
+            </a>
+            <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+          </div>
         </section>
         <hr>
         <section id="services">
@@ -385,12 +378,6 @@
           <ul>
             <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
             <li>2024 - Student Member of IEEE</li>
-          </ul>
-        </section>
-        <section id="contact">
-          <p><strong>Do you want to engage in meaningful cooperation with me? If you are interested, please contact me</strong></p>
-          <ul>
-            <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
           </ul>
         </section>
       </div>
