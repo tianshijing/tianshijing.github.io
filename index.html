@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Juanxi Tian's Homepage</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juanxi Tian's Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
@@ -45,48 +46,76 @@
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
+        header, footer {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .hero {
+            background: url('hero-background.jpg') center/cover no-repeat;
+            color: var(--white-color);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-color);
+            padding: 10px 0;
+            box-shadow: var(--box-shadow);
+        }
+
+        nav a {
+            color: var(--white-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
         .container {
             display: flex;
             flex: 1;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: var(--secondary-color);
-            color: var(--white-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .sidebar:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .sidebar a {
-            color: var(--white-color);
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .sidebar a:hover {
-            background-color: var(--primary-color);
+            flex-wrap: wrap;
         }
 
         .content {
             background-color: var(--white-color);
-            padding: 40px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
-            flex: 1;
-            margin-left: 20px;
+            flex: 1 1 100%;
+            margin-bottom: 40px;
             transition: all 0.3s ease-in-out;
         }
 
@@ -94,61 +123,23 @@
             box-shadow: var(--box-shadow-hover);
         }
 
-        header, footer {
-            background-color: var(--secondary-color);
-            color: var(--white-color);
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: var(--box-shadow);
-        }
-
-        h1, h2, h3 {
+        h2, h3 {
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             color: var(--primary-color);
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        h1:hover, h2:hover, h3:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: var(--white-color);
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-top: 30px;
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
-            padding-bottom: 5px;
         }
 
-        h2:after {
+        h2:after, h3:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
-            width: 100%;
+            width: 50px;
             height: 2px;
             background-color: var(--primary-color);
-        }
-
-        h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
         }
 
         p {
@@ -159,10 +150,6 @@
             color: var(--primary-color);
             text-decoration: none;
             position: relative;
-        }
-
-        a:hover {
-            text-decoration: none;
         }
 
         a:before {
@@ -183,67 +170,34 @@
             transform: scaleX(1);
         }
 
-        hr {
-            border: 0;
-            border-top: 1px solid var(--text-color);
-            margin: 30px 0;
-            transition: border-color 0.3s ease-in-out;
-        }
-
-        .internship-experience {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            background-color: var(--background-color);
-            padding: 20px;
+        .card {
+            background-color: var(--white-color);
             border-radius: 10px;
             box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .internship-experience:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .internship-experience img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .news-item {
             padding: 20px;
-            background-color: var(--background-color);
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
             margin-bottom: 20px;
             transition: all 0.3s ease-in-out;
+            overflow: hidden;
         }
 
-        .news-item:hover {
+        .card:hover {
             box-shadow: var(--box-shadow-hover);
         }
 
-        .news-item p {
-            margin-bottom: 10px;
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
-        .news-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
+        .card-content {
+            display: flex;
+            flex-direction: column;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
+        .internship-experience, .news-item {
+            flex: 1 1 45%;
+            margin: 20px;
         }
 
         .services h3 {
@@ -251,8 +205,22 @@
         }
 
         footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: auto;
-            box-shadow: var(--box-shadow);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: var(--white-color);
+            margin: 0 10px;
+            font-size: 20px;
         }
 
         #mode-toggle {
@@ -276,153 +244,162 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                padding: 10px;
             }
 
             .content {
-                margin-left: 0;
-                margin-top: 20px;
+                padding: 20px;
+                margin-bottom: 20px;
             }
 
-            .sidebar {
-                width: 100%;
+            .internship-experience, .news-item {
+                flex: 1 1 100%;
             }
         }
     </style>
 </head>
 <body>
     <button id="mode-toggle">Day/Night</button>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Navigation</h2>
+    <header>
+        <div class="hero">
+            <h1>Juanxi Tian<span>/田隽熙</span></h1>
+            <p>Undergraduate Student at Hong Kong Baptist University</p>
+        </div>
+        <nav>
             <a href="#about">About</a>
             <a href="#news">News</a>
             <a href="#internships">Internship Experience</a>
             <a href="#collaboration">International Collaboration</a>
             <a href="#preprints">Preprints</a>
             <a href="#services">Services</a>
-        </div>
-        <div class="content">
-            <header>
-                <h1>Juanxi Tian<span>/田隽熙</span></h1>
-            </header>
-            <section id="about">
-                <p>
-                    I am currently pursuing my undergraduate degree at Hong Kong Baptist University. Previously, I gained valuable research experience as a research intern at the Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences. Currently, I am furthering my research skills as a research intern at the Center for Artificial Intelligence Research and Innovation Lab, Westlake University, under the esteemed supervision of Stan Z. Li.
-                </p>
-                <p>
-                    My areas of interest include Multimodal Large Language Models, Optimization in Deep Learning, and Computer Vision.
-                </p>
-                <p>
-                    You can find me at the following websites:
-                </p>
-                <ul>
-                    <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1" target="_blank" rel="noopener noreferrer">Openreview</a></li>
-                    <li><a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a href="https://x.com/Juanxi_Tian" target="_blank" rel="noopener noreferrer">X</a></li>
-                    <li><a href="https://www.researchgate.net/profile/Juanxi-Tian" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
-                </ul>
-                <p>
-                    My research goal is to profoundly understand the black-box cornerstone of deep learning by exploring often overlooked and counterintuitive phenomena in foundational models, thereby aiding and witnessing the emergence of new optimization techniques and the evolution of MLLM into a generalist model.
-                </p>
-                <p><strong>
-                    I am also open to interesting research or competition opportunities. If you are interested in collaborating with me, please feel free to contact me:
-                </strong></p>
-                <ul>
-                    <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
-                </ul>
-            </section>
-            <hr>
-            <section id="news">
-                <h2>News</h2>
-                <p>
-                    Stay updated with the latest news and achievements:
-                </p>
-                <ul>
-                    <li>July 14th, 2024: I maintain an open source repository on the optimizer called <a href="https://github.com/tianshijing/Awesome-Optimizers">Awesome-Optimizers</a>, with <a href="https://jacky1128.github.io">Zedong Wang</a> and <a href="https://lupin1998.github.io">Siyuan Li</a>.</li>
-                    <li>July 1th, 2024: <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> supports custom optimization fine-tuning by major optimizers. And it won the Best Demo Paper Award at NAACL 2024</li>
-                </ul>
-            </section>
-            <hr>
-            <section id="internships">
-                <h2>Internship Experience</h2>
-                <div class="internship-experience">
-                    <img src="CAS.jpg" alt="Chinese Academy of Sciences">
-                    <div>
-                        <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
-                        <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
-                    </div>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about" class="content">
+            <h2>About Me</h2>
+            <p>
+                I am currently pursuing my undergraduate degree at Hong Kong Baptist University. Previously, I gained valuable research experience as a research intern at the Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences. Currently, I am furthering my research skills as a research intern at the Center for Artificial Intelligence Research and Innovation Lab, Westlake University, under the esteemed supervision of Stan Z. Li.
+            </p>
+            <p>
+                My areas of interest include Multimodal Large Language Models, Optimization in Deep Learning, and Computer Vision.
+            </p>
+            <p>
+                You can find me at the following websites:
+            </p>
+            <ul>
+                <li><a href="https://openreview.net/profile?id=~Juanxi_Tian1" target="_blank" rel="noopener noreferrer">Openreview</a></li>
+                <li><a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://x.com/Juanxi_Tian" target="_blank" rel="noopener noreferrer">X</a></li>
+                <li><a href="https://www.researchgate.net/profile/Juanxi-Tian" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+            </ul>
+            <p>
+                My research goal is to profoundly understand the black-box cornerstone of deep learning by exploring often overlooked and counterintuitive phenomena in foundational models, thereby aiding and witnessing the emergence of new optimization techniques and the evolution of MLLM into a generalist model.
+            </p>
+            <p><strong>
+                I am also open to interesting research or competition opportunities. If you are interested in collaborating with me, please feel free to contact me:
+            </strong></p>
+            <ul>
+                <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
+            </ul>
+        </section>
+        <section id="news" class="content">
+            <h2>News</h2>
+            <p>
+                Stay updated with the latest news and achievements:
+            </p>
+            <div class="card news-item">
+                <h3>July 14th, 2024</h3>
+                <p>I maintain an open source repository on the optimizer called <a href="https://github.com/tianshijing/Awesome-Optimizers">Awesome-Optimizers</a>, with <a href="https://jacky1128.github.io">Zedong Wang</a> and <a href="https://lupin1998.github.io">Siyuan Li</a>.</p>
+            </div>
+            <div class="card news-item">
+                <h3>July 1th, 2024</h3>
+                <p><a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> supports custom optimization fine-tuning by major optimizers. And it won the Best Demo Paper Award at NAACL 2024</p>
+            </div>
+        </section>
+        <section id="internships" class="content">
+            <h2>Internship Experience</h2>
+            <div class="card internship-experience">
+                <img src="CAS.jpg" alt="Chinese Academy of Sciences">
+                <div class="card-content">
+                    <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
+                    <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
                 </div>
-                <div class="internship-experience">
-                    <img src="westlakeu.jpg" alt="Westlake University">
-                    <div>
-                        <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
-                        <p>Start Date: 2023-07-27, End Date: Present</p>
-                    </div>
+            </div>
+            <div class="card internship-experience">
+                <img src="westlakeu.jpg" alt="Westlake University">
+                <div class="card-content">
+                    <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
+                    <p>Start Date: 2023-07-27, End Date: Present</p>
                 </div>
-                <div class="internship-experience">
-                    <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
-                    <div>
-                        <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
-                        <p>Start Date: 2024-03-9, End Date: Present</p>
-                    </div>
+            </div>
+            <div class="card internship-experience">
+                <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
+                <div class="card-content">
+                    <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
+                    <p>Start Date: 2024-03-9, End Date: Present</p>
                 </div>
-            </section>
-            <hr>
-            <section id="collaboration">
-                <h2>International Collaboration</h2>
-                <div class="internship-experience">
-                    <img src="unc.jpg" alt="UNC">
-                    <div>
-                        <h3>Collaboration with UNC</h3>
-                        <p>Start Date: 2024-04-23, End Date: Present</p>
-                        <p>Supervised by Professor Huaxiu Yao.</p>
-                    </div>
+            </div>
+        </section>
+        <section id="collaboration" class="content">
+            <h2>International Collaboration</h2>
+            <div class="card internship-experience">
+                <img src="unc.jpg" alt="UNC">
+                <div class="card-content">
+                    <h3>Collaboration with UNC</h3>
+                    <p>Start Date: 2024-04-23, End Date: Present</p>
+                    <p>Supervised by Professor Huaxiu Yao.</p>
                 </div>
-                <div class="internship-experience">
-                    <img src="uiuc.jpg" alt="UIUC">
-                    <div>
-                        <h3>Collaboration with UIUC</h3>
-                        <p>Start Date: 2024-06-15, End Date: Present</p>
-                        <p>Supervised by Professor Tong Zhang.</p>
-                    </div>
+            </div>
+            <div class="card internship-experience">
+                <img src="uiuc.jpg" alt="UIUC">
+                <div class="card-content">
+                    <h3>Collaboration with UIUC</h3>
+                    <p>Start Date: 2024-06-15, End Date: Present</p>
+                    <p>Supervised by Professor Tong Zhang.</p>
                 </div>
-            </section>
-            <hr>
-            <section id="preprints">
-                <h2>Preprints</h2>
-                <div class="news-item">
-                    <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
-                    <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">
-                        <img src="sema.jpg" alt="Switch EMA" style="max-width: 500px;">
-                    </a>
-                    <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-                </div>
-                <div class="news-item">
-                    <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
-                    <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
-                        <img src="CARES.jpg" alt="CARES" style="max-width: 500px;">
-                    </a>
-                    <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-                </div>
-            </section>
-            <hr>
-            <section id="services">
-                <h2>Services</h2>
-                <h3>Membership</h3>
-                <ul>
-                    <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
-                    <li>2024 - Student Member of IEEE</li>
-                </ul>
-            </section>
-        </div>
+            </div>
+        </section>
+        <section id="preprints" class="content">
+            <h2>Preprints</h2>
+            <div class="card news-item">
+                <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
+                <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">
+                    <img src="sema.jpg" alt="Switch EMA" style="max-width: 500px;">
+                </a>
+                <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+            </div>
+            <div class="card news-item">
+                <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
+                <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
+                    <img src="CARES.jpg" alt="CARES" style="max-width: 500px;">
+                </a>
+                <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+            </div>
+        </section>
+        <section id="services" class="content">
+            <h2>Services</h2>
+            <h3>Membership</h3>
+            <ul>
+                <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
+                <li>2024 - Student Member of IEEE</li>
+            </ul>
+        </section>
     </div>
     <footer>
+        <div class="social-icons">
+            <a href="https://openreview.net/profile?id=~Juanxi_Tian1" target="_blank" rel="noopener noreferrer">Openreview</a>
+            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://x.com/Juanxi_Tian" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="https://www.researchgate.net/profile/Juanxi-Tian" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+        </div>
         <p>&copy; 2024 Juanxi Tian. All rights reserved.</p>
     </footer>
     <script>
         const modeToggle = document.getElementById('mode-toggle');
         const body = document.querySelector('body');
-        modeToggle.addEventListener('click', () => {body.classList.toggle('dark-mode');});
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
     </script>
 </body>
 </html>
