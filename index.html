@@ -255,15 +255,6 @@
             box-shadow: var(--box-shadow);
         }
 
-        #clstr_globe {
-            width: 150px;
-            height: 150px;
-            transform: scale(0.75); 
-            transform-origin: top left; 
-            margin: 20px auto;
-            display: block;
-        }
-
         #mode-toggle {
             position: fixed;
             bottom: 20px;
@@ -305,7 +296,6 @@
             <h2>Navigation</h2>
             <a href="#about">About</a>
             <a href="#news">News</a>
-            <a href="#organization">Organization</a>
             <a href="#internships">Internship Experience</a>
             <a href="#collaboration">International Collaboration</a>
             <a href="#preprints">Preprints</a>
@@ -336,7 +326,7 @@
                     My research goal is to profoundly understand the black-box cornerstone of deep learning by exploring often overlooked and counterintuitive phenomena in foundational models, thereby aiding and witnessing the emergence of new optimization techniques and the evolution of MLLM into a generalist model.
                 </p>
                 <p><strong>
-                    I am also open to interesting research opportunities. If you are interested in collaborating with me, please feel free to contact me:
+                    I am also open to interesting research or competition opportunities. If you are interested in collaborating with me, please feel free to contact me:
                 </strong></p>
                 <ul>
                     <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
@@ -349,41 +339,11 @@
                     Stay updated with the latest news and achievements:
                 </p>
                 <ul>
-                    <li>Sep 26th, 2024: <a href="https://cares-ai.github.io">CARES</a> received by NIPS'24! Congratulations to all collaborators!</li>
                     <li>Aug 23th, 2024: I am invited to serve as a Reviewer for ICLR 2025, which will be held in Singapore.</li>
                     <li>Aug 11th, 2024: I founded the Black-Box Optimization & Coupling Bias (BOCB) Organization with <a href="https://lupin1998.github.io">Siyuan Li</a> and <a href="https://jacky1128.github.io">Zedong Wang</a>, which will make for some interesting series work!</li>
                     <li>July 14th, 2024: I maintain an open source repository on the optimizer called <a href="https://github.com/tianshijing/Awesome-Optimizers">Awesome-Optimizers</a>, with <a href="https://jacky1128.github.io">Zedong Wang</a> and <a href="https://lupin1998.github.io">Siyuan Li</a>.</li>
                     <li>July 3th, 2024: A shorter version of <a href="https://cares-ai.github.io">CARES</a> was accepted by ICML 2024 Workshop on <a href="https://icml-fm-wild.github.io">Foundation Models in the Wild</a>.</li>
                     <li>July 1th, 2024: <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> supports custom optimization fine-tuning by major optimizers. And it won the Best Demo Paper Award at NAACL 2024</li>
-                </ul>
-            </section>
-            <hr>
-            <section id="organization">
-                <h2>Organization</h2>
-                <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <img src="bocb_logo.png" alt="BOCB Logo" style="width: 100px; height: auto; margin-right: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-                    <p>
-                        <strong>Black-Box Optimization & Coupling Bias (BOCB)</strong>
-                    </p>
-                </div>
-                <ul>
-                    <li>
-                        Our team is committed to advancing the scientific understanding of black-box optimization techniques and the pervasive Coupling Bias phenomena observed in contemporary AI systems, particularly deep neural networks. Through rigorous theoretical analysis and empirical investigation, we aim to shed light on the fundamental mechanisms underlying these prevalent challenges in the field of artificial intelligence.
-                    </li>
-                    <li>
-                        <strong>Key Focus Areas:</strong>
-                        <ul>
-                            <li>
-                                <strong>Black-Box Optimization:</strong> Exploring advanced methods to enhance the efficiency and effectiveness of optimization processes in complex, non-linear systems.
-                            </li>
-                            <li>
-                                <strong>Coupling Bias:</strong> Investigating the ubiquitous bias that arises from the interdependence of variables in AI models, with a focus on its impact on model performance and generalization.
-                            </li>
-                            <li>
-                                <strong>Deep Neural Networks:</strong> Delving into the intricacies of deep learning architectures to understand and mitigate the effects of coupling bias.
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </section>
             <hr>
@@ -435,8 +395,15 @@
             <section id="preprints">
                 <h2>Preprints</h2>
                 <div class="news-item">
+                    <h3>OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</h3>
+                    <a href="https://arxiv.org/html/2209.04851v3" target="_blank" rel="noopener noreferrer">
+                        <img src="Openmixup.jpg" alt="OpenMixup" style="max-width: 500px;">
+                    </a>
+                    <p>OpenMixup is currently available on the <a href="https://arxiv.org/html/2209.04851v3" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                </div>
+                <div class="news-item">
                     <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
-                    <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">
+                    <a href="https://arxiv.org/abs/2402.09240v2" target="_blank" rel="noopener noreferrer">
                         <img src="sema.jpg" alt="Switch EMA" style="max-width: 500px;">
                     </a>
                     <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
@@ -446,30 +413,35 @@
                     <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
                         <img src="CARES.jpg" alt="CARES" style="max-width: 500px;">
                     </a>
-                    <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">NeurIPS'24</a>.</p>
+                    <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</h3>
+                    <a href="https://arxiv.org/abs/2410.07155" target="_blank" rel="noopener noreferrer">
+                        <img src="Trans4D.jpg" alt="Trans4D" style="max-width: 500px;">
+                    </a>
+                    <p>Trans4D is currently available on the <a href="https://arxiv.org/abs/2410.07155" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Unveiling the Backbone-Optimizer Coupling Bias in Visual Representation Learning</h3>
+                    <a href="https://arxiv.org/abs/2410.06373" target="_blank" rel="noopener noreferrer">
+                        <img src="BOCB.jpg" alt="BOCB" style="max-width: 500px;">
+                    </a>
+                    <p>BOCB is currently available on the <a href="https://arxiv.org/abs/2410.06373" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
                 </div>
             </section>
             <hr>
             <section id="services">
                 <h2>Services</h2>
-                <h3>Reviewer & Program Committee</h3>
+                <h3>Reviewer</h3>
                 <ul>
-                    <li>Conference: 2024 - International Conference on Learning Representations (ICLR), 2025.</li>
-                    <li>Conference: 2024 - Association for the Advancement of Artificial Intelligence (AAAI), 2025.</li>
-                    <li>Academic Journal: 2024 - IEEE’s Transactions on Knowledge and Data Engineering (IEEE TKDE)</li>
-                    <li>Academic Journal: 2024 - Neural Networks </li>
+                    <li>2024 - International Conference on Learning Representations (ICLR), 2025.</li>
                 </ul>
                 <h3>Membership</h3>
                 <ul>
                     <li>2024 - Student Member of IEEE</li>
-                    <li>2024 - Student Member of China Computer Federation (CCF)</li>
                     <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
                 </ul>
-            </section>
-            <hr>
-            <section id="clustrmaps">
-                <h2>Visitor Map</h2>
-                <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=FYOOiPgBSGdrlyJYv0n9cuhdr1UGzEGdPAPuTQ84beA"></script>
             </section>
         </div>
     </div>
@@ -479,7 +451,7 @@
     <script>
         const modeToggle = document.getElementById('mode-toggle');
         const body = document.querySelector('body');
-        modeToggle.addEventListener('click', () => { body.classList.toggle('dark-mode'); });
+        modeToggle.addEventListener('click', () => {body.classList.toggle('dark-mode');});
     </script>
 </body>
 </html>
