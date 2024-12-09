@@ -451,6 +451,111 @@
             box-shadow: var(--box-shadow-hover);
             transform: scale(1.05);
         }
+
+        /* Selected Papers Section Styles */
+        .selected-papers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .paper-category {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .paper-category:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .paper-category h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .paper-category h3:after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .paper-category.open h3:after {
+            content: '-';
+        }
+
+        .paper-list {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .paper-category.open .paper-list {
+            display: block;
+        }
+
+        .paper-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .paper-list li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Services Section Styles */
+        .services-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-card li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -462,7 +567,7 @@
             <a href="#news">News</a>
             <a href="#organization">Organization</a>
             <a href="#cooperation">Cooperation</a>
-            <a href="#preprints">Preprints</a>
+            <a href="#selected-papers">Selected Papers</a>
             <a href="#services">Services</a>
         </div>
         <div class="content">
@@ -543,31 +648,41 @@
                 </div>
             </section>
             <hr>
-            <section id="preprints">
-                <h2 class="section-title">Preprints</h2>
-                <div class="section-content">
-                    <div class="card">
-                        <img src="Openmixup.jpg" alt="OpenMixup">
-                        <h3>OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</h3>
-                        <p>OpenMixup is currently available on the <a href="https://arxiv.org/html/2209.04851v3" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+            <section id="selected-papers">
+                <h2 class="section-title">Selected Papers</h2>
+                <div class="selected-papers">
+                    <div class="paper-category" onclick="toggleCategory(this)">
+                        <h3>MLLM</h3>
+                        <ul class="paper-list">
+                            <li><a href="https://arxiv.org/abs/2406.06007">CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</a></li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <img src="sema.jpg" alt="Switch EMA">
-                        <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
-                        <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240v2" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                    <div class="paper-category" onclick="toggleCategory(this)">
+                        <h3>Optimization</h3>
+                        <ul class="paper-list">
+                            <li><a href="https://arxiv.org/abs/2402.09240v2">Switch EMA: A Free Lunch for Better Flatness and Sharpness</a></li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <img src="CARES.jpg" alt="CARES">
-                        <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
-                        <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                    <div class="paper-category" onclick="toggleCategory(this)">
+                        <h3>Deep Learning</h3>
+                        <ul class="paper-list">
+                            <li><a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</a></li>
+                            <li><a href="https://arxiv.org/abs/2402.09240v2">Switch EMA: A Free Lunch for Better Flatness and Sharpness</a></li>
+                        </ul>
+                    </div>
+                    <div class="paper-category" onclick="toggleCategory(this)">
+                        <h3>4D</h3>
+                        <ul class="paper-list">
+                            <li><a href="https://arxiv.org/abs/2402.09240v2">Trans4D: A Free Lunch for Better Flatness and Sharpness</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
             <hr>
             <section id="services">
                 <h2 class="section-title">Services</h2>
-                <div class="section-content">
-                    <div class="card">
+                <div class="services-content">
+                    <div class="service-card">
                         <h3>Reviewer & Program Committee</h3>
                         <ul>
                             <li>Conference: 2024 - ACL Rolling Review (ARR).</li>
@@ -577,7 +692,7 @@
                             <li>Academic Journal: 2024 - Neural Networks </li>
                         </ul>
                     </div>
-                    <div class="card">
+                    <div class="service-card">
                         <h3>Membership</h3>
                         <ul>
                             <li>2024 - Student Member of IEEE</li>
@@ -601,6 +716,10 @@
         const modeToggle = document.getElementById('mode-toggle');
         const body = document.querySelector('body');
         modeToggle.addEventListener('click', () => { body.classList.toggle('dark-mode'); });
+
+        function toggleCategory(category) {
+            category.classList.toggle('open');
+        }
     </script>
 </body>
 </html>
