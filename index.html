@@ -208,8 +208,8 @@
         }
 
         .internship-experience img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             margin-right: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -386,6 +386,48 @@
         .card a:hover {
             text-decoration: underline;
         }
+
+        #show-more-news {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: var(--box-shadow);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #show-more-news:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #show-more-news:hover:before {
+            transform: scaleX(1);
+        }
+
+        #show-more-news:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+        }
     </style>
 </head>
 <body>
@@ -396,8 +438,7 @@
             <a href="#about">About</a>
             <a href="#news">News</a>
             <a href="#organization">Organization</a>
-            <a href="#internships">Internship Experience</a>
-            <a href="#collaboration">International Collaboration</a>
+            <a href="#cooperation">Cooperation</a>
             <a href="#preprints">Preprints</a>
             <a href="#services">Services</a>
         </div>
@@ -461,45 +502,39 @@
                 <h2 class="section-title">Organization</h2>
                 <div class="section-content">
                     <div class="card">
-                        <img src="bocb_logo.png" alt="BOCB Logo">
+                        <img src="bocb_logo.png" alt="BOCB Logo" style="width: 80px; height: 80px;">
                         <h3>Black-Box Optimization & Coupling Bias (BOCB)</h3>
                         <p>Our team is committed to advancing the scientific understanding of black-box optimization techniques and the pervasive Coupling Bias phenomena observed in contemporary AI systems, particularly deep neural networks.</p>
                     </div>
                 </div>
             </section>
             <hr>
-            <section id="internships">
-                <h2 class="section-title">Internship Experience</h2>
+            <section id="cooperation">
+                <h2 class="section-title">Cooperation</h2>
                 <div class="section-content">
                     <div class="card">
-                        <img src="CAS.jpg" alt="Chinese Academy of Sciences">
+                        <img src="CAS.jpg" alt="Chinese Academy of Sciences" style="width: 80px; height: 80px;">
                         <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
                         <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
                     </div>
                     <div class="card">
-                        <img src="westlakeu.jpg" alt="Westlake University">
+                        <img src="westlakeu.jpg" alt="Westlake University" style="width: 80px; height: 80px;">
                         <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
                         <p>Start Date: 2023-07-27, End Date: Present</p>
                     </div>
                     <div class="card">
-                        <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
+                        <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University" style="width: 80px; height: 80px;">
                         <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
                         <p>Start Date: 2024-03-9, End Date: Present</p>
                     </div>
-                </div>
-            </section>
-            <hr>
-            <section id="collaboration">
-                <h2 class="section-title">International Collaboration</h2>
-                <div class="section-content">
                     <div class="card">
-                        <img src="unc.jpg" alt="UNC">
+                        <img src="unc.jpg" alt="UNC" style="width: 80px; height: 80px;">
                         <h3>Collaboration with UNC</h3>
                         <p>Start Date: 2024-04-23, End Date: 2024-9-25</p>
                         <p>Supervised by Professor Huaxiu Yao.</p>
                     </div>
                     <div class="card">
-                        <img src="uiuc.jpg" alt="UIUC">
+                        <img src="uiuc.jpg" alt="UIUC" style="width: 80px; height: 80px;">
                         <h3>Collaboration with UIUC</h3>
                         <p>Start Date: 2024-06-15, End Date: Present</p>
                         <p>Supervised by Professor Tong Zhang.</p>
