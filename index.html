@@ -428,6 +428,29 @@
             transform: translateY(-3px);
             box-shadow: var(--box-shadow-hover);
         }
+
+        /* Cooperation Section Styles */
+        .cooperation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .cooperation-grid img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cooperation-grid img:hover {
+            box-shadow: var(--box-shadow-hover);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -511,34 +534,12 @@
             <hr>
             <section id="cooperation">
                 <h2 class="section-title">Cooperation</h2>
-                <div class="section-content">
-                    <div class="card">
-                        <img src="CAS.jpg" alt="Chinese Academy of Sciences" style="width: 80px; height: 80px;">
-                        <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
-                        <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
-                    </div>
-                    <div class="card">
-                        <img src="westlakeu.jpg" alt="Westlake University" style="width: 80px; height: 80px;">
-                        <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
-                        <p>Start Date: 2023-07-27, End Date: Present</p>
-                    </div>
-                    <div class="card">
-                        <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University" style="width: 80px; height: 80px;">
-                        <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
-                        <p>Start Date: 2024-03-9, End Date: Present</p>
-                    </div>
-                    <div class="card">
-                        <img src="unc.jpg" alt="UNC" style="width: 80px; height: 80px;">
-                        <h3>Collaboration with UNC</h3>
-                        <p>Start Date: 2024-04-23, End Date: 2024-9-25</p>
-                        <p>Supervised by Professor Huaxiu Yao.</p>
-                    </div>
-                    <div class="card">
-                        <img src="uiuc.jpg" alt="UIUC" style="width: 80px; height: 80px;">
-                        <h3>Collaboration with UIUC</h3>
-                        <p>Start Date: 2024-06-15, End Date: Present</p>
-                        <p>Supervised by Professor Tong Zhang.</p>
-                    </div>
+                <div class="cooperation-grid">
+                    <img src="CAS.jpg" alt="Chinese Academy of Sciences">
+                    <img src="westlakeu.jpg" alt="Westlake University">
+                    <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
+                    <img src="unc.jpg" alt="UNC">
+                    <img src="uiuc.jpg" alt="UIUC">
                 </div>
             </section>
             <hr>
