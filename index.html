@@ -84,7 +84,7 @@
         }
 
         .content {
-            background-color: var(--white-color);
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(60, 64, 67, 0.1));
             padding: 40px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
@@ -499,34 +499,43 @@
         }
 
         .paper-category.open .paper-list {
-            display: block;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
-        .paper-list li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
+        .paper-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
         }
 
-        .paper-list li:before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
+        .paper-item:hover {
+            box-shadow: var(--box-shadow-hover);
         }
 
-        .paper-list img {
-            width: 300px;
-            height: 300px;
+        .paper-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
             border-radius: 5px;
             margin-bottom: 10px;
-            display: block;
         }
 
-        .paper-list img.sema {
-            width: 400px;
-            height: auto;
-            max-width: 100%;
+        .paper-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .paper-item a:hover {
+            text-decoration: underline;
         }
 
         /* Services Section Styles */
@@ -640,26 +649,41 @@
                     <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>MLLM</h3>
                         <ul class="paper-list">
-                            <li><img src="CARES.jpg" alt="CARES"><a href="https://arxiv.org/abs/2406.06007">CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</a></li>
+                            <li class="paper-item">
+                                <img src="CARES.jpg" alt="CARES">
+                                <a href="https://arxiv.org/abs/2406.06007">CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>Optimization</h3>
                         <ul class="paper-list">
-                            <li><img src="sema.jpg" alt="Switch EMA" class="sema"><a href="https://arxiv.org/abs/2402.09240v2">Switch EMA: A Free Lunch for Better Flatness and Sharpness</a></li>
+                            <li class="paper-item">
+                                <img src="sema.jpg" alt="Switch EMA" class="sema">
+                                <a href="https://arxiv.org/abs/2402.09240v2">Switch EMA: A Free Lunch for Better Flatness and Sharpness</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>Deep Learning</h3>
                         <ul class="paper-list">
-                            <li><img src="Openmixup.jpg" alt="OpenMixup"><a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</a></li>
-                            <li><img src="BOCB.jpg" alt="BOCB"><a href="https://arxiv.org/abs/2410.06373v1">Unveiling the Backbone-Optimizer Coupling Bias in Visual Representation Learning</a></li>
+                            <li class="paper-item">
+                                <img src="Openmixup.jpg" alt="OpenMixup">
+                                <a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</a>
+                            </li>
+                            <li class="paper-item">
+                                <img src="BOCB.jpg" alt="BOCB">
+                                <a href="https://arxiv.org/abs/2410.06373v1">Unveiling the Backbone-Optimizer Coupling Bias in Visual Representation Learning</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>4D</h3>
                         <ul class="paper-list">
-                            <li><img src="Trans4D.jpg" alt="Trans4D"><a href="https://arxiv.org/abs/2410.07155">Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</a></li>
+                            <li class="paper-item">
+                                <img src="Trans4D.jpg" alt="Trans4D">
+                                <a href="https://arxiv.org/abs/2410.07155">Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
