@@ -298,6 +298,94 @@
                 width: 100%;
             }
         }
+
+        /* New Styles */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white-color);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            color: var(--white-color);
+            background-color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .hero a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            flex: 1 1 calc(33.333% - 20px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -318,10 +406,12 @@
                 <h1>Juanxi Tian<span>/田隽熙</span></h1>
             </header>
             <section id="about">
+                <div class="hero">
+                    <h1>Welcome to My World</h1>
+                    <p>I am currently a senior student at Hong Kong Baptist University, majoring in artificial intelligence. And long-term with Westlake University, Peking University and other universities and research institutions research partners to maintain cooperative relations.</p>
+                    <a href="#contact">Get in Touch</a>
+                </div>
                 <h2>About</h2>
-                <p>
-                    I am currently a senior student at Hong Kong Baptist University, majoring in artificial intelligence. And long-term with Westlake University, Peking University and other universities and research institutions research partners to maintain cooperative relations.
-                </p>
                 <p>
                     My areas of interest include Multimodal Large Language Models, Optimization in Deep Learning, and Computer Vision.
                 </p>
@@ -348,94 +438,66 @@
             </section>
             <hr>
             <section id="news">
-                <h2>News</h2>
-                <p>
-                    Stay updated with the latest news and achievements:
-                </p>
-                <ul>
-                    <li>Sep 26th, 2024: <a href="https://cares-ai.github.io">CARES</a> received by NIPS'24! Congratulations to all collaborators!</li>
-                    <li>Aug 23th, 2024: I am invited to serve as a Reviewer for ICLR 2025, which will be held in Singapore.</li>
-                    <li>Aug 11th, 2024: I founded the Black-Box Optimization & Coupling Bias (BOCB) Organization with <a href="https://lupin1998.github.io">Siyuan Li</a> and <a href="https://jacky1128.github.io">Zedong Wang</a>, which will make for some interesting series work!</li>
-                    <li>July 14th, 2024: I maintain an open source repository on the optimizer called <a href="https://github.com/tianshijing/Awesome-Optimizers">Awesome-Optimizers</a>, with <a href="https://jacky1128.github.io">Zedong Wang</a> and <a href="https://lupin1998.github.io">Siyuan Li</a>.</li>
-                    <li>July 3th, 2024: A shorter version of <a href="https://cares-ai.github.io">CARES</a> was accepted by ICML 2024 Workshop on <a href="https://icml-fm-wild.github.io">Foundation Models in the Wild</a>.</li>
-                    <li>July 1th, 2024: <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> supports custom optimization fine-tuning by major optimizers. And it won the Best Demo Paper Award at NAACL 2024</li>
-                </ul>
+                <h2 class="section-title">News</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <h3>CARES Received by NIPS'24</h3>
+                        <p>Sep 26th, 2024: <a href="https://cares-ai.github.io">CARES</a> received by NIPS'24! Congratulations to all collaborators!</p>
+                    </div>
+                    <div class="card">
+                        <h3>Invited to Serve as Reviewer for ICLR 2025</h3>
+                        <p>Aug 23th, 2024: I am invited to serve as a Reviewer for ICLR 2025, which will be held in Singapore.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Founded BOCB Organization</h3>
+                        <p>Aug 11th, 2024: I founded the Black-Box Optimization & Coupling Bias (BOCB) Organization with <a href="https://lupin1998.github.io">Siyuan Li</a> and <a href="https://jacky1128.github.io">Zedong Wang</a>, which will make for some interesting series work!</p>
+                    </div>
+                </div>
             </section>
             <hr>
             <section id="organization">
-                <h2>Organization</h2>
-                <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <img src="bocb_logo.png" alt="BOCB Logo" style="width: 100px; height: auto; margin-right: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-                    <p>
-                        <strong>Black-Box Optimization & Coupling Bias (BOCB)</strong>
-                    </p>
+                <h2 class="section-title">Organization</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <img src="bocb_logo.png" alt="BOCB Logo">
+                        <h3>Black-Box Optimization & Coupling Bias (BOCB)</h3>
+                        <p>Our team is committed to advancing the scientific understanding of black-box optimization techniques and the pervasive Coupling Bias phenomena observed in contemporary AI systems, particularly deep neural networks.</p>
+                    </div>
                 </div>
-                <ul>
-                    <li>
-                        Our team is committed to advancing the scientific understanding of black-box optimization techniques and the pervasive Coupling Bias phenomena observed in contemporary AI systems, particularly deep neural networks. Through rigorous theoretical analysis and empirical investigation, we aim to shed light on the fundamental mechanisms underlying these prevalent challenges in the field of artificial intelligence.
-                    </li>
-                    <li>
-                        <strong>Key Focus Areas:</strong>
-                        <ul>
-                            <li>
-                                <strong>Black-Box Optimization:</strong> Exploring advanced methods to enhance the efficiency and effectiveness of optimization processes in complex, non-linear systems.
-                            </li>
-                            <li>
-                                <strong>Coupling Bias:</strong> Investigating the ubiquitous bias that arises from the interdependence of variables in AI models, with a focus on its impact on model performance and generalization.
-                            </li>
-                            <li>
-                                <strong>Deep Neural Networks:</strong> Delving into the intricacies of deep learning architectures to understand and mitigate the effects of coupling bias.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </section>
             <hr>
             <section id="internships">
-                <h2>Internship Experience</h2>
-                <div class="internship-experience">
-                    <img src="CAS.jpg" alt="Chinese Academy of Sciences">
-                    <div>
+                <h2 class="section-title">Internship Experience</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <img src="CAS.jpg" alt="Chinese Academy of Sciences">
                         <h3>Research Intern at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
                         <p>Start Date: 2023-07-26, End Date: 2023-09-6</p>
                     </div>
-                </div>
-                <div class="internship-experience">
-                    <img src="westlakeu.jpg" alt="Westlake University">
-                    <div>
+                    <div class="card">
+                        <img src="westlakeu.jpg" alt="Westlake University">
                         <h3>Research Intern at Center for Artificial Intelligence Research and Innovation Lab, Westlake University</h3>
                         <p>Start Date: 2023-07-27, End Date: Present</p>
                     </div>
-                </div>
-                <div class="internship-experience">
-                    <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
-                    <div>
+                    <div class="card">
+                        <img src="PKU.jpg" alt="International Machine Learning Research Center, Peking University">
                         <h3>Research Intern at International Machine Learning Research Center, Peking University</h3>
                         <p>Start Date: 2024-03-9, End Date: Present</p>
-                    </div>
-                </div>
-                <div class="internship-experience">
-                    <img src="cuhk.jpg" alt="International Machine Learning Research Center, Peking University">
-                    <div>
-                        <h3>Research Intern at MMLab, CUHK</h3>
-                        <p>Start Date: 2024-10-20, End Date: Present</p>
                     </div>
                 </div>
             </section>
             <hr>
             <section id="collaboration">
-                <h2>International Collaboration</h2>
-                <div class="internship-experience">
-                    <img src="unc.jpg" alt="UNC">
-                    <div>
+                <h2 class="section-title">International Collaboration</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <img src="unc.jpg" alt="UNC">
                         <h3>Collaboration with UNC</h3>
                         <p>Start Date: 2024-04-23, End Date: 2024-9-25</p>
                         <p>Supervised by Professor Huaxiu Yao.</p>
                     </div>
-                </div>
-                <div class="internship-experience">
-                    <img src="uiuc.jpg" alt="UIUC">
-                    <div>
+                    <div class="card">
+                        <img src="uiuc.jpg" alt="UIUC">
                         <h3>Collaboration with UIUC</h3>
                         <p>Start Date: 2024-06-15, End Date: Present</p>
                         <p>Supervised by Professor Tong Zhang.</p>
@@ -444,64 +506,52 @@
             </section>
             <hr>
             <section id="preprints">
-                <h2>Preprints</h2>
-                <div class="news-item">
-                    <h3>OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</h3>
-                    <a href="https://arxiv.org/html/2209.04851v3" target="_blank" rel="noopener noreferrer">
-                        <img src="Openmixup.jpg" alt="OpenMixup" style="max-width: 500px;">
-                    </a>
-                    <p>OpenMixup is currently available on the <a href="https://arxiv.org/html/2209.04851v3" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
-                    <a href="https://arxiv.org/abs/2402.09240v2" target="_blank" rel="noopener noreferrer">
-                        <img src="sema.jpg" alt="Switch EMA" style="max-width: 500px;">
-                    </a>
-                    <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-                </div>
-                <div class="news-item">
-                    <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
-                    <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">
-                        <img src="CARES.jpg" alt="CARES" style="max-width: 500px;">
-                    </a>
-                    <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</h3>
-                    <a href="https://arxiv.org/abs/2410.07155" target="_blank" rel="noopener noreferrer">
-                        <img src="Trans4D.jpg" alt="Trans4D" style="max-width: 500px;">
-                    </a>
-                    <p>Trans4D is currently available on the <a href="https://arxiv.org/abs/2410.07155" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Unveiling the Backbone-Optimizer Coupling Bias in Visual Representation Learning</h3>
-                    <a href="https://arxiv.org/abs/2410.06373" target="_blank" rel="noopener noreferrer">
-                        <img src="BOCB.jpg" alt="BOCB" style="max-width: 500px;">
-                    </a>
-                    <p>BOCB is currently available on the <a href="https://arxiv.org/abs/2410.06373" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                <h2 class="section-title">Preprints</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <img src="Openmixup.jpg" alt="OpenMixup">
+                        <h3>OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</h3>
+                        <p>OpenMixup is currently available on the <a href="https://arxiv.org/html/2209.04851v3" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                    </div>
+                    <div class="card">
+                        <img src="sema.jpg" alt="Switch EMA">
+                        <h3>Switch EMA: A Free Lunch for Better Flatness and Sharpness</h3>
+                        <p>SEMA is currently available on the <a href="https://arxiv.org/abs/2402.09240v2" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                    </div>
+                    <div class="card">
+                        <img src="CARES.jpg" alt="CARES">
+                        <h3>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</h3>
+                        <p>CARES is currently available on the <a href="https://arxiv.org/abs/2406.06007" target="_blank" rel="noopener noreferrer">arXiv preprint website</a>.</p>
+                    </div>
                 </div>
             </section>
             <hr>
             <section id="services">
-                <h2>Services</h2>
-                <h3>Reviewer & Program Committee</h3>
-                <ul>
-                    <li>Conference: 2024 - ACL Rolling Review (ARR).</li>
-                    <li>Conference: 2024 - International Conference on Learning Representations (ICLR), 2025.</li>
-                    <li>Conference: 2024 - Association for the Advancement of Artificial Intelligence (AAAI), 2025.</li>
-                    <li>Academic Journal: 2024 - IEEE’s Transactions on Knowledge and Data Engineering (IEEE TKDE)</li>
-                    <li>Academic Journal: 2024 - Neural Networks </li>
-                </ul>
-                <h3>Membership</h3>
-                <ul>
-                    <li>2024 - Student Member of IEEE</li>
-                    <li>2024 - Student Member of China Computer Federation (CCF)</li>
-                    <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
-                </ul>
+                <h2 class="section-title">Services</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <h3>Reviewer & Program Committee</h3>
+                        <ul>
+                            <li>Conference: 2024 - ACL Rolling Review (ARR).</li>
+                            <li>Conference: 2024 - International Conference on Learning Representations (ICLR), 2025.</li>
+                            <li>Conference: 2024 - Association for the Advancement of Artificial Intelligence (AAAI), 2025.</li>
+                            <li>Academic Journal: 2024 - IEEE’s Transactions on Knowledge and Data Engineering (IEEE TKDE)</li>
+                            <li>Academic Journal: 2024 - Neural Networks </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Membership</h3>
+                        <ul>
+                            <li>2024 - Student Member of IEEE</li>
+                            <li>2024 - Student Member of China Computer Federation (CCF)</li>
+                            <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <hr>
             <section id="clustrmaps">
-                <h2>Visitor Map</h2>
+                <h2 class="section-title">Visitor Map</h2>
                 <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=FYOOiPgBSGdrlyJYv0n9cuhdr1UGzEGdPAPuTQ84beA"></script>
             </section>
         </div>
