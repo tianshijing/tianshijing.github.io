@@ -25,6 +25,7 @@
             --white-color: #fff;
             --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --box-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.2);
+            --page-color: #f5f1e8; /* 类似书页的颜色 */
         }
 
         .dark-mode {
@@ -35,10 +36,11 @@
             --white-color: #303134;
             --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
             --box-shadow-hover: 0 6px 16px rgba(255, 255, 255, 0.2);
+            --page-color: #303134; /* 暗模式下的书页颜色 */
         }
 
         body {
-            background-color: var(--background-color);
+            background-color: var(--page-color); /* 修改为类似书页的颜色 */
             color: var(--text-color);
             font-family: 'Roboto', sans-serif;
             display: flex;
