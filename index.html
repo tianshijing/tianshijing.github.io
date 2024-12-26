@@ -610,6 +610,36 @@
             left: 0;
             color: var(--primary-color);
         }
+
+        /* Modal Styles */
+        #wechat-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #wechat-modal img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        #close-modal {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -633,14 +663,15 @@
                     <h1>Welcome to My Homepage</h1>
                     <p>I am now a senior student at Hong Kong Baptist University, majoring in artificial intelligence. My research interests mainly include MLLM, Optimization and Generation (Video / 4D).</p>
                     <div class="actions">
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
-                        <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                            <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
+                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
+                            <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a> <!-- 添加 WeChat 图标 -->
+                        </div>
+                        <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
                     </div>
-                    <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
-                </div>
                 </div>
                 <h2>About</h2>
                 <p>
@@ -772,6 +803,13 @@
     <footer>
         <p>&copy; 2024 Juanxi Tian. All rights reserved.</p>
     </footer>
+
+    <!-- WeChat Modal -->
+    <div id="wechat-modal">
+        <img src="tjx.jpg" alt="WeChat QR Code">
+        <button id="close-modal">Close</button>
+    </div>
+
     <script>
         const modeToggle = document.getElementById('mode-toggle');
         const body = document.querySelector('body');
@@ -780,6 +818,26 @@
         function toggleCategory(category) {
             category.classList.toggle('open');
         }
+
+        // WeChat Modal Logic
+        const wechatIcon = document.getElementById('wechat-icon');
+        const wechatModal = document.getElementById('wechat-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        wechatIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            wechatModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            wechatModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === wechatModal) {
+                wechatModal.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
