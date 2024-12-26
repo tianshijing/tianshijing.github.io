@@ -631,17 +631,16 @@
             <section id="about">
                 <div class="hero">
                     <h1>Welcome to My Homepage</h1>
-                    <p>I am now a final year undergraduate student at Hong Kong Baptist University, majoring in artificial intelligence. My research interests mainly include MLLM, Optimization and Generation (Video / 4D).</p>
+                    <p>I am now a senior student at Hong Kong Baptist University, majoring in artificial intelligence. My research interests mainly include MLLM, Optimization and Generation (Video / 4D).</p>
                     <div class="actions">
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                            <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
-                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
-                            <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a>
-                        </div>
-                        <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
+                        <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
                     </div>
+                    <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
+                </div>
                 </div>
                 <h2>About</h2>
                 <p>
@@ -773,11 +772,6 @@
     <footer>
         <p>&copy; 2024 Juanxi Tian. All rights reserved.</p>
     </footer>
-    <!-- 添加一个隐藏的图片元素 -->
-    <div id="wechat-qr" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 10px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-        <img src="tjx.jpg" alt="WeChat QR Code" style="max-width: 300px; height: auto;">
-        <button onclick="document.getElementById('wechat-qr').style.display = 'none';" style="display: block; margin: 10px auto; padding: 5px 10px; background: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
-    </div>
     <script>
         const modeToggle = document.getElementById('mode-toggle');
         const body = document.querySelector('body');
@@ -786,17 +780,6 @@
         function toggleCategory(category) {
             category.classList.toggle('open');
         }
-
-        document.getElementById('wechat-icon').addEventListener('click', function(event) {
-            event.preventDefault(); 
-            document.getElementById('wechat-qr').style.display = 'block';
-        });
-        document.addEventListener('click', function(event) {
-            var qr = document.getElementById('wechat-qr');
-            if (event.target !== qr && !qr.contains(event.target) && event.target.id !== 'wechat-icon') {
-                qr.style.display = 'none';
-            }
-        });
     </script>
 </body>
 </html>
