@@ -6,18 +6,12 @@
     <title>Juanxi Tian's Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="hkbu.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <style>
         /* Global Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         :root {
             --primary-color: #1a73e8;
             --secondary-color: #3c4043;
@@ -26,7 +20,7 @@
             --white-color: #fff;
             --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --box-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.2);
-            --page-color: #f5f1e8; 
+            --page-color: #f5f1e8;
         }
 
         .dark-mode {
@@ -37,13 +31,13 @@
             --white-color: #303134;
             --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
             --box-shadow-hover: 0 6px 16px rgba(255, 255, 255, 0.2);
-            --page-color: #303134; 
+            --page-color: #303134;
         }
 
         body {
-            background-color: var(--page-color); 
+            background: linear-gradient(135deg, var(--background-color), var(--page-color));
             color: var(--text-color);
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -69,10 +63,6 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .sidebar:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
         .sidebar a {
             color: var(--white-color);
             text-decoration: none;
@@ -80,6 +70,10 @@
             padding: 10px;
             border-radius: 5px;
             transition: background 0.3s ease-in-out;
+        }
+
+        .sidebar a.active {
+            background-color: var(--primary-color);
         }
 
         .sidebar a:hover {
@@ -94,10 +88,6 @@
             flex: 1;
             margin-left: 20px;
             transition: all 0.3s ease-in-out;
-        }
-
-        .content:hover {
-            box-shadow: var(--box-shadow-hover);
         }
 
         header, footer {
@@ -196,27 +186,17 @@
             transition: border-color 0.3s ease-in-out;
         }
 
-        .internship-experience {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            background-color: var(--background-color);
+        .card {
+            background-color: var(--white-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
 
-        .internship-experience:hover {
+        .card:hover {
+            transform: translateY(-10px);
             box-shadow: var(--box-shadow-hover);
-        }
-
-        .internship-experience img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .news-item {
@@ -232,42 +212,84 @@
             box-shadow: var(--box-shadow-hover);
         }
 
-        .news-item p {
-            margin-bottom: 10px;
+        .paper-category {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
         }
 
-        .news-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
+        .paper-category:hover {
+            box-shadow: var(--box-shadow-hover);
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .services h3 {
+        .paper-list {
+            display: none;
             margin-top: 20px;
         }
 
-        footer {
-            margin-top: auto;
-            box-shadow: var(--box-shadow);
+        .paper-category.open .paper-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        #clstr_globe {
-            width: 150px;
-            height: 150px;
-            transform: scale(0.75); 
-            transform-origin: top left; 
-            margin: 20px auto;
+        .paper-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .paper-item:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .service-card {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        #wechat-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        #wechat-modal img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        #close-modal {
             display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
         #mode-toggle {
@@ -302,344 +324,6 @@
                 width: 100%;
             }
         }
-
-        /* New Styles */
-        .hero {
-            background-image: url('juanxi.jpg');
-            background-size: cover;
-            background-position: center;
-            color: var(--white-color);
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: var(--box-shadow);
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--white-color);
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .hero .actions {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .hero .actions a {
-            color: var(--white-color);
-            background-color: var(--primary-color);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
-            width: fit-content;
-        }
-
-        .hero .actions a:hover {
-            background-color: var(--secondary-color);
-        }
-
-        .hero .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero .social-icons a {
-            font-size: 24px;
-            color: var(--white-color);
-            transition: color 0.3s ease-in-out;
-        }
-
-        .hero .social-icons a:hover {
-            color: var(--primary-color);
-        }
-
-        .section-title {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            text-align: center;
-        }
-
-        .section-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card {
-            background-color: var(--white-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            flex: 1 1 calc(33.333% - 20px);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .card a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .card a:hover {
-            text-decoration: underline;
-        }
-
-        #show-more-news {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            font-size: 16px;
-            font-weight: bold;
-            box-shadow: var(--box-shadow);
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #show-more-news:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #show-more-news:hover:before {
-            transform: scaleX(1);
-        }
-
-        #show-more-news:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        /* Cooperation Section Styles */
-        .cooperation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            justify-items: center;
-            align-items: center;
-        }
-
-        .cooperation-grid img {
-            width: 100%;
-            max-width: 120px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .cooperation-grid img:hover {
-            box-shadow: var(--box-shadow-hover);
-            transform: scale(1.05);
-        }
-
-        /* Selected Papers Section Styles */
-        .selected-papers {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .paper-category {
-            background-color: var(--background-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .paper-category:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .paper-category h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-            cursor: pointer;
-            position: relative;
-        }
-
-        .paper-category h3:after {
-            content: '+';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .paper-category.open h3:after {
-            content: '-';
-        }
-
-        .paper-list {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .paper-category.open .paper-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .paper-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: var(--white-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .paper-item:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .paper-item img {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .paper-item a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .paper-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Services Section Styles */
-        .services-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background-color: var(--background-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .service-card:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-
-        .service-card ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .service-card li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .service-card li:before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-        }
-
-        /* Modal Styles */
-        #wechat-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-        #wechat-modal img {
-            max-width: 300px;
-            height: auto;
-        }
-
-        #close-modal {
-            display: block;
-            margin: 10px auto;
-            padding: 5px 10px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -663,16 +347,16 @@
                     <h1>Welcome to My Homepage</h1>
                     <p>I am now a final year undergraduate student at Hong Kong Baptist University, majoring in artificial intelligence. My research interests mainly include MLLM, Optimization and Generation (Video / 4D).</p>
                     <div class="actions">
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
-                        <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
-                        <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-zhihu"></i></a>
-                        <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a> 
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                            <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
+                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
+                            <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-zhihu"></i></a>
+                            <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a>
+                        </div>
+                        <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
                     </div>
-                    <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
-                </div>
                 </div>
                 <h2>About</h2>
                 <p>
@@ -838,6 +522,29 @@
         window.addEventListener('click', (e) => {
             if (e.target === wechatModal) {
                 wechatModal.style.display = 'none';
+            }
+        });
+
+        // Scroll Spy for Navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.sidebar a');
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    navLinks[index].classList.add('active');
+                } else {
+                    navLinks[index].classList.remove('active');
+                }
+            });
+        });
+
+        // Show More News
+        document.getElementById('show-more-news').addEventListener('click', () => {
+            const hiddenNews = document.querySelectorAll('.news-item[style="display: none;"]');
+            for (let i = 0; i < 2 && i < hiddenNews.length; i++) {
+                hiddenNews[i].style.display = 'block';
             }
         });
     </script>
