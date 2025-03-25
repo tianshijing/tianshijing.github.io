@@ -11,111 +11,166 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         :root {
             --primary-color: #1a73e8;
             --secondary-color: #3c4043;
             --background-color: #f8f9fa;
             --text-color: #202124;
             --white-color: #fff;
-            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            --box-shadow-hover: 0 6px 16px rgba(0,0,0,0.2);
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --box-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.2);
             --page-color: #f5f1e8;
         }
+
         .dark-mode {
             --primary-color: #8ab4f8;
             --secondary-color: #e8eaed;
             --background-color: #202124;
             --text-color: #e8eaed;
             --white-color: #303134;
-            --box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-            --box-shadow-hover: 0 6px 16px rgba(255,255,255,0.2);
+            --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            --box-shadow-hover: 0 6px 16px rgba(255, 255, 255, 0.2);
             --page-color: #303134;
         }
+
         body {
             background-color: var(--page-color);
             color: var(--text-color);
             font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
-            line-height: 1.7;
-            transition: all 0.3s ease;
+            line-height: 1.6;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
+
         .container {
             display: flex;
+            flex: 1;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Sidebar */
         .sidebar {
-            width: 250px;
-            background: var(--secondary-color);
+            width: 280px;
+            background-color: var(--secondary-color);
             color: var(--white-color);
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             position: sticky;
             top: 20px;
-            height: fit-content;
-            transition: all 0.3s ease;
+            align-self: flex-start;
+            transition: all 0.3s ease-in-out;
         }
+
+        .sidebar:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
         .sidebar h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--white-color);
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-align: center;
         }
+
         .sidebar a {
             color: var(--white-color);
             text-decoration: none;
-            padding: 12px;
-            display: block;
-            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 16px;
             transition: all 0.3s ease;
         }
+
+        .sidebar a i {
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+
         .sidebar a:hover {
-            background: var(--primary-color);
+            background-color: var(--primary-color);
             transform: translateX(5px);
         }
+
+        /* Content */
         .content {
-            flex: 1;
-            background: var(--white-color);
+            background-color: var(--white-color);
             padding: 40px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
+            flex: 1;
             margin-left: 20px;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
         }
+
+        .content:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
         header {
-            background: var(--secondary-color);
+            background-color: var(--secondary-color);
             color: var(--white-color);
             text-align: center;
             padding: 20px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
+
         h1, h2, h3 {
-            font-family: 'Merriweather W', serif;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
             color: var(--primary-color);
         }
-        h1 { font-size: 40px; margin-bottom: 10px; color: var(--white-color); }
-        h2 { font-size: 28px; margin: 30px 0 20px; position: relative; }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--white-color);
+        }
+
+        h1 .subtitle {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 30px 0 20px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
         h2:after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
             width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
+            height: 2px;
+            background-color: var(--primary-color);
         }
-        h2:hover:after { width: 100%; }
-        h3 { font-size: 20px; margin-bottom: 15px; }
-        p { margin-bottom: 20px; font-size: 16px; }
-        a { color: var(--primary-color); text-decoration: none; transition: all 0.3s ease; }
-        a:hover { text-decoration: underline; }
-        hr { border: 0; border-top: 1px solid var(--text-color); margin: 40px 0; }
+
+        /* Hero Section */
         .hero {
-            background: url('juanxi.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('juanxi.jpg');
+            background-size: cover;
+            background-position: center;
             color: var(--white-color);
             padding: 60px 20px;
             border-radius: 10px;
@@ -125,292 +180,415 @@
             position: relative;
             overflow: hidden;
         }
-        .hero:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.3);
-            z-index: 1;
+
+        .hero-title {
+            font-size: 48px;
+            animation: fadeInDown 1s ease-in-out;
         }
-        .hero > * { position: relative; z-index: 2; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; }
-        .hero p { font-size: 18px; max-width: 600px; margin: 0 auto 30px; }
-        .hero .actions a {
-            background: var(--primary-color);
-            color: var(--white-color);
-            padding: 12px 25px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+
+        .hero-subtitle {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-in-out 0.3s forwards;
         }
-        .hero .actions a:hover { background: var(--secondary-color); transform: scale(1.05); }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--secondary-color);
+        }
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 20px;
-        }
-        .social-icons a { font-size: 26px; color: var(--white-color); }
-        .social-icons a:hover { color: var(--primary-color); transform: scale(1.1); }
-        .news-item {
-            background: var(--background-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-        .news-item:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
-        #show-more-news {
-            display: block;
-            margin: 20px auto;
-            padding: 12px 25px;
-            background: var(--primary-color);
-            color: var(--white-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        #show-more-news:hover { background: var(--secondary-color); transform: scale(1.05); }
-        .selected-papers .paper-category {
-            background: var(--background-color);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .paper-category:hover { box-shadow: var(--box-shadow-hover); }
-        .paper-category h3:after {
-            content: '+';
-            float: right;
-            transition: transform 0.3s ease;
-        }
-        .paper-category.open h3:after { content: '-'; transform: rotate(180deg); }
-        .paper-list {
-            display: none;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
             margin-top: 20px;
         }
-        .paper-category.open .paper-list { display: grid; }
-        .paper-item {
-            background: var(--white-color);
-            padding: 15px;
+
+        .social-icons a {
+            font-size: 28px;
+            padding: 10px;
+            color: var(--white-color);
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: var(--primary-color);
+        }
+
+        /* News Section */
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .news-item {
+            padding: 20px;
+            background-color: var(--background-color);
             border-radius: 10px;
             box-shadow: var(--box-shadow);
-            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .news-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #show-more-news {
+            margin: 20px auto;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
             transition: all 0.3s ease;
         }
-        .paper-item:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
-        .paper-item img { width: 100%; max-width: 250px; border-radius: 5px; margin-bottom: 10px; }
+
+        #show-more-news:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        /* Selected Papers */
+        .selected-papers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .paper-category {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .paper-category:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .paper-category h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .paper-category h3:after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .paper-category.open h3:after {
+            content: '-';
+        }
+
+        .paper-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .paper-category.open .paper-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-height: 1000px;
+        }
+
+        .paper-item {
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .paper-item:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .paper-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            loading: lazy;
+        }
+
+        /* Services */
         .services-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .service-card {
-            background: var(--background-color);
+            background-color: var(--background-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
         }
-        .service-card:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
-        .service-card ul { list-style: none; padding: 0; }
-        .service-card li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .service-card li:before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
+
+        .service-card:hover {
+            box-shadow: var(--box-shadow-hover);
         }
-        .section-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: var(--white-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
-        .card img { width: 80px; height: 80px; margin-bottom: 15px; }
+
+        /* Cooperation */
         .cooperation-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 20px;
+            justify-items: center;
         }
+
         .cooperation-grid img {
             width: 100%;
             max-width: 120px;
+            height: auto;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
+            loading: lazy;
         }
-        .cooperation-grid img:hover { transform: scale(1.05); box-shadow: var(--box-shadow-hover); }
+
+        .cooperation-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        /* Footer */
         footer {
-            background: var(--secondary-color);
+            background-color: var(--secondary-color);
             color: var(--white-color);
             text-align: center;
             padding: 20px;
             border-radius: 10px;
-            margin-top: 40px;
+            margin-top: auto;
             box-shadow: var(--box-shadow);
         }
+
+        /* Mode Toggle */
         #mode-toggle {
             position: fixed;
-            bottom: 20px;
+            bottom: 80px;
             right: 20px;
             padding: 10px 20px;
-            background: var(--secondary-color);
+            background-color: var(--secondary-color);
             color: var(--white-color);
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
         }
-        #mode-toggle:hover { background: var(--primary-color); transform: scale(1.05); }
+
+        #mode-toggle:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Back to Top */
         #back-to-top {
             position: fixed;
-            bottom: 70px;
-            right: 20px;
+            bottom: 20px;
+            left: 20px;
             padding: 10px 15px;
-            background: var(--primary-color);
+            background-color: var(--primary-color);
             color: var(--white-color);
             border: none;
-            border-radius: 5px;
+            border-radius: 50%;
             cursor: pointer;
             display: none;
             transition: all 0.3s ease;
         }
-        #back-to-top:hover { background: var(--secondary-color); transform: scale(1.05); }
+
+        #back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: static;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+        }
+
+        /* Modal */
         #wechat-modal {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: var(--white-color);
+            background-color: var(--white-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             z-index: 1000;
-            text-align: center;
-            animation: fadeIn 0.3s ease;
         }
-        #wechat-modal img { max-width: 300px; height: auto; }
+
+        #wechat-modal img {
+            max-width: 300px;
+            height: auto;
+        }
+
         #close-modal {
-            margin-top: 15px;
-            padding: 8px 20px;
-            background: var(--primary-color);
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
             color: var(--white-color);
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        #close-modal:hover { background: var(--secondary-color); }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .sidebar {
-                width: 100%;
-                position: relative;
-                top: 0;
-                padding: 15px;
-            }
-            .content { margin-left: 0; margin-top: 20px; padding: 20px; }
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 16px; }
-            .paper-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <button id="mode-toggle">Day/Night</button>
-    <button id="back-to-top">↑ Top</button>
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     <div class="container">
         <div class="sidebar">
             <h2>Navigation</h2>
-            <a href="#about">About</a>
-            <a href="#news">News</a>
-            <a href="#selected-papers">Selected Papers</a>
-            <a href="#services">Services</a>
-            <a href="#organization">Organization</a>
-            <a href="#cooperation">Cooperation</a>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#news"><i class="fas fa-newspaper"></i> News</a>
+            <a href="#selected-papers"><i class="fas fa-book"></i> Selected Papers</a>
+            <a href="#services"><i class="fas fa-briefcase"></i> Services</a>
+            <a href="#organization"><i class="fas fa-sitemap"></i> Organization</a>
+            <a href="#cooperation"><i class="fas fa-handshake"></i> Cooperation</a>
         </div>
         <div class="content">
             <header>
-                <h1>Juanxi Tian<span>/田隽熙 (田世憬)</span></h1>
+                <h1>Juanxi Tian <span class="subtitle">/田隽熙 (田世憬)</span></h1>
             </header>
             <section id="about">
                 <div class="hero">
-                    <h1>Welcome to My Homepage</h1>
-                    <p>I am a final-year undergraduate at Hong Kong Baptist University, majoring in Artificial Intelligence. My research interests include (M)LLM, Optimization, and Visual Generation.</p>
+                    <h1 class="hero-title">Welcome to My Homepage</h1>
+                    <p class="hero-subtitle">Final-year AI undergrad at HKBU | Exploring (M)LLM, Optimization, and Visual Generation</p>
                     <div class="actions">
+                        <a href="mailto:juanxitian1031@gmail.com" class="cta-button">Reach Out!</a>
                         <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                            <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
-                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
-                            <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-zhihu"></i></a>
-                            <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a>
+                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer" aria-label="arXiv"><i class="ai ai-arxiv"></i></a>
+                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fab fa-google"></i></a>
+                            <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" rel="noopener noreferrer" aria-label="Zhihu"><i class="fab fa-zhihu"></i></a>
+                            <a href="#" id="wechat-icon" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
                         </div>
-                        <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
                     </div>
                 </div>
                 <h2>About</h2>
-                <p>My research focuses on (M)LLM and optimization, aiming to understand deep learning phenomena and develop robust techniques through empirical analysis. I enjoy exploring scenarios for analysis and improvement, learning through trial and error. Stay tuned for future blog updates!</p>
-                <p><strong>Interested in collaboration? Contact me:</strong></p>
+                <p>My research focuses on (M)LLM and optimization, particularly in understanding the complex phenomena of deep learning systems. I aim to develop more robust and general techniques through empirical analysis and optimization. I enjoy exploring various scenarios to conduct interesting analyses and improvements, even if it involves a lot of trial and error. This process has taught me a great deal. I plan to share meaningful insights and findings through a blog in the future. Stay tuned for updates!</p>
+                <p><strong>I am also open to interesting research opportunities. If you are interested in collaborating with me, please feel free to contact me:</strong></p>
                 <ul>
                     <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
                 </ul>
             </section>
             <hr>
             <section id="news">
-                <h2>News</h2>
+                <h2 class="section-title">News</h2>
                 <div class="news-list">
-                    <div class="news-item">
-                        <h3>New Dataset & Method (4D)</h3>
-                        <p>WideRange4D released! Visit <a href="https://huggingface.co/datasets/Gen-Verse/WideRange4D">Hugging Face</a> and <a href="https://arxiv.org/abs/2503.13435">Arxiv</a> for more.</p>
+                    <div class="news-item visible">
+                        <h3>New Dataset & Method (about 4D)</h3>
+                        <p>WideRange4D released. Visit <a href="https://huggingface.co/datasets/Gen-Verse/WideRange4D">HF</a> and <a href="https://arxiv.org/abs/2503.13435">Arxiv</a> for more!</p>
                     </div>
-                    <div class="news-item">
+                    <div class="news-item visible">
                         <h3>CVPR 2025</h3>
                         <p>Co-authored paper "MergeVQ" accepted at CVPR 2025. Congrats to all!</p>
                     </div>
                     <div class="news-item">
                         <h3>Happy New Year!</h3>
-                        <p>January 1, 2025: Happy New Year! Thanks to all collaborators and friends. Let's keep pushing forward!</p>
+                        <p>Jan 1, 2025: Happy New Year! Thanks to all collaborators and friends.</p>
                     </div>
                     <div class="news-item">
-                        <h3>Invited to Serve as Reviewer for ICLR 2025</h3>
-                        <p>Aug 23, 2024: Invited to review for ICLR 2025 in Singapore.</p>
+                        <h3>ICLR 2025 Reviewer</h3>
+                        <p>Aug 23, 2024: Invited to serve as a Reviewer for ICLR 2025 in Singapore.</p>
                     </div>
                 </div>
                 <button id="show-more-news">Show More</button>
             </section>
             <hr>
             <section id="selected-papers">
-                <h2>Selected Papers</h2>
+                <h2 class="section-title">Selected Papers</h2>
                 <div class="selected-papers">
-                    <div class="paper-category">
+                    <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>MLLM</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
                                 <img src="CARES.jpg" alt="CARES" loading="lazy">
-                                <a href="https://arxiv.org/abs/2406.06007">CARES: Trustworthiness in Medical Vision Language Models</a>
+                                <a href="https://arxiv.org/abs/2406.06007">CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="paper-category">
+                    <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>Optimization</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
@@ -419,29 +597,29 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="paper-category">
+                    <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>Deep Learning</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
                                 <img src="Openmixup.jpg" alt="OpenMixup" loading="lazy">
-                                <a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox and Benchmark</a>
+                                <a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox and Benchmark for Visual Representation Learning</a>
                             </li>
                             <li class="paper-item">
                                 <img src="BOCB.jpg" alt="BOCB" loading="lazy">
-                                <a href="https://arxiv.org/abs/2410.06373v1">Unveiling Backbone-Optimizer Coupling Bias</a>
+                                <a href="https://arxiv.org/abs/2410.06373v1">Unveiling the Backbone-Optimizer Coupling Bias in Visual Representation Learning</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="paper-category">
+                    <div class="paper-category" onclick="toggleCategory(this)">
                         <h3>Visual Generation</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
                                 <img src="Trans4D.jpg" alt="Trans4D" loading="lazy">
-                                <a href="https://arxiv.org/abs/2410.07155">Trans4D: Geometry-Aware Transition for Text-to-4D</a>
+                                <a href="https://arxiv.org/abs/2410.07155">Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</a>
                             </li>
                             <li class="paper-item">
                                 <img src="WideRange4D.jpg" alt="WideRange4D" loading="lazy">
-                                <a href="https://arxiv.org/abs/2503.13435">WideRange4D: High-Quality 4D Reconstruction</a>
+                                <a href="https://arxiv.org/abs/2503.13435">WideRange4D: Enabling High-Quality 4D Reconstruction with Wide-Range Movements and Scenes</a>
                             </li>
                         </ul>
                     </div>
@@ -449,52 +627,52 @@
             </section>
             <hr>
             <section id="services">
-                <h2>Services</h2>
+                <h2 class="section-title">Services</h2>
                 <div class="services-content">
                     <div class="service-card">
                         <h3>Reviewer & Program Committee</h3>
                         <ul>
-                            <li>IJCAI (Main and Survey Track)</li>
-                            <li>CVPR</li>
-                            <li>ICCV</li>
-                            <li>ACL Rolling Review (ARR)</li>
-                            <li>ICLR</li>
-                            <li>AAAI</li>
-                            <li>IEEE TNNLS</li>
-                            <li>IEEE TKDE</li>
-                            <li>ACM TIST</li>
-                            <li>Neural Networks</li>
+                            <li>Conference: International Joint Conference on Artificial Intelligence (IJCAI), Main and Survey Track.</li>
+                            <li>Conference: IEEE Conference on Computer Vision and Pattern Recognition (CVPR).</li>
+                            <li>Conference: International Conference on Computer Vision (ICCV).</li>
+                            <li>Conference: ACL Rolling Review (ARR).</li>
+                            <li>Conference: International Conference on Learning Representations (ICLR).</li>
+                            <li>Conference: Association for the Advancement of Artificial Intelligence (AAAI).</li>
+                            <li>Academic Journal: IEEE Transactions on Neural Networks and Learning Systems (IEEE TNNLS)</li>
+                            <li>Academic Journal: IEEE’s Transactions on Knowledge and Data Engineering (IEEE TKDE)</li>
+                            <li>Academic Journal: ACM TIST</li>
+                            <li>Academic Journal: Neural Networks</li>
                         </ul>
                     </div>
                     <div class="service-card">
                         <h3>Membership</h3>
                         <ul>
-                            <li>2024 - IEEE Student Member</li>
-                            <li>2024 - CCF Student Member</li>
-                            <li>2023 - CAAI Student Member</li>
+                            <li>2024 - Student Member of IEEE</li>
+                            <li>2024 - Student Member of China Computer Federation (CCF)</li>
+                            <li>2023 - Student Member of Chinese Association for Artificial Intelligence (CAAI)</li>
                         </ul>
                     </div>
                 </div>
             </section>
             <hr>
             <section id="organization">
-                <h2>Organization</h2>
+                <h2 class="section-title">Organization</h2>
                 <div class="section-content">
                     <div class="card">
-                        <img src="bocb_logo.png" alt="BOCB Logo" loading="lazy">
-                        <h3>BOCB</h3>
-                        <p>Advancing analysis and optimization of deep learning techniques for robust improvements.</p>
+                        <img src="bocb_logo.png" alt="BOCB Logo" style="width: 80px; height: 80px;" loading="lazy">
+                        <h3>Black-Box Optimization & Coupling Bias (BOCB)</h3>
+                        <p>Our team is committed to advancing the analysis and optimization of complex deep learning techniques.</p>
                     </div>
                     <div class="card">
-                        <img src="GenX.jpg" alt="GenX Logo" loading="lazy">
+                        <img src="GenX.jpg" alt="GenX Logo" style="width: 80px; height: 80px;" loading="lazy">
                         <h3>GenX / Gen-Verse</h3>
-                        <p>Revolutionizing LLM and Diffusion Models with Princeton and Peking University.</p>
+                        <p>Revolutionize LLM and Diffusion Model Algorithms/Frameworks with Princeton University & Peking University.</p>
                     </div>
                 </div>
             </section>
             <hr>
             <section id="cooperation">
-                <h2>Cooperation</h2>
+                <h2 class="section-title">Cooperation</h2>
                 <div class="cooperation-grid">
                     <img src="CAS.jpg" alt="Chinese Academy of Sciences" loading="lazy">
                     <img src="westlakeu.jpg" alt="Westlake University" loading="lazy">
@@ -510,33 +688,51 @@
     <footer>
         <p>© 2025 Juanxi Tian.</p>
     </footer>
+
+    <!-- WeChat Modal -->
     <div id="wechat-modal">
         <img src="tjx.jpg" alt="WeChat QR Code" loading="lazy">
         <button id="close-modal">Close</button>
     </div>
 
     <script>
+        // Mode Toggle
         const modeToggle = document.getElementById('mode-toggle');
+        const body = document.querySelector('body');
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        // Back to Top
         const backToTop = document.getElementById('back-to-top');
-        const body = document.body;
-        modeToggle.addEventListener('click', () => body.classList.toggle('dark-mode'));
         window.addEventListener('scroll', () => {
             backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
-        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-        document.querySelectorAll('.sidebar a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        document.querySelectorAll('.paper-category').forEach(category => {
-            category.addEventListener('click', (e) => {
-                if (e.target.tagName !== 'A' && e.target.tagName !== 'IMG') {
-                    category.classList.toggle('open');
-                }
-            });
+
+        // News Show More
+        const newsItems = document.querySelectorAll('.news-item');
+        const showMoreBtn = document.getElementById('show-more-news');
+        let visibleCount = 2;
+        newsItems.forEach((item, index) => {
+            if (index < visibleCount) item.classList.add('visible');
         });
+        showMoreBtn.addEventListener('click', () => {
+            visibleCount += 2;
+            newsItems.forEach((item, index) => {
+                if (index < visibleCount) item.classList.add('visible');
+            });
+            if (visibleCount >= newsItems.length) showMoreBtn.style.display = 'none';
+        });
+
+        // Paper Category Toggle
+        function toggleCategory(category) {
+            category.classList.toggle('open');
+        }
+
+        // WeChat Modal
         const wechatIcon = document.getElementById('wechat-icon');
         const wechatModal = document.getElementById('wechat-modal');
         const closeModal = document.getElementById('close-modal');
@@ -544,23 +740,11 @@
             e.preventDefault();
             wechatModal.style.display = 'block';
         });
-        closeModal.addEventListener('click', () => wechatModal.style.display = 'none');
+        closeModal.addEventListener('click', () => {
+            wechatModal.style.display = 'none';
+        });
         window.addEventListener('click', (e) => {
             if (e.target === wechatModal) wechatModal.style.display = 'none';
-        });
-        const showMoreBtn = document.getElementById('show-more-news');
-        const newsList = document.querySelector('.news-list');
-        const allNews = newsList.querySelectorAll('.news-item');
-        let visibleNews = 2;
-        allNews.forEach((item, index) => {
-            if (index >= visibleNews) item.style.display = 'none';
-        });
-        showMoreBtn.addEventListener('click', () => {
-            visibleNews += 2;
-            allNews.forEach((item, index) => {
-                if (index < visibleNews) item.style.display = 'block';
-            });
-            if (visibleNews >= allNews.length) showMoreBtn.style.display = 'none';
         });
     </script>
 </body>
