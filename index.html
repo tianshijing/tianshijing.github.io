@@ -21,31 +21,31 @@
         :root {
             --primary-color: #1a73e8;
             --secondary-color: #3c4043;
-            --background-color: #fdf6e3; /* 书本淡黄色 */
-            --text-color: #2d2d2d;
+            --background-color: #f8f9fa; /* 保持原始背景色 */
+            --text-color: #202124;
             --white-color: #fff;
-            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
-            --gradient-light: linear-gradient(135deg, #fdf6e3, #e8e1d1);
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --gradient-light: linear-gradient(135deg, #f8f9fa, #e8ecef); /* 保持原始渐变 */
             --gradient-dark: linear-gradient(135deg, #303134, #202124);
         }
 
         .dark-mode {
             --primary-color: #8ab4f8;
             --secondary-color: #e8eaed;
-            --background-color: #2a2a2a;
+            --background-color: #202124;
             --text-color: #e8eaed;
             --white-color: #303134;
-            --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
-            --box-shadow-hover: 0 8px 20px rgba(255, 255, 255, 0.12);
-            --gradient-light: linear-gradient(135deg, #2a2a2a, #3c3c3c);
+            --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            --box-shadow-hover: 0 8px 20px rgba(255, 255, 255, 0.15);
+            --gradient-light: linear-gradient(135deg, #303134, #202124);
         }
 
         body {
-            background: var(--background-color);
+            background: #FDF6E3; /* 只改这里为书本淡黄色 */
             color: var(--text-color);
             font-family: 'Roboto', 'Noto Serif SC', sans-serif;
-            font-size: clamp(16px, 1.1vw, 18px); /* 自适应字体大小 */
+            font-size: clamp(16px, 1.1vw, 18px); /* 自适应字体 */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -56,19 +56,19 @@
         .container {
             display: flex;
             flex: 1;
-            max-width: 1400px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: clamp(20px, 3vw, 40px);
+            padding: clamp(20px, 3vw, 30px);
             gap: clamp(20px, 2vw, 30px);
         }
 
         /* Sidebar */
         .sidebar {
-            width: clamp(250px, 22vw, 320px);
+            width: clamp(250px, 22vw, 300px);
             background: var(--secondary-color);
             color: var(--white-color);
             padding: clamp(20px, 2.5vw, 30px);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow);
             position: sticky;
             top: clamp(20px, 2vw, 30px);
@@ -83,7 +83,7 @@
         .sidebar h2 {
             font-family: 'Lora', serif;
             font-size: clamp(24px, 2.5vw, 28px);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-align: center;
             background: linear-gradient(90deg, var(--primary-color), var(--white-color));
             -webkit-background-clip: text;
@@ -110,7 +110,7 @@
         }
 
         .sidebar a:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             transform: translateX(8px);
         }
 
@@ -118,7 +118,7 @@
         .content {
             background: var(--gradient-light);
             padding: clamp(30px, 4vw, 50px);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow);
             flex: 1;
             transition: all 0.3s ease-in-out;
@@ -137,7 +137,7 @@
             color: var(--white-color);
             text-align: center;
             padding: clamp(20px, 2.5vw, 25px);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow);
             position: sticky;
             top: 0;
@@ -160,7 +160,7 @@
             font-family: 'Noto Serif SC', serif;
             font-size: clamp(20px, 2vw, 24px);
             font-weight: 400;
-            opacity: 0.9;
+            opacity: 0.85;
         }
 
         h2 {
@@ -195,7 +195,7 @@
             background-position: center;
             color: var(--white-color);
             padding: clamp(60px, 8vw, 80px) clamp(20px, 3vw, 30px);
-            border-radius: 12px;
+            border-radius: 15px;
             text-align: center;
             margin-bottom: 50px;
             box-shadow: var(--box-shadow);
@@ -210,7 +210,7 @@
         .hero-subtitle {
             font-size: clamp(20px, 2.2vw, 24px);
             font-weight: 300;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto 40px;
             opacity: 0.9;
             animation: fadeInUp 1s ease-in-out 0.3s forwards;
@@ -261,7 +261,7 @@
         .news-item {
             padding: clamp(20px, 2.5vw, 25px);
             background: var(--white-color);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow);
             margin-bottom: 25px;
             opacity: 0;
@@ -304,7 +304,7 @@
         .paper-category {
             background: var(--white-color);
             padding: clamp(20px, 2.5vw, 25px);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
@@ -374,14 +374,14 @@
         /* Services */
         .services-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .service-card {
             background: var(--white-color);
             padding: clamp(20px, 2.5vw, 25px);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease-in-out;
         }
@@ -394,7 +394,7 @@
         /* Cooperation */
         .cooperation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
             gap: 25px;
             justify-items: center;
         }
@@ -420,7 +420,7 @@
             color: var(--white-color);
             text-align: center;
             padding: clamp(20px, 2.5vw, 25px);
-            border-radius: 12px;
+            border-radius: 15px;
             margin-top: 50px;
             box-shadow: var(--box-shadow);
             font-size: clamp(16px, 1.2vw, 18px);
@@ -488,7 +488,7 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 padding: 20px;
@@ -503,9 +503,7 @@
                 margin-top: 20px;
                 padding: 30px;
             }
-        }
 
-        @media (max-width: 768px) {
             .hero-title {
                 font-size: clamp(36px, 6vw, 42px);
             }
@@ -528,7 +526,7 @@
             transform: translate(-50%, -50%);
             background: var(--white-color);
             padding: clamp(20px, 2.5vw, 25px);
-            border-radius: 12px;
+            border-radius: 15px;
             box-shadow: var(--box-shadow-hover);
             z-index: 1000;
         }
@@ -560,7 +558,6 @@
     </style>
 </head>
 <body>
-    <!-- 原有 HTML 内容保持不变，仅替换 style 部分 -->
     <button id="mode-toggle">Day/Night</button>
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     <div class="container">
