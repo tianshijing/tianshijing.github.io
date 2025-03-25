@@ -21,12 +21,12 @@
         :root {
             --primary-color: #1a73e8;
             --secondary-color: #3c4043;
-            --background-color: #f8f9fa; /* 保持原始背景色 */
+            --background-color: #f8f9fa;
             --text-color: #202124;
             --white-color: #fff;
             --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
-            --gradient-light: linear-gradient(135deg, #f8f9fa, #e8ecef); /* 保持原始渐变 */
+            --gradient-light: linear-gradient(135deg, #f8f9fa, #e8ecef);
             --gradient-dark: linear-gradient(135deg, #303134, #202124);
         }
 
@@ -42,10 +42,14 @@
         }
 
         body {
-            background: #FDF6E3; /* 只改这里为书本淡黄色 */
+            /* 增强质感的背景：微妙渐变 + 轻微噪点 */
+            background: linear-gradient(135deg, #FDF6E3 0%, #F7EFD2 100%);
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACMSURBVHja7JTBDYAgDERR13/AiRNnDgdhmAhzQSwTdjMZgU3aH2f4nDl8nuFFhgsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQsXLly4cOHChQv3B7rDAdlFQA3sAAAAAElFTkSuQmCC');
+            background-blend-mode: overlay;
+            background-size: 100px 100px;
             color: var(--text-color);
             font-family: 'Roboto', 'Noto Serif SC', sans-serif;
-            font-size: clamp(16px, 1.1vw, 18px); /* 自适应字体 */
+            font-size: clamp(16px, 1.1vw, 18px);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
