@@ -11,286 +11,207 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
             --primary-color: #1a73e8;
-            --secondary-color: #2c3e50;
-            --background-color: #ecf0f1;
-            --text-color: #2d3436;
-            --white-color: #ffffff;
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
-            --page-color: #f9f9f9;
+            --secondary-color: #3c4043;
+            --background-color: #f8f9fa;
+            --text-color: #202124;
+            --white-color: #fff;
+            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --box-shadow-hover: 0 6px 16px rgba(0,0,0,0.2);
+            --page-color: #f5f1e8;
         }
-
         .dark-mode {
-            --primary-color: #3498db;
-            --secondary-color: #34495e;
-            --background-color: #2d3436;
-            --text-color: #dfe6e9;
-            --white-color: #2c3e50;
-            --page-color: #1e272e;
+            --primary-color: #8ab4f8;
+            --secondary-color: #e8eaed;
+            --background-color: #202124;
+            --text-color: #e8eaed;
+            --white-color: #303134;
+            --box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+            --box-shadow-hover: 0 6px 16px rgba(255,255,255,0.2);
+            --page-color: #303134;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             background-color: var(--page-color);
             color: var(--text-color);
             font-family: 'Roboto', sans-serif;
-            line-height: 1.8;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            line-height: 1.7;
+            transition: all 0.3s ease;
         }
-
         .container {
-            max-width: 1300px;
+            display: flex;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            display: flex;
-            flex: 1;
         }
-
-        /* Sidebar */
         .sidebar {
-            width: 280px;
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            width: 250px;
+            background: var(--secondary-color);
             color: var(--white-color);
-            padding: 30px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
             position: sticky;
             top: 20px;
             height: fit-content;
-            box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
         }
-
         .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
             color: var(--white-color);
-            margin-bottom: 20px;
-            font-size: 24px;
         }
-
         .sidebar a {
             color: var(--white-color);
             text-decoration: none;
-            padding: 12px 15px;
+            padding: 12px;
             display: block;
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .sidebar a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateX(5px);
-        }
-
-        /* Content */
-        .content {
-            flex: 1;
-            margin-left: 30px;
-            background: var(--white-color);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--box-shadow);
+            border-radius: 5px;
             transition: all 0.3s ease;
         }
-
+        .sidebar a:hover {
+            background: var(--primary-color);
+            transform: translateX(5px);
+        }
+        .content {
+            flex: 1;
+            background: var(--white-color);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
         header {
             background: var(--secondary-color);
             color: var(--white-color);
-            padding: 20px;
             text-align: center;
+            padding: 20px;
             border-radius: 10px;
-            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
         }
-
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 40px;
-            color: var(--white-color);
-        }
-
-        h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 28px;
+        h1, h2, h3 {
+            font-family: 'Merriweather W', serif;
             color: var(--primary-color);
-            margin-bottom: 20px;
-            position: relative;
         }
-
+        h1 { font-size: 40px; margin-bottom: 10px; color: var(--white-color); }
+        h2 { font-size: 28px; margin: 30px 0 20px; position: relative; }
         h2:after {
             content: '';
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
             position: absolute;
             bottom: -5px;
             left: 0;
-            border-radius: 2px;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
         }
-
-        h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        /* Hero Section */
+        h2:hover:after { width: 100%; }
+        h3 { font-size: 20px; margin-bottom: 15px; }
+        p { margin-bottom: 20px; font-size: 16px; }
+        a { color: var(--primary-color); text-decoration: none; transition: all 0.3s ease; }
+        a:hover { text-decoration: underline; }
+        hr { border: 0; border-top: 1px solid var(--text-color); margin: 40px 0; }
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('juanxi.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 15px;
+            background: url('juanxi.jpg') center/cover no-repeat;
             color: var(--white-color);
+            padding: 60px 20px;
+            border-radius: 10px;
+            text-align: center;
             margin-bottom: 40px;
             box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
         }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+        .hero:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
         }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
+        .hero > * { position: relative; z-index: 2; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 18px; max-width: 600px; margin: 0 auto 30px; }
         .hero .actions a {
             background: var(--primary-color);
-            padding: 12px 25px;
-            border-radius: 25px;
             color: var(--white-color);
+            padding: 12px 25px;
+            border-radius: 5px;
             transition: all 0.3s ease;
         }
-
-        .hero .actions a:hover {
-            background: var(--secondary-color);
-            transform: scale(1.05);
+        .hero .actions a:hover { background: var(--secondary-color); transform: scale(1.05); }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
         }
-
-        .social-icons a {
-            font-size: 28px;
-            color: var(--white-color);
-            margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            transform: scale(1.2);
-            color: var(--primary-color);
-        }
-
-        /* News Section */
+        .social-icons a { font-size: 26px; color: var(--white-color); }
+        .social-icons a:hover { color: var(--primary-color); transform: scale(1.1); }
         .news-item {
             background: var(--background-color);
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px;
             box-shadow: var(--box-shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
-
-        .news-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
+        .news-item:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
         #show-more-news {
             display: block;
             margin: 20px auto;
-            padding: 12px 30px;
+            padding: 12px 25px;
             background: var(--primary-color);
             color: var(--white-color);
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
             transition: all 0.3s ease;
         }
-
-        #show-more-news:hover {
-            background: var(--secondary-color);
-            transform: scale(1.05);
-        }
-
-        /* Papers Section */
-        .paper-category {
+        #show-more-news:hover { background: var(--secondary-color); transform: scale(1.05); }
+        .selected-papers .paper-category {
             background: var(--background-color);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            box-shadow: var(--box-shadow);
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
-        .paper-category:hover {
-            box-shadow: var(--box-shadow-hover);
-        }
-
+        .paper-category:hover { box-shadow: var(--box-shadow-hover); }
         .paper-category h3:after {
             content: '+';
             float: right;
             transition: transform 0.3s ease;
         }
-
-        .paper-category.open h3:after {
-            content: '-';
-            transform: rotate(180deg);
-        }
-
+        .paper-category.open h3:after { content: '-'; transform: rotate(180deg); }
         .paper-list {
             display: none;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
-
-        .paper-category.open .paper-list {
-            display: grid;
-        }
-
+        .paper-category.open .paper-list { display: grid; }
         .paper-item {
             background: var(--white-color);
             padding: 15px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
-
-        .paper-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .paper-item img {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        /* Services Section */
+        .paper-item:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
+        .paper-item img { width: 100%; max-width: 250px; border-radius: 5px; margin-bottom: 10px; }
         .services-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-
         .service-card {
             background: var(--background-color);
             padding: 20px;
@@ -298,37 +219,21 @@
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
         }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .service-card ul {
-            list-style: none;
-        }
-
-        .service-card li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
+        .service-card ul { list-style: none; padding: 0; }
+        .service-card li { margin-bottom: 10px; padding-left: 20px; position: relative; }
         .service-card li:before {
             content: '•';
             position: absolute;
             left: 0;
             color: var(--primary-color);
         }
-
-        /* Organization & Cooperation */
-        .section-content, .cooperation-grid {
+        .section-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-
-        .card, .cooperation-grid img {
+        .card {
             background: var(--white-color);
             padding: 20px;
             border-radius: 10px;
@@ -336,18 +241,21 @@
             transition: all 0.3s ease;
             text-align: center;
         }
-
-        .card:hover, .cooperation-grid img:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--box-shadow-hover);
+        .card:hover { transform: translateY(-5px); box-shadow: var(--box-shadow-hover); }
+        .card img { width: 80px; height: 80px; margin-bottom: 15px; }
+        .cooperation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
         }
-
         .cooperation-grid img {
+            width: 100%;
             max-width: 120px;
-            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
         }
-
-        /* Footer */
+        .cooperation-grid img:hover { transform: scale(1.05); box-shadow: var(--box-shadow-hover); }
         footer {
             background: var(--secondary-color);
             color: var(--white-color);
@@ -355,39 +263,35 @@
             padding: 20px;
             border-radius: 10px;
             margin-top: 40px;
+            box-shadow: var(--box-shadow);
         }
-
-        /* Buttons */
-        #mode-toggle, #back-to-top {
+        #mode-toggle {
             position: fixed;
+            bottom: 20px;
+            right: 20px;
             padding: 10px 20px;
-            background: var(--primary-color);
+            background: var(--secondary-color);
             color: var(--white-color);
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
-        #mode-toggle {
-            bottom: 20px;
-            right: 20px;
-        }
-
+        #mode-toggle:hover { background: var(--primary-color); transform: scale(1.05); }
         #back-to-top {
+            position: fixed;
             bottom: 70px;
             right: 20px;
-            border-radius: 50%;
-            padding: 10px;
+            padding: 10px 15px;
+            background: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             display: none;
+            transition: all 0.3s ease;
         }
-
-        #mode-toggle:hover, #back-to-top:hover {
-            background: var(--secondary-color);
-            transform: scale(1.1);
-        }
-
-        /* Modal */
+        #back-to-top:hover { background: var(--secondary-color); transform: scale(1.05); }
         #wechat-modal {
             display: none;
             position: fixed;
@@ -399,53 +303,40 @@
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             z-index: 1000;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
         }
-
-        #wechat-modal img {
-            max-width: 300px;
-            height: auto;
-        }
-
+        #wechat-modal img { max-width: 300px; height: auto; }
         #close-modal {
-            display: block;
-            margin: 10px auto;
-            padding: 8px 15px;
+            margin-top: 15px;
+            padding: 8px 20px;
             background: var(--primary-color);
             color: var(--white-color);
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
-
-        /* Responsive Design */
+        #close-modal:hover { background: var(--secondary-color); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
+            .container { flex-direction: column; }
             .sidebar {
                 width: 100%;
-                position: static;
-                margin-bottom: 20px;
+                position: relative;
+                top: 0;
+                padding: 15px;
             }
-
-            .content {
-                margin-left: 0;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .services-content, .section-content, .cooperation-grid {
-                grid-template-columns: 1fr;
-            }
+            .content { margin-left: 0; margin-top: 20px; padding: 20px; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 16px; }
+            .paper-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <button id="mode-toggle">Day/Night</button>
-    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <button id="back-to-top">↑ Top</button>
     <div class="container">
         <div class="sidebar">
             <h2>Navigation</h2>
@@ -458,7 +349,7 @@
         </div>
         <div class="content">
             <header>
-                <h1>Juanxi Tian <span>/田隽熙 (田世憬)</span></h1>
+                <h1>Juanxi Tian<span>/田隽熙 (田世憬)</span></h1>
             </header>
             <section id="about">
                 <div class="hero">
@@ -466,19 +357,19 @@
                     <p>I am a final-year undergraduate at Hong Kong Baptist University, majoring in Artificial Intelligence. My research interests include (M)LLM, Optimization, and Visual Generation.</p>
                     <div class="actions">
                         <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://x.com/JuanxiTian" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://juanxitian.alphaxiv.io" target="_blank"><i class="ai ai-arxiv"></i></a>
-                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank"><i class="fab fa-google"></i></a>
-                            <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank"><i class="fab fa-zhihu"></i></a>
+                            <a href="https://www.linkedin.com/in/juanxi-tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                            <a href="https://juanxitian.alphaxiv.io" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i></a>
+                            <a href="https://scholar.google.cz/citations?user=6QB6Q8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i></a>
+                            <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" rel="noopener noreferrer"><i class="fab fa-zhihu"></i></a>
                             <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a>
                         </div>
                         <a href="mailto:juanxitian1031@gmail.com">Reach Out!</a>
                     </div>
                 </div>
                 <h2>About</h2>
-                <p>My research focuses on (M)LLM and optimization, particularly in understanding the complex phenomena of deep learning systems. I aim to develop robust and general techniques through empirical analysis and optimization. I enjoy exploring various scenarios to conduct interesting analyses and improvements.</p>
-                <p><strong>I am open to research opportunities. Contact me at:</strong></p>
+                <p>My research focuses on (M)LLM and optimization, aiming to understand deep learning phenomena and develop robust techniques through empirical analysis. I enjoy exploring scenarios for analysis and improvement, learning through trial and error. Stay tuned for future blog updates!</p>
+                <p><strong>Interested in collaboration? Contact me:</strong></p>
                 <ul>
                     <li>Email: <a href="mailto:juanxitian1031@gmail.com">juanxitian1031@gmail.com</a></li>
                 </ul>
@@ -488,16 +379,16 @@
                 <h2>News</h2>
                 <div class="news-list">
                     <div class="news-item">
-                        <h3>New Dataset & Method (about 4D)</h3>
-                        <p>WideRange4D released. Visit <a href="https://huggingface.co/datasets/Gen-Verse/WideRange4D">HF</a> and <a href="https://arxiv.org/abs/2503.13435">Arxiv</a>.</p>
+                        <h3>New Dataset & Method (4D)</h3>
+                        <p>WideRange4D released! Visit <a href="https://huggingface.co/datasets/Gen-Verse/WideRange4D">Hugging Face</a> and <a href="https://arxiv.org/abs/2503.13435">Arxiv</a> for more.</p>
                     </div>
                     <div class="news-item">
                         <h3>CVPR 2025</h3>
-                        <p>One co-authored paper on visual generation, MergeVQ, accepted at CVPR 2025.</p>
+                        <p>Co-authored paper "MergeVQ" accepted at CVPR 2025. Congrats to all!</p>
                     </div>
                     <div class="news-item">
                         <h3>Happy New Year!</h3>
-                        <p>January 1, 2025: Happy New Year! Thanks to all my collaborators and friends.</p>
+                        <p>January 1, 2025: Happy New Year! Thanks to all collaborators and friends. Let's keep pushing forward!</p>
                     </div>
                     <div class="news-item">
                         <h3>Invited to Serve as Reviewer for ICLR 2025</h3>
@@ -510,7 +401,7 @@
             <section id="selected-papers">
                 <h2>Selected Papers</h2>
                 <div class="selected-papers">
-                    <div class="paper-category" onclick="toggleCategory(this)">
+                    <div class="paper-category">
                         <h3>MLLM</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
@@ -519,7 +410,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="paper-category" onclick="toggleCategory(this)">
+                    <div class="paper-category">
                         <h3>Optimization</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
@@ -528,25 +419,25 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="paper-category" onclick="toggleCategory(this)">
+                    <div class="paper-category">
                         <h3>Deep Learning</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
                                 <img src="Openmixup.jpg" alt="OpenMixup" loading="lazy">
-                                <a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox for Visual Representation Learning</a>
+                                <a href="https://arxiv.org/html/2209.04851v3">OpenMixup: Open Mixup Toolbox and Benchmark</a>
                             </li>
                             <li class="paper-item">
                                 <img src="BOCB.jpg" alt="BOCB" loading="lazy">
-                                <a href="https://arxiv.org/abs/2410.06373v1">Unveiling the Backbone-Optimizer Coupling Bias</a>
+                                <a href="https://arxiv.org/abs/2410.06373v1">Unveiling Backbone-Optimizer Coupling Bias</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="paper-category" onclick="toggleCategory(this)">
+                    <div class="paper-category">
                         <h3>Visual Generation</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
                                 <img src="Trans4D.jpg" alt="Trans4D" loading="lazy">
-                                <a href="https://arxiv.org/abs/2410.07155">Trans4D: Realistic Geometry-Aware Transition for Text-to-4D</a>
+                                <a href="https://arxiv.org/abs/2410.07155">Trans4D: Geometry-Aware Transition for Text-to-4D</a>
                             </li>
                             <li class="paper-item">
                                 <img src="WideRange4D.jpg" alt="WideRange4D" loading="lazy">
@@ -578,9 +469,9 @@
                     <div class="service-card">
                         <h3>Membership</h3>
                         <ul>
-                            <li>2024 - Student Member of IEEE</li>
-                            <li>2024 - Student Member of CCF</li>
-                            <li>2023 - Student Member of CAAI</li>
+                            <li>2024 - IEEE Student Member</li>
+                            <li>2024 - CCF Student Member</li>
+                            <li>2023 - CAAI Student Member</li>
                         </ul>
                     </div>
                 </div>
@@ -590,14 +481,14 @@
                 <h2>Organization</h2>
                 <div class="section-content">
                     <div class="card">
-                        <img src="bocb_logo.png" alt="BOCB Logo" style="width: 80px; height: 80px;" loading="lazy">
-                        <h3>Black-Box Optimization & Coupling Bias (BOCB)</h3>
-                        <p>Advancing analysis and optimization of deep learning techniques.</p>
+                        <img src="bocb_logo.png" alt="BOCB Logo" loading="lazy">
+                        <h3>BOCB</h3>
+                        <p>Advancing analysis and optimization of deep learning techniques for robust improvements.</p>
                     </div>
                     <div class="card">
-                        <img src="GenX.jpg" alt="GenX Logo" style="width: 80px; height: 80px;" loading="lazy">
+                        <img src="GenX.jpg" alt="GenX Logo" loading="lazy">
                         <h3>GenX / Gen-Verse</h3>
-                        <p>Revolutionizing LLM and Diffusion Models with Princeton & Peking University.</p>
+                        <p>Revolutionizing LLM and Diffusion Models with Princeton and Peking University.</p>
                     </div>
                 </div>
             </section>
@@ -613,36 +504,39 @@
                     <img src="uiuc.jpg" alt="UIUC" loading="lazy">
                 </div>
             </section>
+            <hr>
         </div>
     </div>
     <footer>
         <p>© 2025 Juanxi Tian.</p>
     </footer>
-
-    <!-- WeChat Modal -->
     <div id="wechat-modal">
         <img src="tjx.jpg" alt="WeChat QR Code" loading="lazy">
         <button id="close-modal">Close</button>
     </div>
 
     <script>
-        // Dark Mode Toggle
         const modeToggle = document.getElementById('mode-toggle');
-        modeToggle.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
-
-        // Toggle Paper Categories
-        function toggleCategory(category) {
-            category.classList.toggle('open');
-        }
-
-        // Back to Top
         const backToTop = document.getElementById('back-to-top');
+        const body = document.body;
+        modeToggle.addEventListener('click', () => body.classList.toggle('dark-mode'));
         window.addEventListener('scroll', () => {
             backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        // WeChat Modal
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        document.querySelectorAll('.paper-category').forEach(category => {
+            category.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'A' && e.target.tagName !== 'IMG') {
+                    category.classList.toggle('open');
+                }
+            });
+        });
         const wechatIcon = document.getElementById('wechat-icon');
         const wechatModal = document.getElementById('wechat-modal');
         const closeModal = document.getElementById('close-modal');
@@ -654,10 +548,20 @@
         window.addEventListener('click', (e) => {
             if (e.target === wechatModal) wechatModal.style.display = 'none';
         });
-
-        // Show More News (Placeholder for dynamic content)
         const showMoreBtn = document.getElementById('show-more-news');
-        showMoreBtn.addEventListener('click', () => alert('More news coming soon!'));
+        const newsList = document.querySelector('.news-list');
+        const allNews = newsList.querySelectorAll('.news-item');
+        let visibleNews = 2;
+        allNews.forEach((item, index) => {
+            if (index >= visibleNews) item.style.display = 'none';
+        });
+        showMoreBtn.addEventListener('click', () => {
+            visibleNews += 2;
+            allNews.forEach((item, index) => {
+                if (index < visibleNews) item.style.display = 'block';
+            });
+            if (visibleNews >= allNews.length) showMoreBtn.style.display = 'none';
+        });
     </script>
 </body>
 </html>
