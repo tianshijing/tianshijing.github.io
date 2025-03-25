@@ -6,7 +6,7 @@
     <title>Juanxi Tian's Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="hkbu.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -21,33 +21,31 @@
         :root {
             --primary-color: #1a73e8;
             --secondary-color: #3c4043;
-            --background-color: #f8f9fa;
-            --text-color: #202124;
+            --background-color: #fdf6e3; /* 书本淡黄色 */
+            --text-color: #2d2d2d;
             --white-color: #fff;
-            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
-            --page-color: #f5f1e8;
-            --gradient-light: linear-gradient(135deg, #f8f9fa, #e8ecef);
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
+            --gradient-light: linear-gradient(135deg, #fdf6e3, #e8e1d1);
             --gradient-dark: linear-gradient(135deg, #303134, #202124);
         }
 
         .dark-mode {
             --primary-color: #8ab4f8;
             --secondary-color: #e8eaed;
-            --background-color: #202124;
+            --background-color: #2a2a2a;
             --text-color: #e8eaed;
             --white-color: #303134;
-            --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-            --box-shadow-hover: 0 8px 20px rgba(255, 255, 255, 0.15);
-            --page-color: #303134;
+            --box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+            --box-shadow-hover: 0 8px 20px rgba(255, 255, 255, 0.12);
+            --gradient-light: linear-gradient(135deg, #2a2a2a, #3c3c3c);
         }
 
         body {
-            background: var(--page-color);
+            background: var(--background-color);
             color: var(--text-color);
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            font-size: 18px; /* Increased base font size */
+            font-family: 'Roboto', 'Noto Serif SC', sans-serif;
+            font-size: clamp(16px, 1.1vw, 18px); /* 自适应字体大小 */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -58,22 +56,22 @@
         .container {
             display: flex;
             flex: 1;
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 30px;
-            gap: 30px;
+            padding: clamp(20px, 3vw, 40px);
+            gap: clamp(20px, 2vw, 30px);
         }
 
         /* Sidebar */
         .sidebar {
-            width: 300px;
+            width: clamp(250px, 22vw, 320px);
             background: var(--secondary-color);
             color: var(--white-color);
-            padding: 30px;
-            border-radius: 15px;
+            padding: clamp(20px, 2.5vw, 30px);
+            border-radius: 12px;
             box-shadow: var(--box-shadow);
             position: sticky;
-            top: 30px;
+            top: clamp(20px, 2vw, 30px);
             align-self: flex-start;
             transition: all 0.3s ease-in-out;
         }
@@ -83,9 +81,9 @@
         }
 
         .sidebar h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 28px;
-            margin-bottom: 25px;
+            font-family: 'Lora', serif;
+            font-size: clamp(24px, 2.5vw, 28px);
+            margin-bottom: 20px;
             text-align: center;
             background: linear-gradient(90deg, var(--primary-color), var(--white-color));
             -webkit-background-clip: text;
@@ -101,7 +99,7 @@
             gap: 12px;
             padding: 12px 20px;
             border-radius: 10px;
-            font-size: 18px; /* Increased font size */
+            font-size: clamp(16px, 1.2vw, 18px);
             font-weight: 400;
             transition: all 0.3s ease;
         }
@@ -112,15 +110,15 @@
         }
 
         .sidebar a:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             transform: translateX(8px);
         }
 
         /* Content */
         .content {
             background: var(--gradient-light);
-            padding: 50px;
-            border-radius: 15px;
+            padding: clamp(30px, 4vw, 50px);
+            border-radius: 12px;
             box-shadow: var(--box-shadow);
             flex: 1;
             transition: all 0.3s ease-in-out;
@@ -138,8 +136,8 @@
             background: var(--secondary-color);
             color: var(--white-color);
             text-align: center;
-            padding: 25px;
-            border-radius: 15px;
+            padding: clamp(20px, 2.5vw, 25px);
+            border-radius: 12px;
             box-shadow: var(--box-shadow);
             position: sticky;
             top: 0;
@@ -147,28 +145,27 @@
         }
 
         h1, h2, h3 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Lora', serif;
             font-weight: 700;
             color: var(--primary-color);
         }
 
         h1 {
-            font-size: 40px;
+            font-size: clamp(32px, 3.5vw, 40px);
             margin-bottom: 15px;
             color: var(--white-color);
         }
 
         h1 .subtitle {
-            font-family: 'Noto Serif SC', serif; /* Elegant Chinese font */
-            font-size: 24px; /* Increased font size */
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(20px, 2vw, 24px);
             font-weight: 400;
-            opacity: 0.85;
+            opacity: 0.9;
         }
 
         h2 {
-            font-size: 32px;
+            font-size: clamp(28px, 3vw, 32px);
             margin: 40px 0 25px;
-            position: relative;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             background-clip: text;
@@ -187,7 +184,7 @@
         }
 
         p, li {
-            font-size: 18px; /* Increased font size for small text */
+            font-size: clamp(15px, 1.1vw, 18px);
             font-weight: 400;
         }
 
@@ -197,25 +194,23 @@
             background-size: cover;
             background-position: center;
             color: var(--white-color);
-            padding: 80px 30px;
-            border-radius: 15px;
+            padding: clamp(60px, 8vw, 80px) clamp(20px, 3vw, 30px);
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 50px;
             box-shadow: var(--box-shadow);
-            position: relative;
-            overflow: hidden;
         }
 
         .hero-title {
-            font-size: 52px;
+            font-size: clamp(40px, 5vw, 52px);
             font-weight: 700;
             animation: fadeInDown 1s ease-in-out;
         }
 
         .hero-subtitle {
-            font-size: 24px; /* Increased font size */
+            font-size: clamp(20px, 2.2vw, 24px);
             font-weight: 300;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto 40px;
             opacity: 0.9;
             animation: fadeInUp 1s ease-in-out 0.3s forwards;
@@ -223,8 +218,8 @@
 
         .cta-button {
             background: var(--primary-color);
-            padding: 14px 35px;
-            font-size: 20px; /* Increased font size */
+            padding: clamp(12px, 1.5vw, 14px) clamp(25px, 3vw, 35px);
+            font-size: clamp(18px, 1.5vw, 20px);
             font-weight: 700;
             border-radius: 30px;
             box-shadow: var(--box-shadow);
@@ -240,12 +235,12 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: clamp(15px, 2vw, 20px);
             margin-top: 25px;
         }
 
         .social-icons a {
-            font-size: 30px;
+            font-size: clamp(24px, 2.5vw, 30px);
             padding: 12px;
             color: var(--white-color);
             transition: all 0.3s ease;
@@ -258,15 +253,15 @@
 
         /* News Section */
         .section-title {
-            font-size: 38px;
+            font-size: clamp(32px, 3.5vw, 38px);
             margin-bottom: 30px;
             text-align: center;
         }
 
         .news-item {
-            padding: 25px;
+            padding: clamp(20px, 2.5vw, 25px);
             background: var(--white-color);
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: var(--box-shadow);
             margin-bottom: 25px;
             opacity: 0;
@@ -281,12 +276,12 @@
 
         #show-more-news {
             margin: 30px auto;
-            padding: 14px 35px;
+            padding: clamp(12px, 1.5vw, 14px) clamp(25px, 3vw, 35px);
             background: var(--primary-color);
             color: var(--white-color);
             border: none;
             border-radius: 30px;
-            font-size: 20px; /* Increased font size */
+            font-size: clamp(18px, 1.5vw, 20px);
             font-weight: 700;
             cursor: pointer;
             display: block;
@@ -308,8 +303,8 @@
 
         .paper-category {
             background: var(--white-color);
-            padding: 25px;
-            border-radius: 15px;
+            padding: clamp(20px, 2.5vw, 25px);
+            border-radius: 12px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
@@ -320,7 +315,7 @@
         }
 
         .paper-category h3 {
-            font-size: 26px;
+            font-size: clamp(22px, 2vw, 26px);
             margin-bottom: 15px;
             position: relative;
         }
@@ -359,7 +354,6 @@
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease-in-out;
-            opacity: 0;
             animation: fadeIn 0.5s ease forwards;
         }
 
@@ -380,14 +374,14 @@
         /* Services */
         .services-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .service-card {
             background: var(--white-color);
-            padding: 25px;
-            border-radius: 15px;
+            padding: clamp(20px, 2.5vw, 25px);
+            border-radius: 12px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease-in-out;
         }
@@ -400,7 +394,7 @@
         /* Cooperation */
         .cooperation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 25px;
             justify-items: center;
         }
@@ -425,11 +419,11 @@
             background: var(--secondary-color);
             color: var(--white-color);
             text-align: center;
-            padding: 25px;
-            border-radius: 15px;
+            padding: clamp(20px, 2.5vw, 25px);
+            border-radius: 12px;
             margin-top: 50px;
             box-shadow: var(--box-shadow);
-            font-size: 18px; /* Increased font size */
+            font-size: clamp(16px, 1.2vw, 18px);
             font-weight: 400;
         }
 
@@ -437,7 +431,7 @@
         #mode-toggle {
             position: fixed;
             bottom: 90px;
-            right: 30px;
+            right: clamp(20px, 2vw, 30px);
             padding: 12px 25px;
             background: var(--secondary-color);
             color: var(--white-color);
@@ -446,7 +440,7 @@
             cursor: pointer;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
-            font-size: 18px; /* Increased font size */
+            font-size: clamp(16px, 1.2vw, 18px);
             font-weight: 700;
         }
 
@@ -458,8 +452,8 @@
         /* Back to Top */
         #back-to-top {
             position: fixed;
-            bottom: 30px;
-            left: 30px;
+            bottom: clamp(20px, 2vw, 30px);
+            left: clamp(20px, 2vw, 30px);
             padding: 12px 18px;
             background: var(--primary-color);
             color: var(--white-color);
@@ -494,7 +488,7 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .container {
                 flex-direction: column;
                 padding: 20px;
@@ -506,25 +500,22 @@
             }
 
             .content {
-                margin-left: 0;
                 margin-top: 20px;
                 padding: 30px;
             }
+        }
 
+        @media (max-width: 768px) {
             .hero-title {
-                font-size: 42px;
+                font-size: clamp(36px, 6vw, 42px);
             }
 
             .hero-subtitle {
-                font-size: 20px; /* Slightly smaller for mobile */
+                font-size: clamp(18px, 3vw, 20px);
             }
 
             .section-title {
-                font-size: 32px;
-            }
-
-            body, p, li, .sidebar a, footer {
-                font-size: 16px; /* Adjusted for mobile */
+                font-size: clamp(28px, 4vw, 32px);
             }
         }
 
@@ -536,14 +527,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background: var(--white-color);
-            padding: 25px;
-            border-radius: 15px;
+            padding: clamp(20px, 2.5vw, 25px);
+            border-radius: 12px;
             box-shadow: var(--box-shadow-hover);
             z-index: 1000;
         }
 
         #wechat-modal img {
-            max-width: 320px;
+            max-width: clamp(280px, 40vw, 320px);
             height: auto;
             border-radius: 10px;
         }
@@ -558,7 +549,7 @@
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 18px; /* Increased font size */
+            font-size: clamp(16px, 1.2vw, 18px);
             font-weight: 700;
         }
 
@@ -569,6 +560,7 @@
     </style>
 </head>
 <body>
+    <!-- 原有 HTML 内容保持不变，仅替换 style 部分 -->
     <button id="mode-toggle">Day/Night</button>
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     <div class="container">
@@ -670,7 +662,7 @@
                         <h3>Visual Generation</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
-                                <img src="Trans4 напрямуюD.jpg" alt="Trans4D" loading="lazy">
+                                <img src="Trans4D.jpg" alt="Trans4D" loading="lazy">
                                 <a href="https://arxiv.org/abs/2410.07155">Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</a>
                             </li>
                             <li class="paper-item">
