@@ -6,7 +6,7 @@
     <title>Juanxi Tian's Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="hkbu.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -46,7 +46,8 @@
             background: var(--page-color);
             color: var(--text-color);
             font-family: 'Roboto', sans-serif;
-            font-weight: 300;
+            font-weight: 400;
+            font-size: 18px; /* Increased base font size */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -100,7 +101,7 @@
             gap: 12px;
             padding: 12px 20px;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 18px; /* Increased font size */
             font-weight: 400;
             transition: all 0.3s ease;
         }
@@ -158,7 +159,8 @@
         }
 
         h1 .subtitle {
-            font-size: 22px;
+            font-family: 'Noto Serif SC', serif; /* Elegant Chinese font */
+            font-size: 24px; /* Increased font size */
             font-weight: 400;
             opacity: 0.85;
         }
@@ -184,6 +186,11 @@
             border-radius: 2px;
         }
 
+        p, li {
+            font-size: 18px; /* Increased font size for small text */
+            font-weight: 400;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('juanxi.jpg');
@@ -202,11 +209,11 @@
         .hero-title {
             font-size: 52px;
             font-weight: 700;
-            animation: fadeInDown 1s easeმოდ: ease-in-out;
+            animation: fadeInDown 1s ease-in-out;
         }
 
         .hero-subtitle {
-            font-size: 22px;
+            font-size: 24px; /* Increased font size */
             font-weight: 300;
             max-width: 700px;
             margin: 0 auto 40px;
@@ -217,7 +224,7 @@
         .cta-button {
             background: var(--primary-color);
             padding: 14px 35px;
-            font-size: 18px;
+            font-size: 20px; /* Increased font size */
             font-weight: 700;
             border-radius: 30px;
             box-shadow: var(--box-shadow);
@@ -279,7 +286,7 @@
             color: var(--white-color);
             border: none;
             border-radius: 30px;
-            font-size: 18px;
+            font-size: 20px; /* Increased font size */
             font-weight: 700;
             cursor: pointer;
             display: block;
@@ -422,6 +429,7 @@
             border-radius: 15px;
             margin-top: 50px;
             box-shadow: var(--box-shadow);
+            font-size: 18px; /* Increased font size */
             font-weight: 400;
         }
 
@@ -438,6 +446,7 @@
             cursor: pointer;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
+            font-size: 18px; /* Increased font size */
             font-weight: 700;
         }
 
@@ -507,11 +516,15 @@
             }
 
             .hero-subtitle {
-                font-size: 18px;
+                font-size: 20px; /* Slightly smaller for mobile */
             }
 
             .section-title {
                 font-size: 32px;
+            }
+
+            body, p, li, .sidebar a, footer {
+                font-size: 16px; /* Adjusted for mobile */
             }
         }
 
@@ -545,6 +558,8 @@
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 18px; /* Increased font size */
+            font-weight: 700;
         }
 
         #close-modal:hover {
@@ -655,7 +670,7 @@
                         <h3>Visual Generation</h3>
                         <ul class="paper-list">
                             <li class="paper-item">
-                                <img src="Trans4D.jpg" alt="Trans4D" loading="lazy">
+                                <img src="Trans4 напрямуюD.jpg" alt="Trans4D" loading="lazy">
                                 <a href="https://arxiv.org/abs/2410.07155">Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</a>
                             </li>
                             <li class="paper-item">
