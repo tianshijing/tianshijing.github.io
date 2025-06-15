@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="keywords" content="Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+        
+        <!-- Page Title -->
+        <title>Home | MMLab@NTU</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
+        <link href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <!-- <link href="./assets/vendor/aos/dist/aos.css" rel="stylesheet"> -->
+
+        <!-- Theme Stylesheets -->
+        <link href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/index.html">
+                    <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/index.html" class="nav-link">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html" class="nav-link text-400">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_topic.html" class="nav-link text-400">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/downloads.html" class="nav-link text-400">Download</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/careers.html" class="nav-link text-400">Join Us</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html" class="spyre-nav-link">Our Research</a></li>
+                                    <li class="spyre-nav-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="vimeo.eot.html#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/downloads.html" class="spyre-nav-link">Code and Datasets</a></li>
+                                    <li class="spyre-nav-item"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/careers.html" class="spyre-nav-link">Join Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/re5e1f" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay overlay-dark-60 parallax" data-rellax-percentage="0.5" style="background-image: url(https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/backgrounds/bg-39.jpg)"></div>
+                <div class="container">
+                    <div class="row h-100vh justify-content-center align-items-center">
+                        <div class="col-lg-8">
+                            <h1 class="text-white fs-5 fs-lg-7" data-aos="fade-left" data-aos-duration="500">MMLab@NTU</h1>
+                            <p class="mb-5 fs-lg-1 text-white" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">Multimedia Laboratory @ <br /> Nanyang Technological University<br />
+                            Affiliated with <a href="https://www.ntu.edu.sg/s-lab" target="_blank" class="text-white">S-Lab</a>    
+                            </p>
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <a href="vimeo.eot.html#section-4" class="btn btn-primary mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-smooth-scroll data-smooth-scroll-hash="false">Explore</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html" class="btn btn-light px-5 mx-2" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500">Our Research<i class="zmdi zmdi-long-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="move d-none d-lg-block">
+                            <a href="vimeo.eot.html#section-1" class="text-white" data-smooth-scroll data-smooth-scroll-hash="false">
+                                <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-1" class="py-0">
+                <div class="container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">
+                            <div class="row h-100 align-items-center">
+                                <div class="col px-5 px-lg-8 px-xl-10">
+                                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">About</h3>
+                                    <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left">MMLab@NTU</h2>
+                                    <p class="mb-0 text-justify">MMLab@NTU was formed on the 1 August 2018, with a research focus on computer vision and deep learning. Its sister lab is <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank">MMLab@CUHK</a>. It is now a group with four faculty members and more than 40 members including research fellows, research assistants, and PhD students. <br /><br />
+                                    </p>
+                                    <p class="mb-0 text-justify"> Members in MMLab@NTU conduct research primarily in low-level vision, image and video understanding, creative content creation, 3D scene understanding and reconstruction. Have a look at the overview of <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html">our research</a>. All publications are listed <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_topic.html">here</a>. <br /><br />
+                                    </p>
+                                    <p class="mb-0 text-justify"> We are always looking for motivated PhD students, postdocs, research assistants who have the same interests like us. Check out the <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/careers.html">careers</a> page and follow us on <a href="https://twitter.com/re5e1f" target="_blank">Twitter</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-8">
+                            <div class="bg-container" style="background-image: url(https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/images/ntu_arc.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+
+            <!-- Section -->
+            <section id="section-2" class="pt-7 pb-7">
+                <div class="container">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
+                                        <div
+                                            data-background-text="01"
+                                            data-color="#ffffff"
+                                            data-opacity="0.5"
+                                            data-font-size="36px"
+                                            data-font-weight="700"
+                                            data-offset-x="-3.25rem"
+                                        ></div>
+                                        <h4 class="mb-4 fs-1 fw-medium">NeurIPS 2023</h4>
+                                        <p class="fs--1">09/2023: The team has a total of 14 papers (including four spotlight papers and two under the 'Datasets and Benchmarks' track) accepted to NeurIPS 2023. </p>
+                                        <p class="mb-0 fs--1">
+                                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/conference/neurips2023/index.html" target="_blank" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                                        </p>
+                                    </div>
+                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
+                                        <div
+                                            data-background-text="02"
+                                            data-color="#ffffff"
+                                            data-opacity="0.5"
+                                            data-font-size="36px"
+                                            data-font-weight="700"
+                                            data-offset-x="-3.25rem"
+                                        ></div>
+                                        <h4 class="mb-4 fs-1 fw-medium">ICCV 2023</h4>
+                                        <p class="fs--1">07/2023: The team has a total of 20 papers accepted to ICCV 2023. </p>
+                                        <p class="mb-0 fs--1">
+                                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/conference/iccv2023/index.html" target="_blank" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-5 mb-lg-0">
+                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
+                                        <div
+                                            data-background-text="03"
+                                            data-color="#ffffff"
+                                            data-opacity="0.5"
+                                            data-font-size="36px"
+                                            data-font-weight="700"
+                                            data-offset-x="-3.25rem"
+                                        ></div>
+                                        <h4 class="mb-4 fs-1 fw-medium">CVPR 2023</h4>
+                                        <p class="fs--1">03/2023: The team has a total of 14 papers (including 3 highlights and 1 award candidate) accepted to CVPR 2023. </p>
+                                        <p class="mb-0 fs--1">
+                                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/conference/cvpr2023/index.html" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                                        </p>
+                                    </div>
+                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
+                                        <div
+                                            data-background-text="04"
+                                            data-color="#ffffff"
+                                            data-opacity="0.5"
+                                            data-font-size="36px"
+                                            data-font-weight="700"
+                                            data-offset-x="-3.25rem"
+                                        ></div>
+                                        <h4 class="mb-4 fs-1 fw-medium">Pre-CVPR@NTU</h4>
+                                        <p class="fs--1">05/2023: We are organizing one-day, complimentary, in-person seminar showcases presentations and discussions centered around papers accepted at CVPR 2023.</p>
+                                        <p class="mb-0 fs--1">
+                                            <a href="https://wenhaochai.com/cvpr_ntu/seminar_2023/index.html" target="_blank" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Check Out</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">News and Highlights</h2>
+
+							<ul class="zmdi-hc-ul">
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>05/2023: Congratulations to <a href="https://ckkelvinchan.github.io/" target="_blank">Kelvin Chan</a> for winning the <a href="https://www.ntu.edu.sg/scse/news-events/news/detail/scse-outstanding-phd-thesis-award-2023" target="_blank">SCSE Outstanding PhD Thesis Award</a> 2023!</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>05/2023: <a href="https://li-chongyi.github.io/" target="_blank">Chongyi Li</a>, <a href="https://hongfz16.github.io/" target="_blank">Fangzhou Hong</a>, <a href="https://henghuiding.github.io" target="_blank">Henghui Ding</a>, <a href="https://jiahao000.github.io/" target="_blank">Jiahao Xie</a> and <a href="https://williamyang1991.github.io/" target="_blank">Shuai Yang</a> are selected as <a href="https://cvpr2023.thecvf.com/Conferences/2023/OutstandingReviewers" target="_blank">outstanding reviewers of CVPR 2023</a>. Congrats!</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>04/2023: <a href="https://frozenburning.github.io/" target="_blank">Zhaoxi Chen</a> is awarded <a href="https://research.facebook.com/blog/2023/4/announcing-the-2023-meta-research-phd-fellowship-award-winners/" target="_blank">Meta PhD Fellowship Finalist 2023</a>. Congrats!</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>02/2023: Call for Papers: IJCV Special Issue on <a href="https://mipi-challenge.org/MIPI_IJCV/index.html" target="_blank">Mobile Intelligent Photography and Imaging</a>. Full paper submission deadline is August 1st, 2023.</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>01/2023: The team has a total of 5 papers (including 2 oral and 1 spotlight papers) accepted to ICLR 2023.</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>11/2022: <a href="https://yumingj.github.io/" target="_blank">Yuming Jiang</a> and <a href="https://jiawei-ren.github.io/" target="_blank">Jiawei Ren</a> are awarded the very competitive and prestigious <a href="https://www.ntu.edu.sg/scse/news-events/news/detail/2022-google-phd-fellowship" target="_blank">Google PhD Fellowship 2022</a> under the area “Machine Perception, Speech Technology and Computer Vision”. Congrats!</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>10/2022: <a href="https://li-chongyi.github.io/" target="_blank">Chongyi Li</a>, <a href="https://williamyang1991.github.io/" target="_blank">Shuai Yang</a> and <a href="https://kaiyangzhou.github.io/" target="_blank">Kaiyang Zhou</a> are selected as <a href="https://eccv2022.ecva.net/program/outstanding-reviewers/" target="_blank">outstanding reviewers of ECCV 2022</a>. Congrats!</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>09/2022: Call for Papers: IJCV Special Issue on <a href="https://kaiyangzhou.github.io/assets/cfp_ijcv_lvms.html" target="_blank">The Promises and Dangers of Large Vision Models</a>. Full paper submission deadline is March 1st, 2023.</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>09/2022: We launch a new initiative, The <a href="https://theaitalks.org/" target="_blank">AI Talks</a>, inviting active researchers from all over the globe to share their latest research in AI, machine learning, computer vision etc. Subscribe the newsletter <a href="https://theaitalks.org/subscribe/" target="_blank">here</a>.</li>
+
+                                <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i>07/2022: The team has a total of <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/conference/eccv2022/index.html">18 papers</a> (including 3 oral papers) accepted to ECCV 2022.</li>
+							</ul>
+
+                            <p class="mb-4">
+                                <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/news.html" class="h6 fs--1 fw-bold text-uppercase text-primary float-left">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+
+            <!-- Section -->
+            <section id="section-1" class="py-0">
+                <div class="container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 py-8">
+                            <div class="bg-container" style="background-image: url(https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/printscreens/mit_review.jpg);"></div>
+                        </div>
+                        <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">
+                            <div class="row h-100 align-items-center">
+                                <div class="col px-5 px-lg-8 px-xl-10">
+                                    <h3 class="my-0 fs-1 fw-medium text-primary text-center text-lg-left">MIT Technology Review</h3>
+                                    <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left">Innovators Under 35 Asia Pacific</h2>
+                                    <p class="mb-0 text-justify">
+                                        <a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a> has been recognized by MIT Technology Review: Innovators under 35 Asia Pacific 2023 — an incredible achievement. Congratulations to Ziwei!. Details <a href="http://tr35.mittrasia.com/awards" target="_blank">here</a>. <br /><br />
+                                    </p>
+                                    <!--<ul class="zmdi-hc-ul">
+                                        <li><i class="zmdi-hc-li zmdi zmdi-calendar"></i> Paper submission deadline: Aug 1, 2023 (deadline passed) </li>
+                                    </ul>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-3" class="pt-7 pb-6">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Recent</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">Projects</h2>
+                    
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://omniobject3d.github.io/" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/teasers/omniobject3d.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <p>
+                                <span class="text-primary">OmniObject3D: Large-Vocabulary 3D Object Dataset for Realistic Perception, Reconstruction and Generation </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        T. Wu, J. Zhang, X. Fu, Y. Wang, J. Ren, L. Pan, W. Wu, L. Yang, J. Wang, C. Qian, D. Lin, Z. Liu <br /> 
+                                        in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2023 <strong>(CVPR, Award Candidate)</strong><br />   
+                                        </span>
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_OmniObject3D_Large-Vocabulary_3D_Object_Dataset_for_Realistic_Perception_Reconstruction_and_CVPR_2023_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2301.07525" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Wu_OmniObject3D_Large-Vocabulary_3D_CVPR_2023_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                        [<a href="https://omniobject3d.github.io/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                            <p class="text-justify">
+                                 We propose OmniObject3D, a large vocabulary 3D object dataset with massive high-quality real-scanned 3D objects to facilitate the development of 3D perception, reconstruction, and generation in the real world. OmniObject3D comprises 6,000 scanned objects in 190 daily categories, sharing common classes with popular 2D datasets (e.g., ImageNet and LVIS), benefiting the pursuit of generalizable 3D representations.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://totoro97.github.io/projects/f2-nerf/" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/teasers/f2nerf.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <p>
+                                <span class="text-primary">F2-NeRF: Fast Neural Radiance Field Training with Free Camera Trajectories </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        P. Wang, Y. Liu, Z. Chen, L. Liu, Z. Liu, T. Komura, C. Theobalt, W. Wang <br /> 
+                                        in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2023 <strong>(CVPR, Highlight)</strong><br />   
+                                        </span>
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_F2-NeRF_Fast_Neural_Radiance_Field_Training_With_Free_Camera_Trajectories_CVPR_2023_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2303.15951" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Wang_F2-NeRF_Fast_Neural_CVPR_2023_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                        [<a href="https://totoro97.github.io/projects/f2-nerf/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                            <p class="text-justify">
+                                 This paper presents a novel grid-based NeRF called F2-NeRF (Fast-Free-NeRF) for novel view synthesis, which enables arbitrary input camera trajectories and only costs a few minutes for training. Existing two widely-used space-warping methods are only designed for the forward-facing trajectory or the 360 degree object-centric trajectory but cannot process arbitrary trajectories. In this paper, we delve deep into the mechanism of space warping to handle unbounded scenes.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://ldkong.com/LaserMix" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/teasers/lasermix.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <p>
+                                <span class="text-primary">LaserMix for Semi-Supervised LiDAR Semantic Segmentation </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        L. Kong, J. Ren, L. Pan, Z. Liu <br /> 
+                                        in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2023 <strong>(CVPR, Highlight)</strong><br />   
+                                        </span>
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Kong_LaserMix_for_Semi-Supervised_LiDAR_Semantic_Segmentation_CVPR_2023_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2207.00026" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Kong_LaserMix_for_Semi-Supervised_CVPR_2023_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                        [<a href="https://ldkong.com/LaserMix" target="_blank"><span class="text-muted">Project Page</span></a>] 
+                            </p>
+                            <p class="text-justify">
+                                 We study the underexplored semi-supervised learning problem in LiDAR segmentation. Our core idea is to leverage the strong spatial cues of LiDAR point clouds to better exploit unlabeled data. We propose LaserMix to mix laser beams from different LiDAR scans, and then encourage the model to make consistent and confident predictions before and after mixing.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://ykdai.github.io/projects/BracketFlare" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/teasers/deflare.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <p>
+                                <span class="text-primary">Nighttime Smartphone Reflective Flare Removal using Optical Center Symmetry Prior </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        Y. Dai, Y. Luo, S. Zhou, C. Li, C. C. Loy <br /> 
+                                        in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2023 <strong>(CVPR, Highlight)</strong><br />    
+                                        </span>
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Dai_Nighttime_Smartphone_Reflective_Flare_Removal_Using_Optical_Center_Symmetry_Prior_CVPR_2023_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2303.15046" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Dai_Nighttime_Smartphone_Reflective_CVPR_2023_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                        [<a href="https://ykdai.github.io/projects/BracketFlare"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                            <p class="text-justify">
+                                 Reflective flare is a phenomenon that occurs when light reflects inside lenses, causing bright spots or a “ghosting effect” in photos. we propose an optical center symmetry prior, which suggests that the reflective flare and light source are always symmetrical around the lens’s optical center. This prior helps to locate the reflective flare’s proposal region more accurately and can be applied to most smartphone cameras.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section class="py-8 py-md-11 overflow-hidden">
+                <div class="bg-container parallax" data-rellax-percentage="0.5" style="background-image: url(https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/images/reversion.jpg);"></div>
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=pkal3yjyyKQ" class="icond mx-auto align-items-center text"><i class="zmdi zmdi-play zmdi-hc-4x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->          
+
+            <!-- Section -->
+            <section id="section-4">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Explore</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">MMLab@NTU</h2>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/printscreens/research.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html" class="text-body">Our Research</a></h4>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/team.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/printscreens/team.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/team.html" class="text-body">Team</a></h4>
+                        </div>                        
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_topic.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/printscreens/publication_topic.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center">Publications by <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_topic.html" class="text-body">Topic</a> | <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_year.html" class="text-body">Year</a></h4>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/downloads.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/printscreens/downloads.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/downloads.html" class="text-body">Code and Datasets</a></h4>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/careers.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/printscreens/careers.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/careers.html" class="text-body">Join Us</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->          
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer_p text-white" style="background-image: url(https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-dark text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+        
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/re5e1f" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+    
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/re5e1f" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/downloads.html" class="text-white">Code and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/rellax/rellax.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <!-- <script src="./assets/vendor/aos/dist/aos.js"></script> -->
+
+        <!-- Theme Javascripts -->
+        <script src="https://www.mmlab-ntu.com/assets/vendor/jquery.mb.vimeo_player/dist/css/font/assets/js/theme.js"></script>
+    </body>
+</html>
