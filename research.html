@@ -18,14 +18,17 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Vendor Stylesheets -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link href="assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-        <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
+        <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
         <link href="assets/vendor/aos/dist/aos.css" rel="stylesheet">
 
         <!-- Theme Stylesheets -->
         <link href="assets/css/theme.css" rel="stylesheet">
+        <link href="assets/css/enhancements.css" rel="stylesheet">
+        <link href="assets/css/advanced-enhancements.css" rel="stylesheet">
+        <link href="assets/css/dark-theme.css" rel="stylesheet">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
@@ -240,47 +243,137 @@
             <!-- Section -->
             <section class="pb-0">
                 <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-lg-12 mb-7 mb-lg-0">
-                            <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase text-center text-lg-left">Research</h3>
-                            <h2 class="mb-5 fw-medium text-primary text-center text-lg-left">Juanxi Tian</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="text-center mb-5" data-aos="fade-up">
+                                <h3 class="my-0 fs-1 fw-medium text-primary">Research Overview</h3>
+                                <h2 class="mb-4 fw-medium text-secondary">Juanxi Tian's Research Journey</h2>
+                                <p class="lead text-muted">
+                                    Exploring the frontiers of <strong>Generative AI</strong> and <strong>Foundation Models</strong> 
+                                    to build intelligent systems that understand and interact with the world.
+                                </p>
+                            </div>
                             
-                            <!-- <p class="mb-4 text-justify">
-                                My current research currently focus on developing <b>visual intelligence</b> to understand the physical world, building upon video understanding as a core perceptual mechanism. I propose a long-short term memory framework modeled after the human memory system, enabling pre-trained video Large Multi-modal Models (LMMs) to comprehend hour-long video content without additional fine-tuning. To enhance efficiency, I introduce token merging to LMMs, significantly reducing visual tokens with minimal performance degradation. I also demonstrate step-by-step agent system development in Minecraft, showcasing cognitive-inspired agent capabilities in virtual environments.
-                            </p>
+                            <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-8">
+                                        <h4 class="mb-3">
+                                            <i class="fas fa-brain text-primary mr-2"></i>
+                                            Research Vision
+                                        </h4>
+                                        <p class="mb-3 text-justify">
+                                            My research focuses on developing <strong>visual intelligence</strong> to understand the physical world, 
+                                            building upon video understanding as a core perceptual mechanism. I aim to create efficient and scalable, 
+                                            large-scale (vision-centric) multimodal foundation models that can serve as stepping stones toward world models.
+                                        </p>
+                                        <p class="mb-0 text-justify">
+                                            With the belief that "pretraining as we know it will end," I explore how the future of artificial 
+                                            intelligence lies in aligning with human intelligence—and ultimately surpassing it through innovative 
+                                            architectural designs and optimization strategies.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 text-center">
+                                        <div class="research-stats">
+                                            <div class="stat-item mb-3">
+                                                <h3 class="text-primary mb-0">10+</h3>
+                                                <small class="text-muted">Publications</small>
+                                            </div>
+                                            <div class="stat-item mb-3">
+                                                <h3 class="text-success mb-0">5+</h3>
+                                                <small class="text-muted">Top-tier Venues</small>
+                                            </div>
+                                            <div class="stat-item">
+                                                <h3 class="text-info mb-0">7+</h3>
+                                                <small class="text-muted">Review Services</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <p class="mb-4 text-justify">   
-                                I have just begun shaping my research narrative around visual intelligence. With "pretraining as we know it will end"</i>, I believe the future of artificial intelligence lies in aligning with human intelligence—and ultimately surpassing it. I truly believe computer vision will continue to advance.
-                            </p> -->
-
-                            <div class="text-center text-lg-left">
-                                <a href="publication_year.html" class="btn btn-primary btn-lg mt-4 px-6">Publication<i class="zmdi zmdi-link ml-3"></i></a>
+                            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                                <a href="publication_year.html" class="btn btn-primary btn-lg px-5 mr-3">
+                                    <i class="fas fa-file-alt mr-2"></i>View Publications
+                                </a>
+                                <a href="#overview" class="btn btn-outline-primary btn-lg px-5">
+                                    <i class="fas fa-microscope mr-2"></i>Research Areas
+                                </a>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-6">
-                            <img src="assets/img/backgrounds/sm-bg-01.png" class="img-fluid w-100 mt-0 mb-0 mb-lg-0" alt="" />
-                        </div> -->
                     </div>
                 </div>
             </section>
             <!-- End of Section -->
 
-            <section class="pb-0">
+            <section class="py-7">
                 <div class="container">
-                    <p>
-                        Currently, I am interested in several topics, including but not limited to:
-                        <ul>
-                            <li>
-                                <b>Large-scale (Vision / Language) Foundation Models</b>: My research primarily aims to investigate architectural design and the underlying coupling bias, such as its interaction with optimizers. I identified the Backbone-Optimizer Coupling Bias (<a href="https://arxiv.org/pdf/2410.06373">BOCB</a>) , a phenomenon where architectural properties disproportionately influence optimization behavior. By analyzing BOCB across different architectures, I uncovered dependencies that challenge traditional optimizer assumptions and provided practical guidelines for integrating optimization strategies with architectural inductive biases. Additionally, I developed Scaling with Gradient Grouping (<a href="https://arxiv.org/pdf/2506.01049">SGG</a>) , an adaptive optimization framework for large language models. SGG dynamically groups parameters based on gradient similarity, enabling stable updates and reducing computational overhead. This method supports scalable training under resource constraints and advances effective training paradigms for foundation models.
-                            </li>
-                            <li>
-                                <b>Efficient & Scalable AI</b>: As the scale-up of training large models becomes increasingly critical, many conventional techniques are no longer effective. Developing efficient and scalable methodologies—such as speculative decoding, advanced optimizers, and domain-specific efficiency/optimization techniques tailored for generative models—is essential. Crucially, these approaches must remain effective as model size continues to grow.
-                            </li>
-                            <li>
-                                <b>Unified Models for Generation and Understanding</b> Recent efforts in unifying generation and understanding models continue to explore various aspects, including architectural design, data composition strategies, and training paradigms. While the broader community has yet to reach a consensus on the significance and long-term implications of unified modeling, I believe that building a bridge between visual representation learning and generative modeling through a shared framework is a promising direction. Such an approach may play a crucial role in advancing toward Artificial General Intelligence (AGI).
-                            </li>
-                        </ul>
-                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="text-center mb-5" data-aos="fade-up">
+                                <h3 class="fs-1 fw-medium text-primary">Research Interests</h3>
+                                <p class="lead text-muted">Current focus areas and ongoing investigations</p>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="research-card h-100">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-network-wired fa-3x text-primary mb-3"></i>
+                                            <h5 class="font-weight-bold">Foundation Models</h5>
+                                        </div>
+                                        <p class="text-justify">
+                                            Investigating architectural design and coupling bias in large-scale vision/language models. 
+                                            Developed <strong>BOCB</strong> analysis and <strong>SGG</strong> optimization framework for 
+                                            scalable training under resource constraints.
+                                        </p>
+                                        <div class="mt-auto">
+                                            <small class="text-muted">
+                                                <i class="fas fa-link mr-1"></i>
+                                                <a href="https://arxiv.org/pdf/2410.06373">BOCB Paper</a> • 
+                                                <a href="https://arxiv.org/pdf/2506.01049">SGG Paper</a>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="research-card h-100">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-rocket fa-3x text-success mb-3"></i>
+                                            <h5 class="font-weight-bold">Efficient & Scalable AI</h5>
+                                        </div>
+                                        <p class="text-justify">
+                                            Developing efficient methodologies for large model training including speculative decoding, 
+                                            advanced optimizers, and domain-specific optimization techniques that remain effective 
+                                            as model size continues to grow.
+                                        </p>
+                                        <div class="mt-auto">
+                                            <span class="badge badge-success">Optimization</span>
+                                            <span class="badge badge-info">Scalability</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="research-card h-100">
+                                        <div class="text-center mb-3">
+                                            <i class="fas fa-eye fa-3x text-info mb-3"></i>
+                                            <h5 class="font-weight-bold">Unified Generation & Understanding</h5>
+                                        </div>
+                                        <p class="text-justify">
+                                            Building bridges between visual representation learning and generative modeling 
+                                            through shared frameworks. Exploring architectural design, data composition, 
+                                            and training paradigms toward AGI.
+                                        </p>
+                                        <div class="mt-auto">
+                                            <span class="badge badge-primary">Vision</span>
+                                            <span class="badge badge-warning">Generation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -576,5 +669,17 @@
 
         <!-- Theme Javascripts -->
         <script src="assets/js/theme.js"></script>
+        <script src="assets/js/enhancements.js"></script>
+        <script src="assets/js/advanced-features.js"></script>
+        
+        <!-- Initialize AOS -->
+        <script>
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        </script>
     </body>
 </html>
