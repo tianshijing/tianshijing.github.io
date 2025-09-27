@@ -24,6 +24,191 @@
         <!-- Theme Stylesheets -->
         <link href="assets/css/theme.css" rel="stylesheet">
 
+        <!-- Custom Coming Soon Styles -->
+        <style>
+            /* Coming Soon Section Styles */
+            .coming-soon-icon {
+                animation: float 3s ease-in-out infinite;
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+            
+            .coming-soon-title {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #6c757d;
+                margin-bottom: 2rem;
+            }
+            
+            .coming-soon-description {
+                font-size: 1.2rem;
+                color: #6c757d;
+                line-height: 1.6;
+                max-width: 600px;
+                margin: 0 auto 3rem;
+            }
+            
+            .content-type-card {
+                background: #ffffff;
+                border-radius: 15px;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border: 1px solid rgba(192, 0, 0, 0.1);
+                height: 100%;
+            }
+            
+            .content-type-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                border-color: rgba(192, 0, 0, 0.3);
+            }
+            
+            .content-type-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .content-type-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #1f2749;
+                margin-bottom: 0.5rem;
+            }
+            
+            .content-type-description {
+                color: #6c757d;
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+            
+            .cta-heading {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #495057;
+                margin-bottom: 2rem;
+            }
+            
+            .btn-primary {
+                background: linear-gradient(135deg, #c00000 0%, #ff4757 100%);
+                border: none;
+                border-radius: 50px;
+                padding: 0.75rem 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(192, 0, 0, 0.3);
+                background: linear-gradient(135deg, #d10000 0%, #ff5722 100%);
+            }
+            
+            .btn-outline-primary {
+                border: 2px solid #c00000;
+                color: #c00000;
+                background: transparent;
+                border-radius: 50px;
+                padding: 0.75rem 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .btn-outline-primary:hover {
+                background: #c00000;
+                border-color: #c00000;
+                color: #ffffff;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(192, 0, 0, 0.3);
+            }
+            
+            .social-follow-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.75rem;
+                background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
+                color: #ffffff;
+                padding: 0.75rem 2rem;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(29, 161, 242, 0.3);
+            }
+            
+            .social-follow-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(29, 161, 242, 0.4);
+                text-decoration: none;
+                color: #ffffff;
+                background: linear-gradient(135deg, #0d8bd9 0%, #1DA1F2 100%);
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 767.98px) {
+                .coming-soon-title {
+                    font-size: 2.2rem;
+                }
+                
+                .coming-soon-description {
+                    font-size: 1.1rem;
+                }
+                
+                .content-type-card {
+                    padding: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+                
+                .btn-primary,
+                .btn-outline-primary {
+                    padding: 0.6rem 1.5rem;
+                    font-size: 0.9rem;
+                    width: 100%;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                }
+                
+                .social-follow-btn {
+                    padding: 0.6rem 1.5rem;
+                    font-size: 0.9rem;
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+            
+            @media (max-width: 575.98px) {
+                .coming-soon-title {
+                    font-size: 1.8rem;
+                }
+                
+                .coming-soon-description {
+                    font-size: 1rem;
+                }
+                
+                .content-type-card {
+                    padding: 1.25rem;
+                }
+                
+                .content-type-title {
+                    font-size: 1.2rem;
+                }
+            }
+        </style>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
         <script>
@@ -182,20 +367,96 @@
             <!-- End of Section -->
 
 
-            <!-- Section -->
-            <section class="pb-6">
+            <!-- Coming Soon Section -->
+            <section class="py-8 py-lg-10">
                 <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">Featured</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase">Blogs and Slides</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <!-- Coming Soon Icon -->
+                            <div class="coming-soon-icon mb-5">
+                                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#6c757d"/>
+                                    <path d="M14 2V8H20" fill="#495057"/>
+                                    <path d="M16 13H8V15H16V13Z" fill="white"/>
+                                    <path d="M16 17H8V19H16V17Z" fill="white"/>
+                                    <path d="M10 9H8V11H10V9Z" fill="white"/>
+                                </svg>
+                            </div>
+
+                            <!-- Main Heading -->
+                            <h1 class="coming-soon-title mb-4">Content Coming Soon</h1>
+                            
+                            <!-- Description -->
+                            <p class="coming-soon-description mb-6">
+                                I'm currently working on creating valuable content including research insights, 
+                                technical tutorials, and presentation slides. Stay tuned for updates!
+                            </p>
+
+                            <!-- Content Types -->
+                            <div class="row mb-8">
+                                <div class="col-md-6 mb-4">
+                                    <div class="content-type-card">
+                                        <div class="content-type-icon mb-3">
+                                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z" fill="#c00000"/>
+                                                <path d="M14 17H7V15H14V17ZM17 13H7V11H17V13ZM17 9H7V7H17V9Z" fill="#c00000"/>
+                                            </svg>
+                                        </div>
+                                        <h4 class="content-type-title">Technical Blogs</h4>
+                                        <p class="content-type-description">Research insights and tutorials</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="content-type-card">
+                                        <div class="content-type-icon mb-3">
+                                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z" fill="#c00000"/>
+                                                <path d="M10 17L15 12L10 7V17Z" fill="#c00000"/>
+                                            </svg>
+                                        </div>
+                                        <h4 class="content-type-title">Presentation Slides</h4>
+                                        <p class="content-type-description">Conference and seminar materials</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Call to Action -->
+                            <div class="coming-soon-cta">
+                                <h5 class="cta-heading mb-4">In the meantime, you can:</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col-auto mb-3">
+                                        <a href="research.html" class="btn btn-primary btn-lg px-5">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                                                <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                                            </svg>
+                                            View Research
+                                        </a>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <a href="publication_year.html" class="btn btn-outline-primary btn-lg px-5">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                                                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z" fill="currentColor"/>
+                                            </svg>
+                                            Read Publications
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Social Follow -->
+                                <div class="social-follow mt-5">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-follow-btn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.95718 14.8821 3.28445C14.0247 3.61173 13.2884 4.19445 12.773 4.95371C12.2575 5.71297 11.9877 6.61435 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39624C5.36074 6.60667 4.01032 5.43666 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.099 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z" fill="#1DA1F2"/>
+                                        </svg>
+                                        <span>Follow on Twitter</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-
             </section>
-            <!-- End of Section -->
+            <!-- End of Coming Soon Section -->
 
         </main>
         <!-- End of Main Content -->

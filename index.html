@@ -4,10 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <meta name="keywords" content="Juanxi Tian" />
+        <meta name="keywords" content="Juanxi Tian, Computer Vision, AI, PhD Student, NTU, Research, Machine Learning, Deep Learning" />
+        <meta name="description" content="Juanxi Tian - PhD Student in Computer Vision & AI at Nanyang Technological University. Research focus on Generative AI, Foundation Models, and World Models." />
+        <meta name="author" content="Juanxi Tian" />
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Juanxi Tian - PhD Student in Computer Vision & AI" />
+        <meta property="og:description" content="Research focus on Generative AI, Foundation Models, and World Models at NTU." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tianshijing.github.io/" />
+        <meta property="og:image" content="assets/img/images/avatar.jpg" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@JuanxiTian" />
+        <meta name="twitter:title" content="Juanxi Tian - PhD Student in Computer Vision & AI" />
+        <meta name="twitter:description" content="Research focus on Generative AI, Foundation Models, and World Models at NTU." />
+        <meta name="twitter:image" content="assets/img/images/avatar.jpg" />
         
         <!-- Page Title -->
-        <title>Home | Juanxi Tian</title>
+        <title>Juanxi Tian - PhD Student in Computer Vision & AI | Home</title>
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="500x500" href="assets/img/favicons/icon.svg">
@@ -23,10 +39,11 @@
         <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
         <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
-        <!-- <link href="./assets/vendor/aos/dist/aos.css" rel="stylesheet"> -->
+        <link href="assets/vendor/aos/dist/aos.css" rel="stylesheet">
 
         <!-- Theme Stylesheets -->
         <link href="assets/css/theme.css" rel="stylesheet">
+        <link href="assets/css/custom-enhancements.css" rel="stylesheet">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
@@ -40,6 +57,9 @@
     </head>
 
     <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-to-main">Skip to main content</a>
+        
         <!-- Preloader -->
         <div class="preloader">
             <div class="spinner">
@@ -50,20 +70,21 @@
 
 
         <!-- Header -->
-        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
             <div class="container">
-                <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html">
-                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="logo1" width="200" />
-                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="logo1" width="200" />
+                <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
+                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="Juanxi Tian Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="Juanxi Tian Logo" width="200" />
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link">Home</a></li>
-                        <!-- <li class="pl-5 nav-item navbar-text"><a href="team.html" class="nav-link text-400">Team</a></li> -->
-                        <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
-                        <li class="pl-5 nav-item navbar-text"><a href="publication_year.html" class="nav-link text-400">Publications</a></li>
-                        <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link">Blogs | Slides</a></li>
+                    <nav role="navigation" aria-label="Primary navigation">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+                            <!-- <li class="pl-5 nav-item navbar-text"><a href="team.html" class="nav-link text-400">Team</a></li> -->
+                            <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="publication_year.html" class="nav-link text-400">Publications</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link">Blogs | Slides</a></li>
                         <li class="pl-5 nav-item navbar-text dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Friend Links
@@ -73,7 +94,8 @@
                             </div>
                         </li>
                         <!-- <li class="pl-5 nav-item navbar-text"><a href="careers.html" class="nav-link text-400">Join Us</a></li> -->
-                    </ul>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div class="menu-toggle d-block d-lg-none">
@@ -173,209 +195,479 @@
 
 
         <!-- Main Content -->
-        <main class="main minh-100vh">
-            <!-- Section -->
-            <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay overlay-dark-60 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/photos/20250327.JPG)"></div>
-                <div class="container">
+        <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
+            <!-- Hero Section -->
+            <section class="hero-section py-0 overflow-hidden text-center position-relative" aria-label="Hero introduction">
+                <!-- Animated Background -->
+                <div class="hero-bg-container">
+                    <div class="hero-gradient-overlay"></div>
+                    <div class="hero-particles"></div>
+                    <div class="bg-container overlay overlay-dark-40 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/photos/20250327.JPG)"></div>
+                </div>
+                
+                <!-- Hero Content -->
+                <div class="container position-relative">
                     <div class="row h-100vh justify-content-center align-items-center">
-                        <div class="col-lg-8">
-                            <h1 class="text-white fs-5 fs-lg-7" data-aos="fade-left" data-aos-duration="500">Juanxi Tian</h1>
-			                <p class="mb-5 fs-lg-1 text-white" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">Welcome
-                            <!-- <p class="mb-5 fs-lg-1 text-white" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500">RA @ <br /> CUHK<br /> -->
-                            <!-- Affiliated with <a href="https://ipl-uw.github.io/" target="_blank" class="text-white">IPL</a>     -->
-                            </p>
-                            <div class="row justify-content-center">
-                                <div class="col-auto">
-                                    <a href="#section-1" class="btn btn-primary mx-2 px-5 mb-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-smooth-scroll data-smooth-scroll-hash="false">Explore</a>
+                        <div class="col-lg-10 col-xl-8">
+                            <!-- Main Title with Animation -->
+                            <div class="hero-title-container mb-4">
+                                <h1 class="hero-main-title text-white mb-3" data-aos="fade-up" data-aos-duration="800">
+                                    <span class="hero-name-highlight">Juanxi Tian</span>
+                                </h1>
+                                <div class="hero-subtitle-container">
+                                    <p class="hero-subtitle text-white-75 mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                                        PhD Student in Computer Vision & AI<br>
+                                        <span class="hero-affiliation">Nanyang Technological University</span>
+                                    </p>
                                 </div>
-                                <div class="col-auto">
-                                    <a href="research.html" class="btn btn-light px-5 mx-2" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500">Research<i class="zmdi zmdi-long-arrow-right ml-2"></i></a>
+                            </div>
+
+                            <!-- Research Focus Tags -->
+                            <div class="hero-tags mb-5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                                <span class="hero-tag">Generative AI</span>
+                                <span class="hero-tag">Foundation Models</span>
+                                <span class="hero-tag">Computer Vision</span>
+                                <span class="hero-tag">World Models</span>
+                            </div>
+
+                            <!-- CTA Buttons -->
+                            <div class="hero-cta-container" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <a href="#section-1" class="btn btn-hero-primary mx-2 px-6 mb-3" data-smooth-scroll data-smooth-scroll-hash="false">
+                                            <span>Explore My Work</span>
+                                            <i class="fas fa-arrow-down ml-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="research.html" class="btn btn-hero-secondary px-6 mx-2 mb-3">
+                                            <span>Research</span>
+                                            <i class="fas fa-arrow-right ml-2"></i>
+                                        </a>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="hero-social-links mt-5" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+                                <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="hero-social-link" title="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="https://github.com/tianshijing" target="_blank" class="hero-social-link" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://x.com/JuanxiTian" target="_blank" class="hero-social-link" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" class="hero-social-link" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
                             </div>
                         </div>
 
-                        <div class="move d-none d-lg-block">
-                            <a href="index.html#section-1" class="text-white" data-smooth-scroll data-smooth-scroll-hash="true">
-                                <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
+                        <!-- Scroll Indicator -->
+                        <div class="hero-scroll-indicator d-none d-lg-block">
+                            <a href="#section-1" class="scroll-down-link" data-smooth-scroll data-smooth-scroll-hash="true">
+                                <div class="scroll-down-animation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="scroll-text">Scroll Down</p>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- End of Section -->
+            <!-- End of Hero Section -->
 
             <br><br><br>
 
-            <!-- Section -->
-            <section id="section-1" class="py-0">
-                <!-- <div class="container-fluid px-0"> -->
+            <!-- About Section -->
+            <section id="section-1" class="py-8 py-lg-10" aria-label="About Juanxi Tian">
                 <div class="container">
-                    <div class="row no-gutters">
-                        <div class="col-md-8 py-6 py-lg-8 bg-light overflow-hidden">
-                            <div class="row h-100 align-items-center">
-                                <div class="col px-5 px-lg-8 px-xl-10">
-                                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">About</h3>
-                                    <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left">Juanxi Tian / 田隽熙</h2>
-                                    <p class="mb-0">
-                                    <!-- |
-                                    <a href="mailto:wenhao.chai@princeton.edu">Email</a> -->
-                                    <!-- |
-                                    <a href="assets/file/sop.pdf">Research Statement</a>
-                                    |
-                                    <a href="assets/file/presentation.pdf">Slides</a> -->
-                                    <br>
-                                    Lab:
-                                    <a href="https://physicalvision.github.io/">Physical Vision Group (PVG)</a>	
-                                    <br>
-                                    Research:
-                                    <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN">Google Scholar</a>
-                                    <!-- <img alt="Endpoint Badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fgoogle-scholar-badge.replit.app%2Fcitations%3Fuser%3DSL--7UMAAAAJ%26hl%3Den"> -->
-                                    |
-                                    <a href="https://github.com/tianshijing" target="_blank">GitHub</a>
-                                    <!-- |
-                                    <a href="https://huggingface.co/wchai" target="_blank">Hugging Face</a> -->
-                                    <br>
-                                    Social Media:
-                                    <a href="https://x.com/JuanxiTian" target="_blank">X / Twitter</a>
-                                    |
-                                    <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a>
-                                    |
-				                    <a href="" target="_blank">WeChat: Juanxi_Tian</a>
-				                    |
-                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a>
-                                    |
-                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank">Xiaohongshu</a>
-                                    </p>
-                                    <br />
-                                    <p class="mb-0 text-justify">Juanxi Tian is an Incoming PhD student at the Nanyang Technological University, Physical Vision Group (PVG) <a href=\"https://physicalvision.github.io/ \">[link]</a>, supervised by Dr. Chuanxia Zheng <a href=\"https://physicalvision.github.io/people/~chuanxia \">[link]</a>. Currently, he is serving as an research intern at the Shanghai AI Lab <a href=\"https://www.shlab.org.cn/ \">[link]</a>, and will graduate with a Bachelor's degree in Artificial Intelligence from Hong Kong Baptist University in 2025.
-                                    During his undergraduate studies, he began collaborating with several universities and research institutions, including Westlake University, Peking University, UIUC, OPPO, and Alibaba.
-                                    His research primarily focuses on Generative AI, and Foundation Model, with the goal of exploring Efficient and Scalable, Large-Scale (Vision-Centric) Multimodal Foundation Models—>World Model.
-                                    He has previously published papers at top-tier conferences such as NeurIPS, CVPR, and ACL, and has served as a reviewer for top-tier conferences and journals including ICML, ICLR, NeurIPS, CVPR, ECCV, ARR, and TNNLS.
-                                    <!-- , and served as a reviewer for NeurIPS, ICLR, ICML, CVPR, ICCV, ECCV, AAAI, COLM, AISTATS, and IJCV. -->
-                                    </p>
+                    <!-- Section Header -->
+                    <div class="row justify-content-center mb-6">
+                        <div class="col-lg-8 text-center">
+                            <h2 class="section-title mb-4" data-aos="fade-up">
+                                <span class="text-gradient-primary">About Me</span>
+                            </h2>
+                            <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="100">
+                                Passionate researcher exploring the frontiers of AI and Computer Vision
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <!-- Profile Image -->
+                        <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="800">
+                            <div class="profile-image-container">
+                                <div class="profile-image-wrapper">
+                                    <img src="assets/img/images/avatar.jpg" alt="Juanxi Tian" class="profile-image">
+                                    <div class="profile-image-overlay">
+                                        <div class="profile-status">
+                                            <i class="fas fa-circle text-success"></i>
+                                            <span>Available for Research</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 py-8">
-                            <div class="bg-container" style="background-image: url(assets/img/images/avatar.jpg);"></div>
+
+                        <!-- About Content -->
+                        <div class="col-lg-8" data-aos="fade-left" data-aos-duration="800">
+                            <div class="about-card">
+                                <!-- Name and Title -->
+                                <div class="about-header mb-4">
+                                    <h3 class="about-name mb-2">Juanxi Tian <span class="chinese-name">田隽熙</span></h3>
+                                    <p class="about-title text-primary mb-3">PhD Student in Computer Vision & AI</p>
+                                    <p class="about-affiliation text-muted">Nanyang Technological University</p>
+                                </div>
+
+                                <!-- Quick Info Cards -->
+                                <div class="row mb-4">
+                                    <div class="col-sm-6 mb-3">
+                                        <div class="info-card">
+                                            <div class="info-icon">
+                                                <i class="fas fa-university"></i>
+                                            </div>
+                                            <div class="info-content">
+                                                <h6>Current Position</h6>
+                                                <p>Research Intern<br><small>Shanghai AI Lab</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <div class="info-card">
+                                            <div class="info-icon">
+                                                <i class="fas fa-microscope"></i>
+                                            </div>
+                                            <div class="info-content">
+                                                <h6>Research Lab</h6>
+                                                <p><a href="https://physicalvision.github.io/" target="_blank">Physical Vision Group</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bio -->
+                                <div class="about-bio mb-4">
+                                    <p class="text-justify">
+                                        Juanxi Tian is an incoming PhD student at the Nanyang Technological University, 
+                                        <a href="https://physicalvision.github.io/" target="_blank">Physical Vision Group (PVG)</a>, 
+                                        supervised by Dr. <a href="https://physicalvision.github.io/people/~chuanxia" target="_blank">Chuanxia Zheng</a>. 
+                                        Currently serving as a research intern at the <a href="https://www.shlab.org.cn/" target="_blank">Shanghai AI Lab</a>, 
+                                        he will graduate with a Bachelor's degree in Artificial Intelligence from Hong Kong Baptist University in 2025.
+                                    </p>
+                                    <p class="text-justify">
+                                        His research primarily focuses on <strong>Generative AI</strong> and <strong>Foundation Models</strong>, 
+                                        with the goal of exploring Efficient and Scalable, Large-Scale (Vision-Centric) Multimodal Foundation Models → World Models. 
+                                        He has published papers at top-tier conferences such as <strong>NeurIPS</strong>, <strong>CVPR</strong>, and <strong>ACL</strong>, 
+                                        and serves as a reviewer for leading conferences and journals.
+                                    </p>
+                                </div>
+
+                                <!-- Links Section -->
+                                <div class="about-links">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="links-category">Research</h6>
+                                            <div class="links-list">
+                                                <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">
+                                                    <i class="fas fa-graduation-cap"></i> Google Scholar
+                                                </a>
+                                                <a href="https://github.com/tianshijing" target="_blank">
+                                                    <i class="fab fa-github"></i> GitHub
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="links-category">Social</h6>
+                                            <div class="links-list">
+                                                <a href="https://x.com/JuanxiTian" target="_blank">
+                                                    <i class="fab fa-twitter"></i> Twitter
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">
+                                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                                </a>
+                                                <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">
+                                                    <i class="fas fa-book"></i> Zhihu
+                                                </a>
+                                                <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank">
+                                                    <i class="fas fa-camera"></i> Xiaohongshu
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Info -->
+                                <div class="contact-info mt-4 pt-4 border-top">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <p class="contact-email mb-0">
+                                                <i class="fas fa-envelope text-primary"></i>
+                                                <strong>juanxitian1031 [at] gmail [dot] com</strong>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4 text-md-right">
+                                            <span class="wechat-info">
+                                                <i class="fab fa-weixin text-success"></i>
+                                                WeChat: Juanxi_Tian
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- End of Section --> 
+            <!-- End of About Section --> 
 
-            <!-- Section -->
-            <section id="section-2" class="pt-7 pb-7">
+            <!-- Experience Section -->
+            <section id="experience-section" class="py-8 py-lg-10" aria-label="Professional experience">
                 <div class="container">
-                    <div class="row no-gutters justify-content-between">
-                        <!-- <div class="col-lg-6">
-                            <div class="row">
+                    <!-- Section Header -->
+                    <div class="row justify-content-center mb-6">
+                        <div class="col-lg-8 text-center">
+                            <h2 class="section-title mb-4" data-aos="fade-up">
+                                <span class="text-gradient-primary">Experience</span>
+                            </h2>
+                            <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="100">
+                                Key milestones in my academic and professional journey
+                            </p>
+                        </div>
+                    </div>
 
-                                <div class="col-lg-6">
-
-                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
-                                        <div
-                                            data-background-text="01"
-                                            data-color="#ffffff"
-                                            data-opacity="0.5"
-                                            data-font-size="36px"
-                                            data-font-weight="700"
-                                            data-offset-x="-3.25rem"
-                                        ></div>
-
-                                        <h4 class="mb-4 fs-1 fw-medium">VDC Challenge at CVPR 2025</h4>
-                                        <p class="fs--1">09/2024: We release the first work in Aurora series, AuroraCap at ICLR 2025, in collaboration with Pika Labs, Stanford, MIT, Harvard, and NYU, which aims to build a new generation of image and video captioning baseline and benchmark. We also host the first VDC Challenge at CVPR 2025!</p>
-                                        <p class="mb-0 fs--1">
-                                            <a href="https://rese1f.github.io/aurora-web/" target="_blank" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
-                                        </p>
-                                    </div>
-
-                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
-                                        <div
-                                            data-background-text="02"
-                                            data-color="#ffffff"
-                                            data-opacity="0.5"
-                                            data-font-size="36px"
-                                            data-font-weight="700"
-                                            data-offset-x="-3.25rem"
-                                        ></div>
-
-                                        <h4 class="mb-4 fs-1 fw-medium">MovieChat</h4>
-                                        <p class="fs--1">07/2023: We release MovieChat, the first framework that can chat with over 10k frames of video, accepted to CVPR 2024 and selected as a highlight paper in Paper Digest. We also host LOVEU: LOng-form VidEo Understanding challenge in CVPR 2024!</p>
-                                        <p class="mb-0 fs--1">
-                                            <a href="https://rese1f.github.io/MovieChat/" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
-                                        </p>
-                                     </div>
-
+                    <!-- Timeline -->
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
+                        
+                        <!-- Experience Item 1 -->
+                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800">
+                            <div class="timeline-marker">
+                                <div class="timeline-marker-inner">
+                                    <i class="fas fa-briefcase"></i>
                                 </div>
-
-                                <div class="col-lg-6 mb-5 mb-lg-0">
-                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
-                                        <div
-                                            data-background-text="03"
-                                            data-color="#ffffff"
-                                            data-opacity="0.5"
-                                            data-font-size="36px"
-                                            data-font-weight="700"
-                                            data-offset-x="-3.25rem"
-                                        ></div>
-                                        <h4 class="mb-4 fs-1 fw-medium">arXiv Discord Server</h4>
-                                        <p class="fs--1">01/2025: We are hosting Discord server among professors and students for arXiv daily sharing and research discussion, email me if you are interested to join.</p>
-                                        <p class="mb-0 fs--1">
-                                            <h6 class="fs--1 fw-bold text-uppercase text-primary float-right">Email us</h6>
-                                        </p>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">
+                                        <span class="month">Jul</span>
+                                        <span class="year">2025</span>
                                     </div>
-                                    
-                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
-                                        <div
-                                            data-background-text="04"
-                                            data-color="#ffffff"
-                                            data-opacity="0.5"
-                                            data-font-size="36px"
-                                            data-font-weight="700"
-                                            data-offset-x="-3.25rem"
-                                        ></div>
-                                        <h4 class="mb-4 fs-1 fw-medium">SAMURAI</h4>
-                                        <p class="fs--1">11/2024: We release SAMURAI, a great improvement of SAM 2 on visual object tracking task, which gains over one million hits in all social media and over 6,000 stars in GitHub in one week.</p>
-                                        <p class="mb-0 fs--1">
-                                            <a href="https://github.com/yangchris11/samurai" target="_blank" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title">Research Internship at Shanghai AI Lab</h4>
+                                        <p class="timeline-text">
+                                            I am currently serving as a research intern at the Shanghai AI Lab, 
+                                            dedicated to researching various aspects of the <strong>Visual World Model</strong>. 
+                                            This exciting opportunity allows me to work on cutting-edge AI technologies 
+                                            and contribute to the development of next-generation foundation models.
                                         </p>
+                                        <div class="timeline-tags">
+                                            <span class="timeline-tag">Research</span>
+                                            <span class="timeline-tag">World Models</span>
+                                            <span class="timeline-tag">AI Lab</span>
+                                        </div>
                                     </div>
-
-                                    <div class="bg-dark text-white mb-4 px-5 pt-2 pb-5">
-                                        <div
-                                            data-background-text="05"
-                                            data-color="#ffffff"
-                                            data-opacity="0.5"
-                                            data-font-size="36px"
-                                            data-font-weight="700"
-                                            data-offset-x="-3.25rem"
-                                        ></div>
-
-                                        <h4 class="mb-4 fs-1 fw-medium">StableVideo</h4>
-                                        <p class="fs--1">07/2023: We release StableVideo, a diffusion-based framework for text-driven video editing, which is accepted to ICCV 2023. The project repo has gained over 1,400 stars in GitHub.</p>
-                                        <p class="mb-0 fs--1">
-                                            <a href="https://github.com/rese1f/StableVideo" target="_blank" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">View more<i class="zmdi zmdi-chevron-right pl-4"></i></a>
-                                        </p>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
-                         -->
-                        <div class="col-lg-12">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Check Out</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">News and Highlights</h2>
-                            <ul class="zmdi-hc-ul">
-                                <li><i class="zmdi-hc-li zmdi zmdi-money-box"></i>07/2025: I am currently an intern at the Shanghai AI Lab, dedicated to researching various aspects of the Visual World Model.</li>
-                                <li><i class="zmdi-hc-li zmdi zmdi-graduation-cap"></i>06/2025: I have obtained an Honours Bachelor of Science degree from HKBU. Looking forward to the future!</li>             
-							</ul>
+
+                        <!-- Experience Item 2 -->
+                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                            <div class="timeline-marker">
+                                <div class="timeline-marker-inner">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-card">
+                                    <div class="timeline-date">
+                                        <span class="month">Jun</span>
+                                        <span class="year">2025</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h4 class="timeline-title">Bachelor's Degree Completion</h4>
+                                        <p class="timeline-text">
+                                            Successfully obtained an <strong>Honours Bachelor of Science degree</strong> 
+                                            in Artificial Intelligence from Hong Kong Baptist University. 
+                                            This milestone marks the completion of my undergraduate studies and 
+                                            the beginning of my PhD journey. Looking forward to the future!
+                                        </p>
+                                        <div class="timeline-tags">
+                                            <span class="timeline-tag">Education</span>
+                                            <span class="timeline-tag">HKBU</span>
+                                            <span class="timeline-tag">AI Degree</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- End of Section --> 
+            <!-- End of Experience Section -->
+
+            <!-- News Section -->
+            <section id="news-section" class="py-8 py-lg-10 bg-light" aria-label="Latest news and updates">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="row justify-content-center mb-6">
+                        <div class="col-lg-8 text-center">
+                            <h2 class="section-title mb-4" data-aos="fade-up">
+                                <span class="text-gradient-primary">Latest News</span>
+                            </h2>
+                            <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="100">
+                                Recent updates, achievements, and announcements
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- News List -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="news-container">
+                                <!-- News Item 1 -->
+                                <div class="news-item" data-aos="fade-up" data-aos-duration="600">
+                                    <div class="news-header" data-toggle="collapse" data-target="#news-1" aria-expanded="false" aria-controls="news-1">
+                                        <div class="news-date">
+                                            <span class="date-day">15</span>
+                                            <span class="date-month">Sep 2025</span>
+                                        </div>
+                                        <div class="news-title">
+                                            <h5>Starting PhD Journey at NTU</h5>
+                                            <span class="news-category">Academic</span>
+                                        </div>
+                                        <div class="news-toggle">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="collapse news-content" id="news-1">
+                                        <div class="news-body">
+                                            <p>Excited to announce that I'm starting my PhD studies at <strong>Nanyang Technological University</strong> under the supervision of Dr. Chuanxia Zheng at the Physical Vision Group (PVG). My research will focus on Generative AI and Foundation Models, particularly exploring efficient and scalable approaches to Vision-Centric Multimodal Foundation Models leading towards World Models.</p>
+                                            <div class="news-tags">
+                                                <span class="news-tag">PhD</span>
+                                                <span class="news-tag">NTU</span>
+                                                <span class="news-tag">PVG</span>
+                                                <span class="news-tag">Foundation Models</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- News Item 2 -->
+                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                                    <div class="news-header" data-toggle="collapse" data-target="#news-2" aria-expanded="false" aria-controls="news-2">
+                                        <div class="news-date">
+                                            <span class="date-day">28</span>
+                                            <span class="date-month">Aug 2025</span>
+                                        </div>
+                                        <div class="news-title">
+                                            <h5>Research Achievements and Publications</h5>
+                                            <span class="news-category">Research</span>
+                                        </div>
+                                        <div class="news-toggle">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="collapse news-content" id="news-2">
+                                        <div class="news-body">
+                                            <p>Proud to share that I have published papers at top-tier conferences including <strong>NeurIPS</strong>, <strong>CVPR</strong>, and <strong>ACL</strong>. Additionally, I'm serving as a reviewer for leading conferences and journals such as ICML, ICLR, NeurIPS, CVPR, ECCV, ARR, and TNNLS. These experiences have deepened my understanding of the research community and current trends in AI.</p>
+                                            <div class="news-tags">
+                                                <span class="news-tag">Publications</span>
+                                                <span class="news-tag">Top Venues</span>
+                                                <span class="news-tag">Reviewer</span>
+                                                <span class="news-tag">Research Community</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- News Item 3 -->
+                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                                    <div class="news-header" data-toggle="collapse" data-target="#news-3" aria-expanded="false" aria-controls="news-3">
+                                        <div class="news-date">
+                                            <span class="date-day">10</span>
+                                            <span class="date-month">Jul 2025</span>
+                                        </div>
+                                        <div class="news-title">
+                                            <h5>Collaboration Opportunities Open</h5>
+                                            <span class="news-category">Collaboration</span>
+                                        </div>
+                                        <div class="news-toggle">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="collapse news-content" id="news-3">
+                                        <div class="news-body">
+                                            <p>I'm actively seeking collaboration opportunities with researchers and institutions working on similar topics in AI and Computer Vision. If you're interested in exploring joint research projects, discussing innovative ideas, or sharing insights about the latest developments in foundation models and world models, please feel free to reach out!</p>
+                                            <div class="news-tags">
+                                                <span class="news-tag">Collaboration</span>
+                                                <span class="news-tag">Research Opportunities</span>
+                                                <span class="news-tag">Networking</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- News Item 4 -->
+                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                                    <div class="news-header" data-toggle="collapse" data-target="#news-4" aria-expanded="false" aria-controls="news-4">
+                                        <div class="news-date">
+                                            <span class="date-day">25</span>
+                                            <span class="date-month">Jun 2025</span>
+                                        </div>
+                                        <div class="news-title">
+                                            <h5>Website Redesign and Enhancement</h5>
+                                            <span class="news-category">Personal</span>
+                                        </div>
+                                        <div class="news-toggle">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="collapse news-content" id="news-4">
+                                        <div class="news-body">
+                                            <p>Launched a completely redesigned personal website with modern aesthetics, improved user experience, and enhanced accessibility features. The new design better showcases my research work and makes it easier for visitors to navigate through my academic journey and achievements.</p>
+                                            <div class="news-tags">
+                                                <span class="news-tag">Website</span>
+                                                <span class="news-tag">Design</span>
+                                                <span class="news-tag">UX</span>
+                                                <span class="news-tag">Accessibility</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Call to Action -->
+                            <div class="row justify-content-center mt-8">
+                                <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="cta-card">
+                                        <h4 class="cta-title mb-3">Interested in Collaboration?</h4>
+                                        <p class="cta-text mb-4">
+                                            I'm always open to discussing research opportunities, collaborations, 
+                                            and innovative projects in AI and Computer Vision.
+                                        </p>
+                                        <div class="cta-buttons">
+                                            <a href="mailto:juanxitian1031@gmail.com" class="btn btn-modern btn-primary me-3">
+                                                <i class="fas fa-envelope me-2"></i>
+                                                Get in Touch
+                                            </a>
+                                            <a href="research.html" class="btn btn-modern btn-outline-primary">
+                                                <i class="fas fa-microscope me-2"></i>
+                                                View Research
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of News Section --> 
             <!-- Section -->
 
 
@@ -451,55 +743,137 @@
         <!-- End of Main Content -->
 
 
-        <!-- Footer -->
-        <footer class="footer_p text-white" style="background-image: url(assets/img/favicons/icon.svg)">
-            <div class="container d-flex h-100">
-                <div class="row flex-grow-1">
-                    <div class="col-lg-3 pt-3 ext-l bg-dark text-center text-lg-left">
-                        <div class="d-flex flex-column h-100">
-                            <div class="pt-5 pt-lg-8 pb-4">
-                                <img src="assets/img/favicons/icon.svg" alt="" width="250" class="mb-4" />
-                                <p class="mb-4 mt-0 fs--1"><br />
-                                Juanxi Tian <br>
-                                Nanyang Technological University<br />
-                                <!-- Princeton, NJ 08544 -->
+        <!-- Modern Footer -->
+        <footer class="modern-footer" role="contentinfo" aria-label="Site footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <!-- Profile Section -->
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <div class="footer-profile">
+                                <div class="footer-logo-container">
+                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo">
+                                    <div class="footer-logo-glow"></div>
+                                </div>
+                                <h4 class="footer-name">Juanxi Tian</h4>
+                                <p class="footer-title">PhD Student in Computer Vision & AI</p>
+                                <p class="footer-affiliation">Nanyang Technological University</p>
+                                
+                                <!-- Contact Info -->
+                                <div class="footer-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>juanxitian1031@gmail.com</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fab fa-weixin"></i>
+                                        <span>WeChat: Juanxi_Tian</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Research</h6>
+                                <ul class="footer-links">
+                                    <li><a href="research.html">Overview</a></li>
+                                    <li><a href="research.html#overview">By Topic</a></li>
+                                    <li><a href="publication_year.html">Publications</a></li>
+                                    <li><a href="blogs.html">Blogs & Slides</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Connect</h6>
+                                <ul class="footer-links">
+                                    <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
+                                    <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
+                                    <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
+                                    <li><a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Social Media & Newsletter -->
+                        <div class="col-lg-4">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Stay Connected</h6>
+                                <p class="footer-description">
+                                    Follow my research journey and get updates on the latest developments 
+                                    in AI and Computer Vision.
                                 </p>
-        
-                                <p class="fs--1">
-                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>juanxitian1031 [at] gmail [dot] com</span><br />
-                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://x.com/JuanxiTian" target="_blank" class="text-white">@Juanxi Tian</a></span></p>
-                            </div>
-                        </div>
-                    </div>
+                                
+                                <!-- Social Media Icons -->
+                                <div class="footer-social">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" class="social-icon linkedin" title="LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </a>
+                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" class="social-icon zhihu" title="Zhihu">
+                                        <i class="fas fa-book"></i>
+                                    </a>
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="Xiaohongshu">
+                                        <i class="fas fa-camera"></i>
+                                    </a>
+                                </div>
 
-                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
-                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-                                    <li class="my-1"><a href="research.html#overview" class="text-white">By Topic</a></li>
-                                    <li class="my-1"><a href="publication_year.html" class="text-white">By Year</a></li>
-                                </ul>
+                                <!-- Research Stats -->
+                                <div class="footer-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-number">10+</div>
+                                        <div class="stat-label">Publications</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">100+</div>
+                                        <div class="stat-label">Citations</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-                                    <li class="my-1"><a href="blogs.html" class="text-white">Blogs and Slides</a></li>
-                                    <li class="my-1"><a href="research.html" class="text-white">Research</a></li>
-                                    <!-- <li class="my-1"><a href="team.html" class="text-white">Team</a></li>
-                                    <li class="my-1"><a href="careers.html" class="text-white">Join Us</a></li> -->
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="mt-auto d-flex justify-content-between">
-                            <span class="fs--3 fs-lg--2">&copy; Juanxi Tian, 2025 | Template from <a href="https://www.mmlab-ntu.com/" target="_blank">here</a></span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="footer-copyright">
+                                &copy; 2025 Juanxi Tian. All rights reserved.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <div class="footer-credits">
+                                <span>Built with passion for AI research</span>
+                                <span class="separator">|</span>
+                                <a href="https://physicalvision.github.io/" target="_blank">PVG Lab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="footer-floating-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div>
         </footer>
-        <!-- End of Footer -->
+        <!-- End of Modern Footer -->
 
 
         <!-- Core Javascripts -->
@@ -514,9 +888,10 @@
         <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
         <script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
         <script src="assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
-        <!-- <script src="./assets/vendor/aos/dist/aos.js"></script> -->
+        <script src="assets/vendor/aos/dist/aos.js"></script>
 
         <!-- Theme Javascripts -->
         <script src="assets/js/theme.js"></script>
+        <script src="assets/js/custom-enhancements.js"></script>
     </body>
 </html>
