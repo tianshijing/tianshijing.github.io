@@ -4,7 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="Juanxi Tian, Computer Vision, AI, PhD Student, NTU, Research, Machine Learning, Deep Learning, Publications, Papers" />
+        <meta name="description" content="Juanxi Tian - Publications in Computer Vision & AI. Research papers published at top-tier conferences like NeurIPS, CVPR, and ACL." />
+        <meta name="author" content="Juanxi Tian" />
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Juanxi Tian - Publications" />
+        <meta property="og:description" content="Research publications in AI and computer vision at top-tier conferences and journals." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tianshijing.github.io/publication_year.html" />
+        <meta property="og:image" content="assets/img/images/avatar.jpg" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@JuanxiTian" />
+        <meta name="twitter:title" content="Juanxi Tian - Publications" />
+        <meta name="twitter:description" content="Research publications in AI and computer vision at top-tier conferences and journals." />
+        <meta name="twitter:image" content="assets/img/images/avatar.jpg" />
         
         <!-- Page Title -->
         <title>Publications | Juanxi Tian</title>
@@ -21,11 +37,14 @@
         <!-- Vendor Stylesheets -->
         <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
         <link href="assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="assets/vendor/jquery.mb.vimeo_player/dist/css/jquery.mb.vimeo_player.min.css" rel="stylesheet">
-        <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+        <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
+        <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="assets/vendor/aos/dist/aos.css" rel="stylesheet">
 
         <!-- Theme Stylesheets -->
         <link href="assets/css/theme.css" rel="stylesheet">
+        <link href="assets/css/custom-enhancements.css" rel="stylesheet">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
@@ -70,6 +89,9 @@
     </head>
 
     <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-to-main">Skip to main content</a>
+        
         <!-- Preloader -->
         <div class="preloader">
             <div class="spinner">
@@ -79,30 +101,32 @@
         <!-- End of Preloader -->
 
         <!-- Header -->
-        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
             <div class="container">
-              <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html">
-                <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="logo1" width="200" />
-                <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="logo1" width="200" />
-              </a>
+                <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
+                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="Juanxi Tian Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="Juanxi Tian Logo" width="200" />
+                </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link text-400">Home</a></li>
-                        <!-- <li class="pl-5 nav-item navbar-text"><a href="team.html" class="nav-link text-400">Team</a></li> -->
-                        <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
-                        <li class="pl-5 nav-item navbar-text"><a href="research.html#overview" class="nav-link">Publications</a></li>
-                        <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link">Blogs | Slides</a></li>
+                    <nav role="navigation" aria-label="Primary navigation">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link text-400">Home</a></li>
+                            <!-- <li class="pl-5 nav-item navbar-text"><a href="team.html" class="nav-link text-400">Team</a></li> -->
+                            <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="publication_year.html" class="nav-link" aria-current="page">Publications</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link text-400">Blogs | Slides</a></li>
                         <li class="pl-5 nav-item navbar-text dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Friend Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
-                                <a class="dropdown-item" href="https://physicalvision.github.io" target="_blank" style="color: #ffffff;" onmouseover="this.style.backgroundColor='rgba(192, 0, 0, 0.2)'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">PVG</a>
+								<a class="dropdown-item" href="https://physicalvision.github.io" target="_blank" style="color: #ffffff;" onmouseover="this.style.backgroundColor='rgba(192, 0, 0, 0.2)'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">PVG</a>
                             </div>
                         </li>
                         <!-- <li class="pl-5 nav-item navbar-text"><a href="careers.html" class="nav-link text-400">Join Us</a></li> -->
-                    </ul>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div class="menu-toggle d-block d-lg-none">
@@ -129,7 +153,7 @@
                                     <li class="spyre-nav-item"><a href="research.html" class="spyre-nav-link">Research</a></li>
                                     <!-- <li class="spyre-nav-item"><a href="team.html" class="spyre-nav-link">Team</a></li> -->
                                     <li class="spyre-nav-item dropdown">
-                                        <a href="publication_year.html#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <a href="index.html#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li class="dropdown-menu-item"><a href="research.html#overview" class="dropdown-menu-link">By Topic</a></li>
                                             <li class="dropdown-menu-item"><a href="publication_year.html" class="dropdown-menu-link">By Year</a></li>
@@ -139,9 +163,10 @@
                                     <li class="spyre-nav-item dropdown">
                                         <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Friend Links</a>
                                         <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
-                                            <li class="dropdown-menu-item"><a href="https://physicalvision.github.io" target="_blank" class="dropdown-menu-link">PVG</a></li>
+											<li class="dropdown-menu-item"><a href="https://physicalvision.github.io" target="_blank" class="dropdown-menu-link">PVG</a></li>
                                         </ul>
                                     </li>
+                                    <!-- <li class="spyre-nav-item"><a href="careers.html" class="spyre-nav-link">Join Us</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -160,7 +185,7 @@
                                             data-letter-spacing="5px"
                                         ></div>
                                         <div class="text-uppercase"
-                                            data-background-text="mmlab"
+                                            data-background-text="machine learning"
                                             data-color="#7079a2"
                                             data-opacity="0.04"
                                             data-font-size="175px"
@@ -200,7 +225,7 @@
         <!-- End of Header -->
 
         <!-- Main Content -->
-        <main class="main minh-100vh">
+        <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
             <section class="py-0 overflow-hidden text-center">
                 <div class="bg-container overlay overlay-dark-50 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/fire.jpg)"></div>
                 <div class="container">
@@ -400,53 +425,137 @@
         <!-- End of Main Content -->
 
 
-        <!-- Footer -->
-        <footer class="footer_p text-white" style="background-image: url(assets/img/favicons/icon.svg)">
-          <div class="container d-flex h-100">
-              <div class="row flex-grow-1">
-                  <div class="col-lg-3 pt-3 ext-l bg-dark text-center text-lg-left">
-                      <div class="d-flex flex-column h-100">
-                          <div class="pt-5 pt-lg-8 pb-4">
-                              <img src="assets/img/favicons/icon.svg" alt="" width="250" class="mb-4" />
-                              <p class="mb-4 mt-0 fs--1"><br />
-                              Juanxi Tian <br>
-                              Nanyang Technological University<br />
-                              <!-- Princeton, NJ 08544 -->
-                              </p>
-      
-                              <p class="fs--1">
-                              <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>juanxitian1031 [at] gmail [dot] com</span><br />
-                              <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://x.com/JuanxiTian" target="_blank" class="text-white">@Juanxi Tian</a></span></p>
-                          </div>
-                      </div>
-                  </div>
-
-                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
-                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-                                    <li class="my-1"><a href="research.html#overview" class="text-white">By Topic</a></li>
-                                    <li class="my-1"><a href="publication_year.html" class="text-white">By Year</a></li>
-                                </ul>
+        <!-- Modern Footer -->
+        <footer class="modern-footer" role="contentinfo" aria-label="Site footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <!-- Profile Section -->
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <div class="footer-profile">
+                                <div class="footer-logo-container" style="text-align: left;">
+                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px; margin-left: -20px;">
+                                    <div class="footer-logo-glow"></div>
+                                </div>
+                                <h4 class="footer-name">Juanxi Tian</h4>
+                                <p class="footer-title">PhD Student in AI</p>
+                                <p class="footer-affiliation">Nanyang Technological University</p>
+                                
+                                <!-- Contact Info -->
+                                <div class="footer-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>juanxitian1031@gmail.com</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fab fa-weixin"></i>
+                                        <span>WeChat: Juanxi_Tian</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-lg-3">
-                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
-                                <ul class="pt-2 mb-5 fw-light list-unstyled">
-                                    <li class="my-1"><a href="blogs.html" class="text-white">Blogs and Slides</a></li>
-                                    <li class="my-1"><a href="research.html" class="text-white">Research</a></li>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Research</h6>
+                                <ul class="footer-links">
+                                    <li><a href="research.html">Overview</a></li>
+                                    <li><a href="research.html#overview">By Topic</a></li>
+                                    <li><a href="publication_year.html">Publications</a></li>
+                                    <li><a href="blogs.html">Blogs & Slides</a></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="mt-auto d-flex justify-content-between">
-                            <span class="fs--3 fs-lg--2">&copy; Juanxi Tian, 2025 | Template from <a href="https://www.mmlab-ntu.com/" target="_blank">here</a></span>
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Connect</h6>
+                                <ul class="footer-links">
+                                    <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
+                                    <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
+                                    <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
+                                    <li><a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Social Media & Newsletter -->
+                        <div class="col-lg-4">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Stay Connected</h6>
+                                <p class="footer-description">
+                                    Follow my research journey and get updates on the latest developments 
+                                    in AI.
+                                </p>
+                                
+                                <!-- Social Media Icons -->
+                                <div class="footer-social">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" class="social-icon linkedin" title="LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </a>
+                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" class="social-icon zhihu" title="Zhihu">
+                                        <i class="fas fa-book"></i>
+                                    </a>
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="Xiaohongshu">
+                                        <i class="fas fa-camera"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Research Stats -->
+                                <div class="footer-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-number">10+</div>
+                                        <div class="stat-label">Publications</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">200+</div>
+                                        <div class="stat-label">Citations</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="footer-copyright">
+                                &copy; 2025 Juanxi Tian. All rights reserved.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <div class="footer-credits">
+                                <span>Built with passion for AI research</span>
+                                <span class="separator">|</span>
+                                <a href="https://physicalvision.github.io/" target="_blank">PVG Lab</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="footer-floating-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div>
         </footer>
-        <!-- End of Footer -->
+        <!-- End of Modern Footer -->
 
         <!-- Top Button -->
         <a id="back-to-top" href="publication_year.html#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
@@ -469,6 +578,7 @@
 
         <!-- Theme Javascripts -->
         <script src="assets/js/theme.js"></script>
+        <script src="assets/js/custom-enhancements.js"></script>
         <script src="assets/js/top.js"></script>
     </body>
 </html>
