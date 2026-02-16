@@ -200,14 +200,20 @@
      * News Section Interactions
      */
     function initNewsSection() {
-        // Manual collapse functionality - no auto-closing
+        // Smooth collapse functionality using Bootstrap API
         $('.news-header').on('click', function() {
-            const target = $(this).data('target');
-            const isExpanded = $(this).attr('aria-expanded') === 'true';
-            
-            // Only toggle current item - don't close others
-            $(this).attr('aria-expanded', !isExpanded);
-            $(target).toggleClass('show');
+            const $header = $(this);
+            const targetId = $header.attr('aria-controls');
+            const $content = $('#' + targetId);
+            const isExpanded = $header.attr('aria-expanded') === 'true';
+
+            if (isExpanded) {
+                $content.collapse('hide');
+                $header.attr('aria-expanded', 'false');
+            } else {
+                $content.collapse('show');
+                $header.attr('aria-expanded', 'true');
+            }
         });
 
         // News items intersection observer for animations

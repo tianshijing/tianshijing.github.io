@@ -258,8 +258,8 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
-                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="Juanxi Tian Logo" width="200" />
-                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="Juanxi Tian Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="NTU Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="NTU Logo" width="200" />
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -272,9 +272,10 @@
                             <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link" aria-current="page">Blogs | Slides</a></li>
                         <li class="pl-5 nav-item navbar-text dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Friend Links
+                                Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
+                                <a class="dropdown-item text-white" href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" target="_blank">OpenMM-Arena</a>
                                 <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/" target="_blank">ScalingOpt</a>
                             </div>
                         </li>
@@ -315,8 +316,9 @@
                                     </li>
                                     <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
                                     <li class="spyre-nav-item dropdown">
-                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Friend Links</a>
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                                         <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
+                                            <li class="dropdown-menu-item"><a href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" class="dropdown-menu-link" target="_blank">OpenMM-Arena</a></li>
                                             <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
                                         </ul>
                                     </li>
@@ -380,18 +382,28 @@
 
         <!-- Main Content -->
         <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
-            <!-- Section -->
-            <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay overlay-dark-30 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/pexels-07.jpg)"></div>
-                <div class="container">
-                    <div class="row h-100vh align-items-center">
-                        <div class="col">
-                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Blogs | Slides</h1>
+            <!-- NTU Banner Section -->
+            <section class="ntu-page-banner">
+                <div class="bg-container parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/ntu-hive-yunnan.jpg); background-position: center 40%;"></div>
+                <div class="ntu-banner-overlay ntu-banner-overlay--blogs"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--top-left"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--bottom-right"></div>
+                <div class="container ntu-banner-content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
+                            <h1 class="ntu-banner-title">Blogs | Slides</h1>
+                            <p class="ntu-banner-subtitle">Insights & Presentations</p>
+                            <div class="ntu-banner-campus-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Yunnan Garden &middot; Nanyang Technological University</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="ntu-banner-bottom-fade"></div>
+                <span class="ntu-photo-credit">Photo: The Hive from Yunnan Garden &copy; Jeslynn / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></span>
             </section>
-            <!-- End of Section -->
+            <!-- End of NTU Banner Section -->
 
 
             <!-- Coming Soon Section -->
@@ -498,7 +510,7 @@
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <div class="footer-profile">
                                 <div class="footer-logo-container" style="text-align: left;">
-                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px; margin-left: -20px;">
+                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px;">
                                     <div class="footer-logo-glow"></div>
                                 </div>
                                 <h4 class="footer-name">Juanxi Tian</h4>
@@ -539,7 +551,6 @@
                                     <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
                                     <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
                                     <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
-                                    <li><a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -549,13 +560,12 @@
                             <div class="footer-section">
                                 <h6 class="footer-section-title">Stay Connected</h6>
                                 <p class="footer-description">
-                                    Follow my research journey and get updates on the latest developments 
-                                    in AI.
+                                    Stay informed on my latest research, publications, and insights shaping the future of AI.
                                 </p>
                                 
                                 <!-- Social Media Icons -->
                                 <div class="footer-social">
-                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter / X">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                     <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
@@ -567,10 +577,7 @@
                                     <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
                                         <i class="fas fa-graduation-cap"></i>
                                     </a>
-                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" class="social-icon zhihu" title="Zhihu">
-                                        <i class="fas fa-book"></i>
-                                    </a>
-                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="Xiaohongshu">
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="RedNote / XiaoHongShu">
                                         <i class="fas fa-camera"></i>
                                     </a>
                                 </div>

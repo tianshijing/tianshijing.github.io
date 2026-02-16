@@ -104,8 +104,8 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
-                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="Juanxi Tian Logo" width="200" />
-                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="Juanxi Tian Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="NTU Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="NTU Logo" width="200" />
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -118,9 +118,10 @@
                             <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link text-400">Blogs | Slides</a></li>
                         <li class="pl-5 nav-item navbar-text dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Friend Links
+                                Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
+                                <a class="dropdown-item text-white" href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" target="_blank">OpenMM-Arena</a>
                                 <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/" target="_blank">ScalingOpt</a>
                             </div>
                         </li>
@@ -161,8 +162,9 @@
                                     </li>
                                     <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
                                     <li class="spyre-nav-item dropdown">
-                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Friend Links</a>
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                                         <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
+                                            <li class="dropdown-menu-item"><a href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" class="dropdown-menu-link" target="_blank">OpenMM-Arena</a></li>
                                             <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
                                         </ul>
                                     </li>
@@ -226,22 +228,28 @@
 
         <!-- Main Content -->
         <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
-            <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay overlay-dark-50 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/fire.jpg)"></div>
-                <div class="container">
-                    <div class="row h-100vh align-items-center">
-                        <div class="col">
-                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Publication</h1>
+            <!-- NTU Banner Section -->
+            <section class="ntu-page-banner">
+                <div class="bg-container parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/ntu-admin-night.jpg); background-position: center 30%;"></div>
+                <div class="ntu-banner-overlay ntu-banner-overlay--publications"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--top-left"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--bottom-right"></div>
+                <div class="container ntu-banner-content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
+                            <h1 class="ntu-banner-title">Publications</h1>
+                            <p class="ntu-banner-subtitle">Selected Research Papers</p>
+                            <div class="ntu-banner-campus-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>NTU Admin Building &middot; Nanyang Technological University</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="ntu-banner-bottom-fade"></div>
+                <span class="ntu-photo-credit">Photo: NTU Admin Building &copy; Kenrick95 / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></span>
             </section>
-            <!-- Section -->
-            <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay overlay-dark-60 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/bg-03.jpg)">
-                </div>
-            </section>
-            <!-- End of Section -->
+            <!-- End of NTU Banner Section -->
 
             <!-- Section -->
             <section id="section-1" class="pb-0">
@@ -251,6 +259,7 @@
                             <div class="pb-6 pt-6 py-lg-3" data-toggle="sticky" data-sticky-offset-top="100">
                                 <h5 class="mb-4 text-uppercase text-600">Years</h5>
                                 <ul class="mb-5 mb-lg-6 pl-4 text-600">
+                                    <li class="mb-1"><a href="publication_year.html#2026" class="text-600">2026</a></li>
                                     <li class="mb-1"><a href="publication_year.html#2025" class="text-600">2025</a></li>
                                     <li class="mb-1"><a href="publication_year.html#2024" class="text-600">2024</a></li>
                                 </ul>
@@ -271,8 +280,28 @@
                         <div class="col-lg-8 order-lg-2 pb-6 pb-lg-0 pt-lg-3">
                             <div class="mb-8">
                               <h6>* Equal contribution.&nbsp;&nbsp; <sup>&dagger;</sup> Project lead.&nbsp;&nbsp; <sup>&Dagger;</sup> Corresponding author.</h6>
-                              <span id="2025"></span>
+                              <span id="2026"></span>
 
+                            </div>
+
+                            <div class="mb-8">
+                              <h2 class="mb-4 text-uppercase">2026</h2>
+                              <h4 class="mb-4 text-uppercase">Preprint</h4>
+                              <ul class="conference">
+                                <li>
+                                  <span class="text-primary"><b>GEBench: Benchmarking Image Generation Models as GUI Environments</b></span> 
+                                  <br />
+                                  <span class="text-500">
+                                  Haodong Li, Jingwei Wu, Quan Sun, Guopeng Li, <b>Juanxi Tian</b>, Huanyu Zhang, Yanlin Lai, Ruichuan An, Hongbo Peng, Yuhong Dai, Chenxi Li, Chunmei Qing, Jia Wang, Ziyang Meng, Zheng Ge, Xiangyu Zhang, Daxin Jiang <br /> 
+                                </span>
+                                <span class="text-900"> 
+                                  StepFun Tech Report, 2026<br />   
+                                  </span>
+                                  <a href="https://arxiv.org/abs/2602.09007">Paper</a>
+                                </li>
+                              </ul>
+                                
+                                <span id="2025"></span>
                             </div>
 
                             <div class="mb-8">
@@ -321,6 +350,18 @@
                                   |
                                   <a href="https://github.com/Gen-Verse/WideRange4D">Code</a>
                                 </li>
+                                <hr>
+                                <li>
+                                  <span class="text-primary"><b>Envision: Benchmarking Unified Understanding & Generation for Causal World Process Insights</b></span> 
+                                  <br />
+                                  <span class="text-500">
+                                  <b>Juanxi Tian</b>, Siyuan Li, Conghui He, Lijun Wu, Cheng Tan<sup>&Dagger;</sup> <br /> 
+                                </span>
+                                <span class="text-900"> 
+                                  OpenData Lab Tech Report, 2025<br />   
+                                  </span>
+                                  <a href="https://arxiv.org/abs/2512.01816">Paper</a>
+                                </li>
                                </ul> 
                                 
                                 <span id="2024"></span>
@@ -347,22 +388,6 @@
                                     </li>
                                     <hr>
                                     <li>
-                                      <span class="text-primary"><b>OpenMixup: Open mixup toolbox and benchmark for visual representation learning</b></span> 
-                                      <br />
-                                      <span class="text-500">
-                                        Siyuan Li*, Zedong Wang, Zicheng Liu, <b>Juanxi Tian</b>, Di Wu, Cheng Tan, Weiyang Jin, Stan Z Li<sup>&Dagger;</sup> <br /> 
-                                      </span>
-                                      <span class="text-900">
-                                        Tech Report, 2024 <br /> 
-                                      </span>
-                                        <a href="https://github.com/Westlake-AI/openmixup">Project Page</a>
-                                        |
-                                        <a href="https://arxiv.org/pdf/2209.04851">Paper</a>
-                                        |
-                                        <a href="https://github.com/Westlake-AI/openmixup">Code</a>
-                                    </li>
-                                    <hr>
-                                    <li>
                                       <span class="text-primary"><b>Switch EMA: A Free Lunch for Better Flatness and Sharpness</b></span> 
                                       <br />
                                       <span class="text-500">
@@ -382,37 +407,6 @@
                                         <a href="https://arxiv.org/pdf/2410.07155">Paper</a>
                                         |
                                         <a href="https://github.com/YangLing0818/Trans4D">Code</a>
-                                    </li>
-                                    <hr>
-                                    <li>
-                                      <span class="text-primary"><b>CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models</b></span>
-                                      <br />
-                                      <span class="text-500">
-                                        Peng Xia*, Ze Chen, <b>Juanxi Tian</b>, Yangrui Gong, Ruibo Hou, Yue Xu, Zhenbang Wu, Zhiyuan Fan, Yiyang Zhou, Kangyu Zhu, Wenhao Zheng, Xiao Wang, Xuchao Zhang, Chentan Bansal, Marc Niethammer, Junzhou Huang, Hongtu Zhu, Yun Li, Jimeng Sun, Zongyuan Ge, Gang Li, James Zou, Huaxiu Yao<sup>&Dagger;</sup> <br />
-                                      </span>
-                                      <span class="text-900">
-                                        NeurIPS DB Track, 2024<br />
-                                      </span>
-                                        <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/fde7f40f8ced5735006810534dc66b33-Paper-Datasets_and_Benchmarks_Track.pdf">Paper</a>
-                                        |
-                                        <a href="https://cares-ai.github.io">Project</a>
-                                        |
-                                        <a href="https://github.com/richard-peng-xia/CARES">Code</a>
-                                    </li>
-                                    <hr>
-                                </ul>
-                                <br>
-                                <h4 class="mb-4 text-uppercase">Journal</h4>
-                                <ul class="journal">
-                                  <li>
-                                      <span class="text-primary"><b>A Survey on Mixup Augmentations and Beyond</b></span> 
-                                      <br />
-                                      <span class="text-500">
-                                        Xin Jin*, Hongyu Zhu*, Siyuan Li*, Zedong Wang, Zicheng Liu, <b>Juanxi Tian</b>, Chang Yu, Huafeng Qin, Stan Z Li<sup>&Dagger;</sup> <br /> 
-                                        </span>
-                                        <a href="https://arxiv.org/abs/2409.05202">Paper</a>
-                                        |
-                                        <a href="https://github.com/Westlake-AI/Awesome-Mixup">Code</a>
                                     </li>
                                 </ul>
                             </div>                                                     
@@ -434,7 +428,7 @@
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <div class="footer-profile">
                                 <div class="footer-logo-container" style="text-align: left;">
-                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px; margin-left: -20px;">
+                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px;">
                                     <div class="footer-logo-glow"></div>
                                 </div>
                                 <h4 class="footer-name">Juanxi Tian</h4>
@@ -475,7 +469,6 @@
                                     <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
                                     <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
                                     <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
-                                    <li><a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -485,13 +478,12 @@
                             <div class="footer-section">
                                 <h6 class="footer-section-title">Stay Connected</h6>
                                 <p class="footer-description">
-                                    Follow my research journey and get updates on the latest developments 
-                                    in AI.
+                                    Stay informed on my latest research, publications, and insights shaping the future of AI.
                                 </p>
                                 
                                 <!-- Social Media Icons -->
                                 <div class="footer-social">
-                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter / X">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                     <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
@@ -503,10 +495,7 @@
                                     <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
                                         <i class="fas fa-graduation-cap"></i>
                                     </a>
-                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" class="social-icon zhihu" title="Zhihu">
-                                        <i class="fas fa-book"></i>
-                                    </a>
-                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="Xiaohongshu">
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="RedNote / XiaoHongShu">
                                         <i class="fas fa-camera"></i>
                                     </a>
                                 </div>

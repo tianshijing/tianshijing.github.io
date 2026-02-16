@@ -73,8 +73,8 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
-                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="Juanxi Tian Logo" width="200" />
-                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="Juanxi Tian Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="NTU Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="NTU Logo" width="200" />
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -87,9 +87,10 @@
                             <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link">Blogs | Slides</a></li>
                         <li class="pl-5 nav-item navbar-text dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Friend Links
+                                Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
+                                <a class="dropdown-item text-white" href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" target="_blank">OpenMM-Arena</a>
                                 <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/" target="_blank">ScalingOpt</a>
                             </div>
                         </li>
@@ -130,8 +131,9 @@
                                     </li>
                                     <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
                                     <li class="spyre-nav-item dropdown">
-                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Friend Links</a>
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                                         <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
+                                            <li class="dropdown-menu-item"><a href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" class="dropdown-menu-link" target="_blank">OpenMM-Arena</a></li>
                                             <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
                                         </ul>
                                     </li>
@@ -202,9 +204,15 @@
                 <div class="hero-bg-container">
                     <div class="hero-gradient-overlay"></div>
                     <div class="hero-particles"></div>
-                    <div class="bg-container overlay overlay-dark-40 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/photos/20250327.JPG)"></div>
+                    <div class="bg-container overlay overlay-dark-30 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/ntu-hive-01.jpg); background-position: center 40%;"></div>
                 </div>
                 
+                <!-- Corner decorations -->
+                <div class="ntu-banner-decor ntu-banner-decor--top-left" style="z-index: 10;"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--bottom-right" style="z-index: 10;"></div>
+                
+                <span class="ntu-photo-credit" style="z-index: 10;">Photo: The Hive, NTU &copy; Supanut Arunoprayote / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></span>
+
                 <!-- Hero Content -->
                 <div class="container position-relative">
                     <div class="row h-100vh justify-content-center align-items-center">
@@ -248,15 +256,23 @@
                                 </div>
                             </div>
 
+                            <!-- Campus Label -->
+                            <div class="mt-4 mb-3" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800" style="position: relative; z-index: 10;">
+                                <div class="ntu-banner-campus-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>The Hive &middot; Nanyang Technological University, Singapore</span>
+                                </div>
+                            </div>
+
                             <!-- Social Links -->
-                            <div class="hero-social-links mt-5" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+                            <div class="hero-social-links mt-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                                 <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="hero-social-link" title="Google Scholar">
                                     <i class="fas fa-graduation-cap"></i>
                                 </a>
                                 <a href="https://github.com/tianshijing" target="_blank" class="hero-social-link" title="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://x.com/JuanxiTian" target="_blank" class="hero-social-link" title="Twitter">
+                                <a href="https://x.com/JuanxiTian" target="_blank" class="hero-social-link" title="Twitter / X">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" class="hero-social-link" title="LinkedIn">
@@ -280,8 +296,6 @@
                 </div>
             </section>
             <!-- End of Hero Section -->
-
-            <br><br><br>
 
             <!-- About Section -->
             <section id="section-1" class="py-8 py-lg-10" aria-label="About Juanxi Tian">
@@ -325,26 +339,31 @@
                                 </div>
 
                                 <!-- Quick Info Cards -->
-                                <div class="row mb-4">
-                                    <div class="col-sm-6 mb-3">
-                                        <div class="info-card">
-                                            <div class="info-icon">
+                                <div class="row mb-4" style="display:flex;flex-wrap:wrap;">
+                                    <div class="col-sm-6 mb-3" style="display:flex;">
+                                        <div class="info-card" style="flex:1;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+                                            <div class="info-icon" style="margin-bottom:0.6rem;">
                                                 <i class="fas fa-university"></i>
                                             </div>
-                                            <div class="info-content">
-                                                <h6>Current Position</h6>
-                                                <p>Research Intern<br><small>Ant Group</small></p>
-                                            </div>
+                                            <h6 style="font-size:0.9rem;font-weight:600;color:#6c757d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.3rem;">Current Position</h6>
+                                            <p style="font-weight:500;color:#1f2749;font-size:1rem;margin:0;">Research Intern<br><small style="color:#6c757d;">Ant Group</small></p>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 mb-3">
-                                        <div class="info-card">
-                                            <div class="info-icon">
-                                                <i class="fas fa-microscope"></i>
+                                    <div class="col-sm-6 mb-3" style="display:flex;">
+                                        <div class="info-card" style="flex:1;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+                                            <div class="info-icon" style="margin-bottom:0.6rem;">
+                                                <i class="fas fa-code-branch"></i>
                                             </div>
-                                            <div class="info-content">
-                                                <h6>Research Lab</h6>
-                                                <p><a href="https://physicalvision.github.io/" target="_blank">Physical Vision Group</a></p>
+                                            <h6 style="font-size:0.9rem;font-weight:600;color:#6c757d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem;">Open-source Community</h6>
+                                            <div style="display:flex;gap:0.6em;justify-content:center;align-items:center;flex-wrap:wrap;">
+                                                <a href="https://tianshijing.github.io/ScalingOpt/" target="_blank" style="display:flex;align-items:center;gap:0.35em;padding:0.35em 0.65em;border-radius:8px;background:#f0f0f5;transition:all 0.3s ease;text-decoration:none;">
+                                                    <img src="assets/img/logos/scalingopt-logo.png" alt="ScalingOpt" style="height:24px;width:auto;object-fit:contain;">
+                                                    <span style="font-weight:600;color:#1f2749;font-size:0.8rem;">ScalingOpt</span>
+                                                </a>
+                                                <a href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" target="_blank" style="display:flex;align-items:center;gap:0.35em;padding:0.35em 0.65em;border-radius:8px;background:#f0f0f5;transition:all 0.3s ease;text-decoration:none;">
+                                                    <img src="assets/img/logos/openenvision-logo.png" alt="OpenEnvision" style="height:24px;width:auto;object-fit:contain;border-radius:4px;">
+                                                    <span style="font-weight:600;color:#1f2749;font-size:0.8rem;">OpenEnvision</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -359,7 +378,7 @@
                                     <p class="text-justify">
                                         His research primarily focuses on <strong>Generative AI</strong> and <strong>Efficient AI （Optimization）</strong>, 
                                         with the goal of exploring Efficient and Scalable, Large-Scale (Vision-Centric) Multimodal Foundation Models → World Models. 
-                                        He has published papers at top-tier conferences such as <strong>NeurIPS</strong>, <strong>CVPR</strong>, and <strong>ACL</strong>, 
+                                        He has published papers at top-tier conferences 
                                         and serves as a reviewer for leading conferences and journals.
                                     </p>
                                 </div>
@@ -367,7 +386,7 @@
                                 <!-- Links Section -->
                                 <div class="about-links">
                                     <div class="row">
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-md-4 mb-3">
                                             <h6 class="links-category">Research</h6>
                                             <div class="links-list">
                                                 <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">
@@ -378,20 +397,34 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-md-4 mb-3">
                                             <h6 class="links-category">Social</h6>
                                             <div class="links-list">
                                                 <a href="https://x.com/JuanxiTian" target="_blank">
-                                                    <i class="fab fa-twitter"></i> Twitter
+                                                    <i class="fab fa-twitter"></i> Twitter / X
                                                 </a>
                                                 <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">
                                                     <i class="fab fa-linkedin"></i> LinkedIn
                                                 </a>
-                                                <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">
-                                                    <i class="fas fa-book"></i> Zhihu
-                                                </a>
                                                 <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank">
-                                                    <i class="fas fa-camera"></i> Xiaohongshu
+                                                    <i class="fas fa-camera"></i> RedNote / XiaoHongShu
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <h6 class="links-category">Experience</h6>
+                                            <div class="links-list experience-logos">
+                                                <a href="https://www.antgroup.com/" target="_blank" class="exp-logo-link">
+                                                    <img src="assets/img/logos/ant-group.png" alt="Ant Group" class="exp-logo-img"> Ant Group
+                                                </a>
+                                                <a href="https://www.shlab.org.cn/" target="_blank" class="exp-logo-link">
+                                                    <img src="assets/img/logos/shanghai-ai-lab.png" alt="Shanghai AI Lab" class="exp-logo-img"> Shanghai AI Lab
+                                                </a>
+                                                <a href="https://illinois.edu/" target="_blank" class="exp-logo-link">
+                                                    <img src="assets/img/logos/uiuc.png" alt="UIUC" class="exp-logo-img"> UIUC
+                                                </a>
+                                                <a href="https://www.pku.edu.cn/" target="_blank" class="exp-logo-link">
+                                                    <img src="assets/img/logos/pku.png" alt="Peking University" class="exp-logo-img"> Peking University
                                                 </a>
                                             </div>
                                         </div>
@@ -555,7 +588,7 @@
                             <div class="news-container">
                                 <!-- News Item 2 -->
                                 <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                                    <div class="news-header" data-toggle="collapse" data-target="#news-2" aria-expanded="false" aria-controls="news-2">
+                                    <div class="news-header" aria-expanded="false" aria-controls="news-2">
                                         <div class="news-date">
                                             <span class="date-day">05</span>
                                             <span class="date-month">Jan 2026</span>
@@ -570,7 +603,7 @@
                                     </div>
                                     <div class="collapse news-content" id="news-2">
                                         <div class="news-body">
-                                            <p>I'm very happy to start my internship at Ant Group. The research topic is about Generative AI and Optimization.</p>
+                                            <p>I'm thrilled to begin my research internship at Ant Group, joining the Ming-Omni team. My research focuses on Unified Multimodal Models.</p>
                                             <div class="news-tags">
                                                 <span class="news-tag">Publications</span>
                                                 <span class="news-tag">Top Venues</span>
@@ -691,8 +724,8 @@
                         <!-- Profile Section -->
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <div class="footer-profile">
-                                <div class="footer-logo-container" style="text-align: left;">
-                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px; margin-left: -20px;">
+                                <div class="footer-logo-container">
+                                    <img src="assets/img/favicons/icon.svg" alt="NTU Logo" class="footer-logo">
                                     <div class="footer-logo-glow"></div>
                                 </div>
                                 <h4 class="footer-name">Juanxi Tian</h4>
@@ -733,7 +766,6 @@
                                     <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
                                     <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
                                     <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
-                                    <li><a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -743,13 +775,12 @@
                             <div class="footer-section">
                                 <h6 class="footer-section-title">Stay Connected</h6>
                                 <p class="footer-description">
-                                    Follow my research journey and get updates on the latest developments 
-                                    in AI.
+                                    Stay informed on my latest research, publications, and insights shaping the future of AI.
                                 </p>
                                 
                                 <!-- Social Media Icons -->
                                 <div class="footer-social">
-                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter / X">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                     <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
@@ -761,10 +792,7 @@
                                     <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
                                         <i class="fas fa-graduation-cap"></i>
                                     </a>
-                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" class="social-icon zhihu" title="Zhihu">
-                                        <i class="fas fa-book"></i>
-                                    </a>
-                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="Xiaohongshu">
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="RedNote / XiaoHongShu">
                                         <i class="fas fa-camera"></i>
                                     </a>
                                 </div>

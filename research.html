@@ -92,6 +92,7 @@
         section.overview .thin b{display:block;padding:2px 5px}
         section.overview .thin ul.content{transition:opacity 200ms ease;opacity:1}
         @media (max-width: 1480px) { ul.row li.page{margin:0} }
+        @media (max-width: 768px) { .pillar-grid{grid-template-columns:1fr !important;} }
 
         .thick{border:3px solid var(--secondary-link-border-color);padding:.5em;font-size:1.25rem}
         .thick>b{color:var(--main-color)}
@@ -123,8 +124,8 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
-                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="Juanxi Tian Logo" width="200" />
-                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="Juanxi Tian Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-none d-lg-block" alt="NTU Logo" width="200" />
+                    <img src="assets/img/favicons/icon.svg" class="d-block d-lg-none" alt="NTU Logo" width="200" />
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -137,9 +138,10 @@
                             <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link text-400">Blogs | Slides</a></li>
                         <li class="pl-5 nav-item navbar-text dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Friend Links
+                                Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
+                                <a class="dropdown-item text-white" href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" target="_blank">OpenMM-Arena</a>
                                 <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/" target="_blank">ScalingOpt</a>
                             </div>
                         </li>
@@ -180,8 +182,9 @@
                                     </li>
                                     <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
                                     <li class="spyre-nav-item dropdown">
-                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Friend Links</a>
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                                         <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
+                                            <li class="dropdown-menu-item"><a href="https://openenvision-lab.github.io/OpenMM-Arena/index.html" class="dropdown-menu-link" target="_blank">OpenMM-Arena</a></li>
                                             <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
                                         </ul>
                                     </li>
@@ -247,18 +250,28 @@
         <!-- Main Content -->
         <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
 
-            <!-- Section -->
-            <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay overlay-dark-50 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/pexels-03.jpg)"></div>
-                <div class="container">
-                    <div class="row h-100vh align-items-center">
-                        <div class="col">
-                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Research</h1>
+            <!-- NTU Banner Section -->
+            <section class="ntu-page-banner">
+                <div class="bg-container parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/ntu-hive-02.jpg); background-position: center 35%;"></div>
+                <div class="ntu-banner-overlay ntu-banner-overlay--research"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--top-left"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--bottom-right"></div>
+                <div class="container ntu-banner-content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
+                            <h1 class="ntu-banner-title">Research</h1>
+                            <p class="ntu-banner-subtitle">Exploring the Frontiers of AI</p>
+                            <div class="ntu-banner-campus-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>The Hive &middot; Nanyang Technological University</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="ntu-banner-bottom-fade"></div>
+                <span class="ntu-photo-credit">Photo: The Hive, NTU &copy; Supanut Arunoprayote / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></span>
             </section>
-            <!-- End of Section -->
+            <!-- End of NTU Banner Section -->
 
             <!-- Section -->
             <section class="pb-0">
@@ -294,13 +307,16 @@
                         Currently, I am interested in several topics, including but not limited to:
                         <ul>
                             <li>
-                                <b>Large-scale (Vision / Language) Foundation Models</b>: My research primarily aims to investigate architectural design and the underlying coupling bias, such as its interaction with optimizers. I identified the Backbone-Optimizer Coupling Bias (<a href="https://arxiv.org/pdf/2410.06373">BOCB</a>) , a phenomenon where architectural properties disproportionately influence optimization behavior. By analyzing BOCB across different architectures, I uncovered dependencies that challenge traditional optimizer assumptions and provided practical guidelines for integrating optimization strategies with architectural inductive biases. Additionally, I developed Scaling with Gradient Grouping (<a href="https://arxiv.org/pdf/2506.01049">SGG</a>) , an adaptive optimization framework for large language models. SGG dynamically groups parameters based on gradient similarity, enabling stable updates and reducing computational overhead. This method supports scalable training under resource constraints and advances effective training paradigms for foundation models.
+                                <b>Native Multimodal Foundation Model</b>: Rather than retrofitting language models with vision or audio adapters, native multimodal foundation models are designed from the ground up to jointly perceive and reason across text, images, video, and audio within a single architecture. This paradigm treats every modality as a first-class citizen during pre-training, enabling richer cross-modal representations, more coherent multimodal reasoning, and emergent capabilities that modular pipelines struggle to achieve. Core challenges include designing unified tokenization schemes, balancing modality-specific and shared representations, crafting scalable pre-training objectives that capture inter-modal dependencies, and establishing principled scaling laws that govern how performance evolves as data, compute, and the number of modalities grow.
                             </li>
                             <li>
-                                <b>Efficient & Scalable AI</b>: As the scale-up of training large models becomes increasingly critical, many conventional techniques are no longer effective. Developing efficient and scalable methodologies—such as speculative decoding, advanced optimizers, and domain-specific efficiency/optimization techniques tailored for generative models—is essential. Crucially, these approaches must remain effective as model size continues to grow.
+                                <b>Efficient & Scalable AI</b>: As foundation models continue to scale in both parameter count and training data, many conventional techniques face diminishing returns or become prohibitively expensive. Advancing efficient and scalable methodologies—spanning adaptive optimization strategies, speculative and parallel decoding, low-precision training, memory-efficient attention mechanisms, and domain-specific acceleration techniques for generative models—is essential to sustaining progress. Crucially, these approaches must not only reduce computational cost at today's scale but also preserve their effectiveness as model size, sequence length, and deployment complexity continue to grow.
                             </li>
                             <li>
-                                <b>Unified Models for Generation and Understanding</b> Recent efforts in unifying generation and understanding models continue to explore various aspects, including architectural design, data composition strategies, and training paradigms. While the broader community has yet to reach a consensus on the significance and long-term implications of unified modeling, I believe that building a bridge between visual representation learning and generative modeling through a shared framework is a promising direction. Such an approach may play a crucial role in advancing toward Artificial General Intelligence (AGI).
+                                <b>Unified Models for Generation and Understanding</b>: A growing line of work aims to bridge visual generation and visual understanding within a single model, rather than treating them as separate tasks served by disparate architectures. Unification opens the door to shared representations that benefit both directions—generative objectives can regularize discriminative features, while perceptual understanding can guide more semantically faithful synthesis. Key research threads include joint tokenization strategies, hybrid training paradigms that balance reconstruction and recognition losses, and data composition strategies that expose the model to both generative and discriminative signals at scale. Although the field has not yet converged on a dominant recipe, such unified frameworks represent a compelling path toward more general and versatile visual intelligence.
+                            </li>
+                            <li>
+                                <b>World Model</b>: World models seek to learn an internal, predictive representation of the environment that can simulate future states, reason about physical dynamics, and support planning without exhaustive trial-and-error interaction. By capturing spatial, temporal, and causal structure from large-scale video and sensor data, world models hold the potential to serve as a general-purpose "mental simulator" for embodied agents, autonomous driving, robotics, and scientific discovery. Central challenges include learning physically grounded dynamics from passive observation, generalizing across diverse environments and embodiments, achieving long-horizon temporal consistency, and efficiently integrating world-model predictions into downstream decision-making and control.
                             </li>
                         </ul>
                     </p>
@@ -310,66 +326,62 @@
             
             <section class="overview" id="overview" style="text-align:center">
                 <div class="container">
-                    <p style="text-align:left">The following presents my comprehensive research experience and areas of focus, along with a timeline highlighting the periods when I was most actively engaged in each field. The template is from <a href="https://jiayuanm.com/">here</a>.</p>
+                    <p style="text-align:left">The following illustrates how two complementary research pillars — Efficient & Scalable AI and Generative AI — jointly converge toward building a Native Unified Multimodal Foundation Model.</p>
                     <br>
-                    
-                    <div class="main thick">
-                    <b>Efficient & Scalable AI (08/2024 - Present)</b>
-                    <p>How to achieve efficient and scalable general/domain-specific technologies?</p>
-                    <p>How to achieve effective training more efficiently and ensure good generalization?</p>
-                    <p><a href="javascript:$('#overview-lmm ul.content').slideToggle();">Show/Hide Work</a></p>
+
+                    <!-- Two Pillars Side by Side -->
+                    <div class="pillar-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1em;">
+                        <!-- Header Row -->
+                        <div class="main thick">
+                        <b>Efficient & Scalable AI</b>
+                        <p style="font-style:italic;font-weight:500;font-size:0.95rem;color:#444;margin-top:0.3em;letter-spacing:0.02em;">"Efficiency isn't about doing less — it's about understanding more."</p>
+                        </div>
+                        <div class="main thick">
+                        <b>Generative AI</b>
+                        <p style="font-style:italic;font-weight:500;font-size:0.95rem;color:#444;margin-top:0.3em;letter-spacing:0.02em;">"What I cannot create, I do not understand."</p>
+                        </div>
+                        <!-- Sub-topic Row 1 -->
+                        <div class="thin">
+                        <b>Adaptive Optimization</b>
+                        <p style="font-size:0.9rem;text-align:left;padding:4px 5px">Developing optimizer-architecture co-design principles and scalable training strategies that remain effective across diverse model scales.</p>
+                        </div>
+                        <div class="thin">
+                        <b>Unified Generation & Understanding</b>
+                        <p style="font-size:0.9rem;text-align:left;padding:4px 5px">Bridging visual synthesis and perception within a shared framework via joint tokenization and hybrid training paradigms.</p>
+                        </div>
+                        <!-- Sub-topic Row 2 -->
+                        <div class="thin">
+                        <b>Training-Inference Acceleration</b>
+                        <p style="font-size:0.9rem;text-align:left;padding:4px 5px">Unified acceleration across training and inference — speculative decoding, memory-efficient attention, and consistent optimization strategies that bridge the training-serving gap for real-time deployment.</p>
+                        </div>
+                        <div class="thin">
+                        <b>Multimodal Synthesis</b>
+                        <p style="font-size:0.9rem;text-align:left;padding:4px 5px">High-fidelity generation across images, video, 3D/4D, and beyond — advancing quality, consistency, and compositional control.</p>
+                        </div>
+                        <!-- Sub-topic Row 3 -->
+                        <div class="thin">
+                        <b>Scalable Architecture Design</b>
+                        <p style="font-size:0.9rem;text-align:left;padding:4px 5px">Designing model architectures with inherent scalability — exploring structural inductive biases, modular composition, and architecture-optimizer synergies that generalize as capacity grows.</p>
+                        </div>
+                        <div class="thin">
+                        <b>World Modeling</b>
+                        <p style="font-size:0.9rem;text-align:left;padding:4px 5px">Learning predictive, physically grounded representations of environments to enable simulation, planning, and embodied reasoning.</p>
+                        </div>
                     </div>
-                    <ul class="row" id="overview-lmm">
-                    <!-- <li class="page stretch join up down"> -->
-                    <li class="page join down">
-                        <div class="thin">
-                        <b>Data-centric efficient AI</b>
-                        <ul class="content">
-                            <li>Openmixup: Open mixup toolbox and benchmark for visual representation learning</li>
-                            <li>A Survey on Mixup Augmentations and Beyond</li>
-                        </ul>
-                        </div>
-                    </li>
-                    <!-- <li class="page stretch join up down"> -->
-                    <li class="page join down">
-                        <div class="thin">
-                        <b>Efficient Optimization</b>
-                        <ul class="content">
-                            <li>SGG: Taming LLMs by Scaling Learning Rates with Gradient Grouping</li>
-                            <li>Switch EMA: A Free Lunch for Better Flatness and Sharpness</li>
-                            <li>BOCB: Unveiling the Backbone-Optimizer Coupling Bias in Visual Representation Learning</li>
-                        </ul>
-                        </div>
-                    </li>
-                    </ul>
-                    <br>
-                    <div class="main thick">
-                    <b>Generative Models (10/2024 - Present)</b>
-                    <p>How to ensure the efficient and high-quality generation of generative models?</p>
-                    <p>How to better build an efficient unified multimodal generation framework?</p>
-                    <p><a href="javascript:$('#overview-generative ul.content').slideToggle();">Show/Hide Work</a></p>
+
+                    <!-- Convergence Arrow -->
+                    <div style="display:flex;justify-content:center;align-items:center;margin:1.2em 0;">
+                        <div style="flex:1;height:3px;background:linear-gradient(to right, transparent, var(--secondary-link-border-color));"></div>
+                        <div style="margin:0 0.8em;font-size:2rem;color:var(--main-color);line-height:1;">&#x2B07;</div>
+                        <div style="flex:1;height:3px;background:linear-gradient(to left, transparent, var(--secondary-link-border-color));"></div>
                     </div>
-                    <ul class="row" id="overview-generative">
-                    <!-- <li class="page stretch join up down"> -->
-                    <li class="page join down">
-                        <div class="thin">
-                        <b>Unified Framework/Model (Image)</b>
-                        <ul class="content">
-                            <li>MergeVQ: A Unified Framework for Visual Generation and Representation with Disentangled Token Merging and Quantization</li>
-                        </ul>
-                        </div>
-                    </li>
-                    <!-- <li class="page stretch join up down"> -->
-                    <li class="page join down">
-                        <div class="thin">
-                        <b>4D</b>
-                        <ul class="content">
-                            <li>WideRange4D: Enabling High-Quality 4D Reconstruction with Wide-Range Movements and Scenes</li>
-                            <li>Trans4D: Realistic Geometry-Aware Transition for Compositional Text-to-4D Synthesis</li>
-                        </ul>
-                        </div>
-                    </li>
-                    <!-- <li class="page stretch join up down"> -->
+
+                    <!-- Converged Goal -->
+                    <div class="main thick" style="border-color:var(--main-color);position:relative;">
+                    <b style="font-size:1.35rem;">Native Unified Multimodal Foundation Model</b>
+                    <p style="margin-top:0.4em">A single architecture that natively perceives and generates across all modalities — text, image, video, audio, and 3D — grounded in physical-world understanding, trained efficiently at scale, and capable of seamless reasoning across generation and comprehension.</p>
+                    </div>
+
                 </div>
               </section>
 
@@ -543,7 +555,7 @@
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <div class="footer-profile">
                                 <div class="footer-logo-container" style="text-align: left;">
-                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px; margin-left: -20px;">
+                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo" style="width: 300px;">
                                     <div class="footer-logo-glow"></div>
                                 </div>
                                 <h4 class="footer-name">Juanxi Tian</h4>
@@ -584,7 +596,6 @@
                                     <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
                                     <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
                                     <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
-                                    <li><a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank">Zhihu</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -594,13 +605,12 @@
                             <div class="footer-section">
                                 <h6 class="footer-section-title">Stay Connected</h6>
                                 <p class="footer-description">
-                                    Follow my research journey and get updates on the latest developments 
-                                    in AI.
+                                    Stay informed on my latest research, publications, and insights shaping the future of AI.
                                 </p>
                                 
                                 <!-- Social Media Icons -->
                                 <div class="footer-social">
-                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon twitter" title="Twitter / X">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                     <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
@@ -612,10 +622,7 @@
                                     <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
                                         <i class="fas fa-graduation-cap"></i>
                                     </a>
-                                    <a href="https://www.zhihu.com/people/Juanxi_Tian" target="_blank" class="social-icon zhihu" title="Zhihu">
-                                        <i class="fas fa-book"></i>
-                                    </a>
-                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="Xiaohongshu">
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="RedNote / XiaoHongShu">
                                         <i class="fas fa-camera"></i>
                                     </a>
                                 </div>
