@@ -2696,6 +2696,296 @@
     }
 }
 
+/* ==========================================================================
+   Publication Page Enhancements
+   Beautiful animations and interactions for the publications list
+   ========================================================================== */
+
+/* --- Year Section Headings --- */
+.pub-year-heading {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.pub-year-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #c00000, #ff4757, transparent);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pub-year-heading.animate-in::after {
+    width: 100%;
+}
+
+/* --- Category Subheadings --- */
+.pub-category-heading {
+    position: relative;
+    display: inline-block;
+    color: #6c757d;
+    letter-spacing: 0.05em;
+}
+
+.pub-category-heading::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #c00000;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.3s;
+}
+
+.pub-category-heading.animate-in::before {
+    opacity: 1;
+}
+
+/* --- Publication Paper Item --- */
+.pub-paper-item {
+    position: relative;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.4s ease;
+    overflow: hidden;
+    /* Initial state for scroll animation */
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.pub-paper-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animated accent bar on left */
+.pub-paper-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #c00000, #ff4757);
+    border-radius: 0 2px 2px 0;
+    transition: height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pub-paper-item:hover::before {
+    height: 100%;
+}
+
+.pub-paper-item:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 12px 40px rgba(192, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    border-color: rgba(192, 0, 0, 0.15);
+}
+
+/* Paper title */
+.pub-paper-item .text-primary b {
+    transition: color 0.3s ease;
+}
+
+.pub-paper-item:hover .text-primary b {
+    color: #c00000 !important;
+}
+
+/* Paper links */
+.pub-paper-item a {
+    position: relative;
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 2px 2px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #c00000;
+    background: rgba(192, 0, 0, 0.06);
+    border: 1px solid rgba(192, 0, 0, 0.12);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    text-decoration: none !important;
+}
+
+.pub-paper-item a:hover {
+    background: linear-gradient(135deg, #c00000, #ff4757);
+    color: #ffffff !important;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.25);
+    text-decoration: none !important;
+}
+
+/* Link separator replacement (hide plain | text) */
+.pub-paper-item .pub-link-separator {
+    display: inline-block;
+    width: 4px;
+}
+
+/* --- Year Block Container --- */
+.pub-year-block {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(192, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    transition: border-color 0.4s ease;
+}
+
+.pub-year-block:hover {
+    border-left-color: rgba(192, 0, 0, 0.25);
+}
+
+/* Timeline dot at year heading */
+.pub-year-block::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #c00000, #ff4757);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(192, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.pub-year-block:hover::before {
+    box-shadow: 0 0 0 8px rgba(192, 0, 0, 0.15);
+    transform: scale(1.2);
+}
+
+/* --- Sidebar Navigation Enhancement --- */
+.pub-sidebar-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 8px;
+    color: #495057;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    text-decoration: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.pub-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(192, 0, 0, 0.06);
+    border-radius: 8px;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.pub-sidebar-link:hover {
+    color: #c00000 !important;
+    transform: translateX(6px);
+    text-decoration: none !important;
+}
+
+.pub-sidebar-link:hover::before {
+    width: 100%;
+}
+
+.pub-sidebar-link.active {
+    color: #c00000;
+    background: rgba(192, 0, 0, 0.08);
+}
+
+/* --- Staggered Entrance Delays --- */
+.pub-paper-item:nth-child(1)  { transition-delay: 0.05s; }
+.pub-paper-item:nth-child(2)  { transition-delay: 0.12s; }
+.pub-paper-item:nth-child(3)  { transition-delay: 0.19s; }
+.pub-paper-item:nth-child(4)  { transition-delay: 0.26s; }
+.pub-paper-item:nth-child(5)  { transition-delay: 0.33s; }
+.pub-paper-item:nth-child(6)  { transition-delay: 0.40s; }
+.pub-paper-item:nth-child(7)  { transition-delay: 0.47s; }
+.pub-paper-item:nth-child(8)  { transition-delay: 0.54s; }
+
+/* --- Publication Stats Badge (floating) --- */
+.pub-stats-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(192, 0, 0, 0.06);
+    border: 1px solid rgba(192, 0, 0, 0.12);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #c00000;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.pub-stats-badge i {
+    font-size: 1rem;
+}
+
+.pub-stats-badge:hover {
+    background: rgba(192, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.1);
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 991.98px) {
+    .pub-year-block {
+        padding-left: 1rem;
+    }
+    
+    .pub-paper-item {
+        padding: 1.25rem 1.25rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pub-year-block {
+        padding-left: 0.75rem;
+        border-left-width: 2px;
+    }
+    
+    .pub-paper-item {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .pub-paper-item a {
+        font-size: 0.8rem;
+        padding: 2px 8px;
+    }
+}
+
+/* --- Publication HR replacement --- */
+.pub-paper-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(192, 0, 0, 0.12), transparent);
+    margin: 0;
+}
+
 /* Legacy page banner support */
 section.py-0.overflow-hidden.text-center {
     position: relative;

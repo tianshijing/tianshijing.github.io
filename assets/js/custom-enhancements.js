@@ -38,6 +38,9 @@
         // Initialize news section
         initNewsSection();
         
+        // Initialize publication page animations
+        initPublicationAnimations();
+        
         // Initialize footer animations
         initFooterAnimations();
         
@@ -240,6 +243,98 @@
         }).on('mouseleave', function() {
             $(this).removeClass('tag-hover');
         });
+    }
+
+    /**
+     * Publication Page Animations
+     */
+    function initPublicationAnimations() {
+        var paperItems = document.querySelectorAll('.pub-paper-item');
+        var yearHeadings = document.querySelectorAll('.pub-year-heading');
+        var categoryHeadings = document.querySelectorAll('.pub-category-heading');
+
+        if (paperItems.length === 0) return;
+
+        // Staggered entrance animation for paper items
+        if ('IntersectionObserver' in window) {
+            var paperObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var item = entry.target;
+                        var siblings = item.parentElement.querySelectorAll('.pub-paper-item');
+                        var index = Array.prototype.indexOf.call(siblings, item);
+                        var delay = index * 120;
+
+                        setTimeout(function() {
+                            item.classList.add('animate-in');
+                        }, delay);
+
+                        paperObserver.unobserve(item);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            paperItems.forEach(function(item) {
+                paperObserver.observe(item);
+            });
+
+            // Year heading underline animation
+            var headingObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        setTimeout(function() {
+                            entry.target.classList.add('animate-in');
+                        }, 200);
+                        headingObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            yearHeadings.forEach(function(h) { headingObserver.observe(h); });
+            categoryHeadings.forEach(function(h) { headingObserver.observe(h); });
+        } else {
+            // Fallback: show everything immediately
+            paperItems.forEach(function(item) { item.classList.add('animate-in'); });
+            yearHeadings.forEach(function(h) { h.classList.add('animate-in'); });
+            categoryHeadings.forEach(function(h) { h.classList.add('animate-in'); });
+        }
+
+        // Sidebar active state tracking on scroll
+        var yearBlocks = document.querySelectorAll('.pub-year-block');
+        var sidebarLinks = document.querySelectorAll('.pub-sidebar-link');
+
+        if (yearBlocks.length > 0 && sidebarLinks.length > 0) {
+            $(window).on('scroll', throttle(function() {
+                var scrollPos = $(window).scrollTop() + 200;
+
+                yearBlocks.forEach(function(block) {
+                    var top = block.offsetTop;
+                    var height = block.offsetHeight;
+                    var spanEl = block.querySelector('span[id]');
+
+                    if (!spanEl) {
+                        var h2 = block.querySelector('h2');
+                        if (h2) {
+                            var yearText = h2.textContent.trim();
+                            sidebarLinks.forEach(function(link) {
+                                if (scrollPos >= top && scrollPos < top + height) {
+                                    if (link.textContent.trim() === yearText) {
+                                        link.classList.add('active');
+                                    } else {
+                                        link.classList.remove('active');
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
+            }, 100));
+        }
     }
 
     /**
