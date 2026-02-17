@@ -1966,6 +1966,31 @@
 }
 
 /* Research Stats */
+.footer-stats-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.visitor-tracker {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visitor-tracker img {
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.visitor-tracker img:hover {
+    opacity: 1;
+}
+
 .footer-stats {
     display: flex;
     gap: 2rem;
@@ -1974,6 +1999,7 @@
     border-radius: 15px;
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 1;
 }
 
 .stat-item {
@@ -2015,28 +2041,9 @@
     margin: 0;
 }
 
-.footer-credits {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: flex-end;
-}
-
-.footer-credits a {
-    color: #c00000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-credits a:hover {
-    color: #ff4757;
-    text-decoration: none;
-}
-
-.separator {
-    color: rgba(255, 255, 255, 0.3);
+/* Footer bottom copyright centered */
+.footer-bottom .footer-copyright {
+    text-align: center;
 }
 
 /* Floating Elements */
@@ -2126,6 +2133,15 @@
         transform: translateX(-50%);
     }
     
+    .footer-stats-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .visitor-tracker img {
+        width: 120px;
+    }
+    
     .footer-stats {
         flex-direction: column;
         gap: 1rem;
@@ -2139,14 +2155,6 @@
     
     .stat-item:last-child {
         border-bottom: none;
-    }
-    
-    .footer-credits {
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.25rem;
-        text-align: center;
-        margin-top: 1rem;
     }
 }
 
