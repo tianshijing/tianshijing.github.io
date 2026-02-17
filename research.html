@@ -102,6 +102,44 @@
         .bold{font-weight:600}
         .hide{display:none}
 
+        /* Convergence Arrow Styles */
+        .convergence-arrow-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5em 0;
+            gap: 0;
+        }
+        .convergence-line {
+            flex: 1;
+            height: 2px;
+            position: relative;
+        }
+        .convergence-line--left {
+            background: linear-gradient(to right, transparent, var(--main-color));
+        }
+        .convergence-line--right {
+            background: linear-gradient(to left, transparent, var(--main-color));
+        }
+        .convergence-arrow-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0.6em;
+            animation: convergence-bounce 2s ease-in-out infinite;
+        }
+        .convergence-arrow-icon svg {
+            filter: drop-shadow(0 2px 6px rgba(192, 0, 0, 0.25));
+            transition: transform 0.3s ease;
+        }
+        .convergence-arrow-wrapper:hover .convergence-arrow-icon svg {
+            transform: scale(1.15);
+        }
+        @keyframes convergence-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+
     </style>
 
 
@@ -370,10 +408,15 @@
                     </div>
 
                     <!-- Convergence Arrow -->
-                    <div style="display:flex;justify-content:center;align-items:center;margin:1.2em 0;">
-                        <div style="flex:1;height:3px;background:linear-gradient(to right, transparent, var(--secondary-link-border-color));"></div>
-                        <div style="margin:0 0.8em;font-size:2rem;color:var(--main-color);line-height:1;">&#x2B07;</div>
-                        <div style="flex:1;height:3px;background:linear-gradient(to left, transparent, var(--secondary-link-border-color));"></div>
+                    <div class="convergence-arrow-wrapper">
+                        <div class="convergence-line convergence-line--left"></div>
+                        <div class="convergence-arrow-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="18" r="17" stroke="var(--main-color)" stroke-width="2" fill="none" opacity="0.18"/>
+                                <path d="M12 14.5L18 21.5L24 14.5" stroke="var(--main-color)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="convergence-line convergence-line--right"></div>
                     </div>
 
                     <!-- Converged Goal -->
