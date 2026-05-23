@@ -842,6 +842,31 @@
     transition: all 0.3s ease;
 }
 
+.links-list a .links-list-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex: 0 0 20px;
+    transition: all 0.3s ease;
+}
+
+.x-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    color: currentColor;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}
+
+.links-list-x-icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    color: #c00000;
+    transition: all 0.3s ease;
+}
+
 .links-list a::after {
     content: '';
     position: absolute;
@@ -867,6 +892,22 @@
     transform: scale(1.2);
 }
 
+.links-list a:hover .links-list-logo {
+    transform: scale(1.2);
+}
+
+.links-list a:hover .links-list-x-icon {
+    transform: scale(1.2);
+}
+
+.blogxiv-cta-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    vertical-align: -0.2em;
+}
+
 /* Experience Logos */
 .experience-logos .exp-logo-link {
     display: flex;
@@ -885,6 +926,7 @@
 .community-link {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.35em;
     padding: 0.35em 0.75em;
     border-radius: 8px;
@@ -893,26 +935,44 @@
     text-decoration: none;
 }
 
+.community-link--logo-only {
+    width: 48px;
+    height: 42px;
+    padding: 0.4em;
+}
+
+.community-link--featured {
+    width: 56px;
+    height: 48px;
+}
+
 .community-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(52, 58, 64, 0.1);
 }
 
 .community-link-logo {
-    height: 24px;
+    height: 30px;
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
 }
 
-.community-link-logo--square {
-    width: 24px;
+.community-link-logo--wide {
+    max-width: 36px;
 }
 
-.community-link-label {
-    font-weight: 600;
-    color: var(--brand-ink);
-    font-size: 0.8rem;
+.community-link-logo--square {
+    width: 30px;
+}
+
+.community-link-logo--featured {
+    width: 38px;
+    height: 38px;
+}
+
+.community-link-logo--tall {
+    height: 31px;
 }
 
 .exp-logo-img {
@@ -946,6 +1006,12 @@
 
 .contact-email i {
     font-size: 1.2rem;
+}
+
+.contact-email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .wechat-info {
@@ -2061,10 +2127,10 @@
     text-decoration: none;
 }
 
-.social-icon.twitter:hover {
-    background: rgba(29, 161, 242, 0.2);
-    border-color: #1da1f2;
-    color: #1da1f2;
+.social-icon.x-social:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 .social-icon.github:hover {
