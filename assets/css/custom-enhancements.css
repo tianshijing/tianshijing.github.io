@@ -427,7 +427,15 @@
     
     .ntu-banner-campus-label {
         font-size: 0.7rem;
+        max-width: calc(100vw - 40px);
         padding: 6px 14px;
+        line-height: 1.45;
+        white-space: normal;
+        justify-content: center;
+    }
+
+    .ntu-banner-campus-label span {
+        min-width: 0;
     }
 }
 
@@ -2721,6 +2729,20 @@
         radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.25) 100%);
 }
 
+.ntu-banner-overlay--projects {
+    background:
+        linear-gradient(180deg,
+            rgba(52, 58, 64, 0.36) 0%,
+            rgba(86, 22, 22, 0.24) 40%,
+            rgba(0, 0, 0, 0.34) 70%,
+            rgba(0, 0, 0, 0.62) 100%),
+        radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.28) 100%);
+}
+
+.ntu-page-banner--projects .ntu-banner-content {
+    transform: translateY(-44px);
+}
+
 /* --- Page Banner Content --- */
 .ntu-page-banner .ntu-banner-content {
     position: relative;
@@ -2886,6 +2908,10 @@
     .ntu-page-banner .ntu-banner-bottom-fade {
         height: 80px;
     }
+
+    .ntu-page-banner--projects .ntu-banner-content {
+        transform: translateY(-28px);
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -2898,6 +2924,12 @@
     }
     .ntu-banner-subtitle {
         font-size: 0.8rem;
+        max-width: calc(100vw - 32px);
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+        letter-spacing: 0.06em;
+        white-space: normal;
     }
     .ntu-banner-campus-label {
         font-size: 0.7rem;
@@ -3157,6 +3189,264 @@
     background: rgba(192, 0, 0, 0.1);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(192, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Projects Page Enhancements
+   ========================================================================== */
+
+.projects-page .project-section-heading {
+    position: relative;
+}
+
+.project-section-summary {
+    max-width: 720px;
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.project-group-block {
+    padding-bottom: 1rem;
+}
+
+.project-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-title-block {
+    min-width: 0;
+}
+
+.project-repo-path {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    max-width: 100%;
+    margin-top: 0.45rem;
+    color: #6c757d;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.project-repo-path i {
+    flex: 0 0 auto;
+    color: #343a40;
+}
+
+.project-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex: 0 0 auto;
+    padding: 0.45rem 0.8rem;
+    border-radius: 8px;
+    background: #fff8e6;
+    border: 1px solid rgba(237, 177, 32, 0.28);
+    color: #7a5600;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.project-metrics {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.project-pageviews {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex: 0 0 auto;
+    padding: 0.45rem 0.8rem;
+    border-radius: 8px;
+    background: rgba(52, 58, 64, 0.05);
+    border: 1px solid rgba(52, 58, 64, 0.12);
+    color: #343a40;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.project-stars i {
+    color: #edb120;
+}
+
+.project-pageviews i {
+    color: #c00000;
+}
+
+.project-star-count,
+.project-pageview-count {
+    font-variant-numeric: tabular-nums;
+}
+
+.project-summary {
+    color: #495057;
+    line-height: 1.68;
+    margin: 0.8rem 0 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.project-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0.28rem 0.7rem;
+    border-radius: 8px;
+    background: rgba(52, 58, 64, 0.06);
+    border: 1px solid rgba(52, 58, 64, 0.08);
+    color: #495057;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.project-tags .project-role-tag {
+    background: rgba(192, 0, 0, 0.08);
+    border-color: rgba(192, 0, 0, 0.14);
+    color: #c00000;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+}
+
+.project-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 3px 10px;
+    margin: 2px 2px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #c00000;
+    background: rgba(192, 0, 0, 0.06);
+    border: 1px solid rgba(192, 0, 0, 0.12);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-toggle:hover,
+.project-toggle:focus {
+    background: linear-gradient(135deg, #c00000, #ff4757);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(192, 0, 0, 0.25);
+    outline: none;
+}
+
+.project-toggle i {
+    transition: transform 0.25s ease;
+}
+
+.project-toggle:not(.collapsed) i {
+    transform: rotate(180deg);
+}
+
+.project-collapse {
+    margin-top: 1rem;
+}
+
+.project-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(52, 58, 64, 0.035);
+    border: 1px solid rgba(52, 58, 64, 0.08);
+}
+
+.project-detail-grid h6 {
+    margin-bottom: 0.45rem;
+    color: #343a40;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-detail-grid p {
+    color: #6c757d;
+    line-height: 1.62;
+    margin-bottom: 0;
+}
+
+.project-sidebar-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.project-sidebar-stat {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    background: rgba(52, 58, 64, 0.04);
+    border: 1px solid rgba(52, 58, 64, 0.08);
+}
+
+.project-sidebar-number {
+    color: #c00000;
+    font-size: 1.35rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.project-sidebar-label {
+    color: #6c757d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .project-card-header {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .project-stars {
+        align-self: flex-start;
+    }
+
+    .project-metrics {
+        align-self: flex-start;
+        justify-content: flex-start;
+    }
+
+    .project-detail-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Responsive Tweaks --- */

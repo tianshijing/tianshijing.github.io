@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta name="keywords" content="Juanxi Tian, Computer Vision, AI, PhD Student, NTU, Projects, Open Source, Awesome Lists, Multimodal Modeling, Visual Agent, ScalingOpt" />
+        <meta name="description" content="Juanxi Tian - Projects, open-source awesome lists, codebases, and knowledge-sharing communities for AI research." />
+        <meta name="author" content="Juanxi Tian" />
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Juanxi Tian - Projects" />
+        <meta property="og:description" content="Open-source projects, curated awesome lists, and knowledge-sharing communities for AI research." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tianshijing.github.io/projects.html" />
+        <meta property="og:image" content="assets/img/images/avatar.jpg" />
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@JuanxiTian" />
+        <meta name="twitter:title" content="Juanxi Tian - Projects" />
+        <meta name="twitter:description" content="Open-source projects, curated awesome lists, and knowledge-sharing communities for AI research." />
+        <meta name="twitter:image" content="assets/img/images/avatar.jpg" />
+        
+        <!-- Page Title -->
+        <title>Projects | Juanxi Tian</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="300x300" href="assets/img/favicons/ntu-crest.svg">
+        <link rel="icon" type="image/svg+xml" sizes="16x16" href="assets/img/favicons/ntu-crest.svg">
+        <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/img/favicons/ntu-crest.svg">
+        <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/img/favicons/ntu-crest.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
+        <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="assets/vendor/aos/dist/aos.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="assets/css/theme.css" rel="stylesheet">
+        <link href="assets/css/custom-enhancements.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+        <style>
+          a
+          {
+              text-decoration: none;
+
+              color: #6c757d;
+              background-color: transparent;
+          }
+          a:hover
+          {
+              text-decoration: underline; 
+
+              color: #c00000;
+          }
+
+          a:not([href]):not([class])
+          {
+              text-decoration: none; 
+
+              color: inherit;
+          }
+          a:not([href]):not([class]):hover
+          {
+              text-decoration: none; 
+
+              color: inherit;
+          }
+          body {
+            counter-reset: conference 31 journal 9 workshop 11 informal 15;
+          }
+        </style>
+    </head>
+
+    <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-to-main">Skip to main content</a>
+        
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand navbar-brand-lockup mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
+                    <img src="assets/img/favicons/icon.svg" alt="NTU Logo" class="navbar-brand-logo navbar-brand-logo--ntu" />
+                    <img src="assets/img/logos/openenvision_logo.png" alt="OpenEnvision Logo" class="navbar-brand-logo navbar-brand-logo--openenvision" />
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <nav role="navigation" aria-label="Primary navigation">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link text-400">Home</a></li>
+                            <!-- <li class="pl-5 nav-item navbar-text"><a href="team.html" class="nav-link text-400">Team</a></li> -->
+                            <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="publication_year.html" class="nav-link text-400">Publications</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link text-400">Blogs | Slides</a></li>
+                            <li class="pl-5 nav-item navbar-text"><a href="projects.html" class="nav-link" aria-current="page">Projects</a></li>
+                        <li class="pl-5 nav-item navbar-text dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Links
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
+                                <a class="dropdown-item text-white" href="https://github.com/OpenEnvision" target="_blank">OpenEnvision</a>
+                                <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/index.html" target="_blank">ScalingOpt</a>
+                                <a class="dropdown-item text-white" href="https://openenvision.github.io/BlogXiv/" target="_blank">BlogXiv</a>
+                            </div>
+                        </li>
+                        <!-- <li class="pl-5 nav-item navbar-text"><a href="careers.html" class="nav-link text-400">Join Us</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="research.html" class="spyre-nav-link">Research</a></li>
+                                    <!-- <li class="spyre-nav-item"><a href="team.html" class="spyre-nav-link">Team</a></li> -->
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="index.html#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="research.html#overview" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
+                                    <li class="spyre-nav-item"><a href="projects.html" class="spyre-nav-link">Projects</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
+                                        <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
+                                            <li class="dropdown-menu-item"><a href="https://github.com/OpenEnvision" class="dropdown-menu-link" target="_blank">OpenEnvision</a></li>
+                                            <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/index.html" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
+                                            <li class="dropdown-menu-item"><a href="https://openenvision.github.io/BlogXiv/" class="dropdown-menu-link" target="_blank">BlogXiv</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="spyre-nav-item"><a href="careers.html" class="spyre-nav-link">Join Us</a></li> -->
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#8a8f94"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="machine learning"
+                                            data-color="#8a8f94"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#8a8f94"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://x.com/JuanxiTian" target="_blank">
+                                                <svg class="x-icon text-white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" fill="currentColor"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+        <!-- Main Content -->
+        <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
+            <!-- NTU Banner Section -->
+            <section class="ntu-page-banner ntu-page-banner--projects">
+                <div class="bg-container parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/ntu-yunnan-pavilion-projects.jpg); background-position: center 8%;"></div>
+                <div class="ntu-banner-overlay ntu-banner-overlay--projects"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--top-left"></div>
+                <div class="ntu-banner-decor ntu-banner-decor--bottom-right"></div>
+                <div class="container ntu-banner-content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h1 class="ntu-banner-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Projects</h1>
+                            <p class="ntu-banner-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Open Source &amp; Knowledge Sharing</p>
+                            <div class="ntu-banner-campus-label" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Yunnan Garden &middot; Nanyang Technological University</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ntu-banner-bottom-fade"></div>
+                <span class="ntu-photo-credit">Photo: Yunnan Garden, NTU &copy; <a href="https://unsplash.com/photos/a-gazebo-in-the-middle-of-a-park-surrounded-by-trees-ps61GJeZm-g" target="_blank">sakura yu</a> / <a href="https://unsplash.com/license" target="_blank">Unsplash License</a></span>
+            </section>
+            <!-- End of NTU Banner Section -->
+
+            <!-- Section -->
+            <section id="section-1" class="pb-0 projects-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="pb-6 pt-6 py-lg-3" data-toggle="sticky" data-sticky-offset-top="100" data-aos="fade-right" data-aos-duration="600">
+                                <h5 class="mb-4 text-uppercase text-600" style="letter-spacing: 0.1em;">Collections</h5>
+                                <div class="mb-5 mb-lg-6">
+                                    <a href="projects.html#awesome-lists" class="pub-sidebar-link active"><i class="fas fa-list-ul mr-2" style="font-size:0.8rem;"></i>Awesome Lists</a>
+                                    <a href="projects.html#codebase" class="pub-sidebar-link"><i class="fas fa-code-branch mr-2" style="font-size:0.8rem;"></i>Codebase</a>
+                                    <a href="projects.html#knowledge-sharing-community" class="pub-sidebar-link"><i class="fas fa-users mr-2" style="font-size:0.8rem;"></i>Knowledge Sharing Community</a>
+                                </div>
+
+                                <h5 class="mb-4 text-uppercase text-600" style="letter-spacing: 0.1em;">Metrics</h5>
+                                <div class="project-sidebar-stats mb-5 mb-lg-6">
+                                    <div class="project-sidebar-stat">
+                                        <span class="project-sidebar-number" data-project-total-stars>1,245</span>
+                                        <span class="project-sidebar-label">Total Stars</span>
+                                    </div>
+                                    <div class="project-sidebar-stat">
+                                        <span class="project-sidebar-number">2</span>
+                                        <span class="project-sidebar-label">Lists</span>
+                                    </div>
+                                    <div class="project-sidebar-stat">
+                                        <span class="project-sidebar-number">1</span>
+                                        <span class="project-sidebar-label">Codebase</span>
+                                    </div>
+                                    <div class="project-sidebar-stat">
+                                        <span class="project-sidebar-number">2</span>
+                                        <span class="project-sidebar-label">Community</span>
+                                    </div>
+                                    <div class="project-sidebar-stat">
+                                        <span class="project-sidebar-number" data-project-total-pageviews>408</span>
+                                        <span class="project-sidebar-label">Pageviews</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 order-lg-2 pb-6 pb-lg-0 pt-lg-3">
+                            <div class="mb-6 project-section-heading" data-aos="fade-up" data-aos-duration="600">
+                                <span id="awesome-lists"></span>
+                                <div class="pub-stats-badge">
+                                    <i class="fab fa-github"></i>
+                                    <span>Awesome Lists</span>
+                                </div>
+                                <h2 class="mb-4 text-uppercase pub-year-heading" data-aos="fade-up" data-aos-duration="600">Awesome Lists</h2>
+                                <p class="project-section-summary">
+                                    Curated open-source research maps maintained under OpenEnvision, spanning multimodal modeling and visual-agent systems.
+                                </p>
+                            </div>
+
+                            <div class="mb-8 pub-year-block project-group-block">
+                                <h4 class="mb-4 text-uppercase pub-category-heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">OpenEnvision</h4>
+
+                                <div class="pub-paper-item project-item" data-github-repo="OpenEnvision/Awesome-Multimodal-Modeling">
+                                    <div class="project-card-header">
+                                        <div class="project-title-block">
+                                            <span class="text-primary"><b>Awesome Multimodal Modeling</b></span>
+                                            <div class="project-repo-path">
+                                                <i class="fab fa-github"></i>
+                                                <span>OpenEnvision/Awesome-Multimodal-Modeling</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-stars" title="GitHub stars">
+                                            <i class="fas fa-star"></i>
+                                            <span class="project-star-count" data-fallback="342">342</span>
+                                            <span class="project-star-label">stars</span>
+                                        </div>
+                                    </div>
+                                    <p class="project-summary">
+                                        A structured survey for multimodal models, covering MLLMs, unified multimodal models, native multimodal models, and adjacent awesome lists.
+                                    </p>
+                                    <div class="project-tags" aria-label="Project topics">
+                                        <span>MLLM</span>
+                                        <span>UMM</span>
+                                        <span>NMM</span>
+                                        <span>Multimodal Modeling</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="https://github.com/OpenEnvision/Awesome-Multimodal-Modeling" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a>
+                                        <button class="project-toggle collapsed" type="button" data-toggle="collapse" data-target="#awesomeMultimodalDetails" aria-expanded="false" aria-controls="awesomeMultimodalDetails">
+                                            <i class="fas fa-chevron-down"></i>
+                                            <span>Details</span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse project-collapse" id="awesomeMultimodalDetails">
+                                        <div class="project-detail-grid">
+                                            <div>
+                                                <h6>Scope</h6>
+                                                <p>Image-text centered multimodal modeling with annotations for video, audio, 3D, and omni extensions.</p>
+                                            </div>
+                                            <div>
+                                                <h6>Focus</h6>
+                                                <p>Architecture-first categorization, model taxonomy, and links to papers, code, demos, and related lists.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pub-paper-item project-item" data-github-repo="OpenEnvision/Awesome-Visual-Agent">
+                                    <div class="project-card-header">
+                                        <div class="project-title-block">
+                                            <span class="text-primary"><b>Awesome-Visual-Agent</b></span>
+                                            <div class="project-repo-path">
+                                                <i class="fab fa-github"></i>
+                                                <span>OpenEnvision/Awesome-Visual-Agent</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-stars" title="GitHub stars">
+                                            <i class="fas fa-star"></i>
+                                            <span class="project-star-count" data-fallback="13">13</span>
+                                            <span class="project-star-label">stars</span>
+                                        </div>
+                                    </div>
+                                    <p class="project-summary">
+                                        A curated research index for visual agents that perceive, ground, plan, act, create, and evaluate in visually grounded environments.
+                                    </p>
+                                    <div class="project-tags" aria-label="Project topics">
+                                        <span>Visual Agent</span>
+                                        <span>GUI Agent</span>
+                                        <span>Embodied AI</span>
+                                        <span>Evaluation</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="https://github.com/OpenEnvision/Awesome-Visual-Agent" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a>
+                                        <button class="project-toggle collapsed" type="button" data-toggle="collapse" data-target="#awesomeVisualAgentDetails" aria-expanded="false" aria-controls="awesomeVisualAgentDetails">
+                                            <i class="fas fa-chevron-down"></i>
+                                            <span>Details</span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse project-collapse" id="awesomeVisualAgentDetails">
+                                        <div class="project-detail-grid">
+                                            <div>
+                                                <h6>Scope</h6>
+                                                <p>GUI agents, computer-use agents, embodied VLA systems, visual reasoning loops, and visual-agent safety.</p>
+                                            </div>
+                                            <div>
+                                                <h6>Focus</h6>
+                                                <p>Research taxonomy, reading pathways, benchmarks, environments, tools, and engineering resources.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-6 project-section-heading" data-aos="fade-up" data-aos-duration="600">
+                                <span id="codebase"></span>
+                                <div class="pub-stats-badge">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>Codebase</span>
+                                </div>
+                                <h2 class="mb-4 text-uppercase pub-year-heading" data-aos="fade-up" data-aos-duration="600">Codebase</h2>
+                                <p class="project-section-summary">
+                                    Open-source codebases where I participated as a contributor, supporting reproducible research infrastructure and community use.
+                                </p>
+                            </div>
+
+                            <div class="mb-8 pub-year-block project-group-block">
+                                <h4 class="mb-4 text-uppercase pub-category-heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">OpenDCAI</h4>
+
+                                <div class="pub-paper-item project-item" data-github-repo="OpenDCAI/OpenWorldLib">
+                                    <div class="project-card-header">
+                                        <div class="project-title-block">
+                                            <span class="text-primary"><b>OpenWorldLib: A Unified Codebase and Definition of Advanced World Models</b></span>
+                                            <div class="project-repo-path">
+                                                <i class="fab fa-github"></i>
+                                                <span>OpenDCAI/OpenWorldLib</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-stars" title="GitHub stars">
+                                            <i class="fas fa-star"></i>
+                                            <span class="project-star-count" data-fallback="783">783</span>
+                                            <span class="project-star-label">stars</span>
+                                        </div>
+                                    </div>
+                                    <p class="project-summary">
+                                        Participated in OpenDCAI's unified world-model codebase, which standardizes model invocation, documents advanced world-model research, and integrates reusable pipelines for perception, reasoning, generation, and interaction.
+                                    </p>
+                                    <div class="project-tags" aria-label="Project topics">
+                                        <span class="project-role-tag">Participated</span>
+                                        <span>World Models</span>
+                                        <span>Unified Codebase</span>
+                                        <span>OpenDCAI</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="https://github.com/OpenDCAI/OpenWorldLib" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a>
+                                        <a href="https://arxiv.org/abs/2604.04707" target="_blank"><i class="fas fa-file-alt mr-1"></i>Paper</a>
+                                        <button class="project-toggle collapsed" type="button" data-toggle="collapse" data-target="#openWorldLibDetails" aria-expanded="false" aria-controls="openWorldLibDetails">
+                                            <i class="fas fa-chevron-down"></i>
+                                            <span>Details</span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse project-collapse" id="openWorldLibDetails">
+                                        <div class="project-detail-grid">
+                                            <div>
+                                                <h6>Role</h6>
+                                                <p>Participated as a contributor to the project rather than as the primary lead.</p>
+                                            </div>
+                                            <div>
+                                                <h6>Focus</h6>
+                                                <p>Unified framework design, method integration, documentation, and reusable scripts for advanced world-model research.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-6 project-section-heading" data-aos="fade-up" data-aos-duration="600">
+                                <span id="knowledge-sharing-community"></span>
+                                <div class="pub-stats-badge">
+                                    <i class="fas fa-users"></i>
+                                    <span>Knowledge Sharing Community</span>
+                                </div>
+                                <h2 class="mb-4 text-uppercase pub-year-heading" data-aos="fade-up" data-aos-duration="600">Knowledge Sharing Community</h2>
+                                <p class="project-section-summary">
+                                    Community infrastructure for discovering, sharing, and curating high-signal AI research writing and optimization resources.
+                                </p>
+                            </div>
+
+                            <div class="mb-8 pub-year-block project-group-block">
+                                <h4 class="mb-4 text-uppercase pub-category-heading" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">OpenEnvision</h4>
+
+                                <div class="pub-paper-item project-item" data-github-repo="OpenEnvision/BlogXiv" data-pageviews-fallback="362" data-pageviews-endpoint="https://mapmyvisitors.com/ajax/orange_dots?id=2245537">
+                                    <div class="project-card-header">
+                                        <div class="project-title-block">
+                                            <span class="text-primary"><b>BlogXiv</b></span>
+                                            <div class="project-repo-path">
+                                                <i class="fab fa-github"></i>
+                                                <span>OpenEnvision/BlogXiv</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-metrics">
+                                            <div class="project-stars" title="GitHub stars">
+                                                <i class="fas fa-star"></i>
+                                                <span class="project-star-count" data-fallback="8">8</span>
+                                                <span class="project-star-label">stars</span>
+                                            </div>
+                                            <div class="project-pageviews" title="BlogXiv pageviews">
+                                                <i class="fas fa-eye"></i>
+                                                <span class="project-pageview-count" data-fallback="362">362</span>
+                                                <span class="project-pageview-label">pageviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-summary">
+                                        Knowledge-sharing community and discovery platform for curated AI research blogs, helping researchers find durable technical writing across models, agents, safety, efficiency, and world models.
+                                    </p>
+                                    <div class="project-tags" aria-label="Project topics">
+                                        <span>Knowledge Sharing</span>
+                                        <span>Research Blogs</span>
+                                        <span>Community</span>
+                                        <span>OpenEnvision</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="https://openenvision.github.io/BlogXiv/site/index.html" target="_blank"><i class="fas fa-globe mr-1"></i>Website</a>
+                                        <a href="https://github.com/OpenEnvision/BlogXiv" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a>
+                                        <button class="project-toggle collapsed" type="button" data-toggle="collapse" data-target="#blogxivDetails" aria-expanded="false" aria-controls="blogxivDetails">
+                                            <i class="fas fa-chevron-down"></i>
+                                            <span>Details</span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse project-collapse" id="blogxivDetails">
+                                        <div class="project-detail-grid">
+                                            <div>
+                                                <h6>Purpose</h6>
+                                                <p>Curates high-quality AI research blogs and technical insights for researchers and builders.</p>
+                                            </div>
+                                            <div>
+                                                <h6>Signals</h6>
+                                                <p>Displays GitHub stars and live pageviews so the community footprint is visible beyond repository activity.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pub-paper-item project-item" data-github-repo="tianshijing/ScalingOpt" data-pageviews-fallback="46" data-pageviews-endpoint="https://mapmyvisitors.com/ajax/orange_dots?id=2245596">
+                                    <div class="project-card-header">
+                                        <div class="project-title-block">
+                                            <span class="text-primary"><b>ScalingOpt</b></span>
+                                            <div class="project-repo-path">
+                                                <i class="fab fa-github"></i>
+                                                <span>tianshijing/ScalingOpt</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-metrics">
+                                            <div class="project-stars" title="GitHub stars">
+                                                <i class="fas fa-star"></i>
+                                                <span class="project-star-count" data-fallback="99">99</span>
+                                                <span class="project-star-label">stars</span>
+                                            </div>
+                                            <div class="project-pageviews" title="ScalingOpt pageviews">
+                                                <i class="fas fa-eye"></i>
+                                                <span class="project-pageview-count" data-fallback="46">46</span>
+                                                <span class="project-pageview-label">pageviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="project-summary">
+                                        Knowledge-sharing community for large-scale optimization, helping researchers discover optimizer algorithms, compare training strategies, and follow practical resources for efficient deep learning.
+                                    </p>
+                                    <div class="project-tags" aria-label="Project topics">
+                                        <span>Knowledge Sharing</span>
+                                        <span>Optimization</span>
+                                        <span>Optimizers</span>
+                                        <span>OpenEnvision</span>
+                                    </div>
+                                    <div class="project-actions">
+                                        <a href="https://tianshijing.github.io/ScalingOpt/" target="_blank"><i class="fas fa-globe mr-1"></i>Website</a>
+                                        <a href="https://github.com/tianshijing/ScalingOpt" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a>
+                                        <button class="project-toggle collapsed" type="button" data-toggle="collapse" data-target="#scalingOptDetails" aria-expanded="false" aria-controls="scalingOptDetails">
+                                            <i class="fas fa-chevron-down"></i>
+                                            <span>Details</span>
+                                        </button>
+                                    </div>
+                                    <div class="collapse project-collapse" id="scalingOptDetails">
+                                        <div class="project-detail-grid">
+                                            <div>
+                                                <h6>Purpose</h6>
+                                                <p>Collects optimizer-centric resources for large-scale machine learning, including algorithms, papers, tutorials, and implementation references.</p>
+                                            </div>
+                                            <div>
+                                                <h6>Signals</h6>
+                                                <p>Displays GitHub stars and live pageviews so both repository attention and website community traffic are visible.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Modern Footer -->
+        <footer class="modern-footer" role="contentinfo" aria-label="Site footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <!-- Profile Section -->
+                        <div class="col-lg-5 mb-5 mb-lg-0">
+                            <div class="footer-profile">
+                                <div class="footer-logo-container" style="text-align: left;">
+                                    <img src="assets/img/favicons/icon.svg" alt="Juanxi Tian" class="footer-logo">
+                                    <div class="footer-logo-glow"></div>
+                                </div>
+                                <h4 class="footer-name">Juanxi Tian</h4>
+                                <p class="footer-title">PhD Student & Research Intern</p>
+                                <p class="footer-affiliation">NTU &middot; Ant Group</p>
+                                
+                                <!-- Contact Info -->
+                                <div class="footer-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>juanxitian1031@gmail.com</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fab fa-weixin"></i>
+                                        <span>WeChat: Juanxi_Tian</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Research</h6>
+                                <ul class="footer-links">
+                                    <li><a href="research.html">Overview</a></li>
+                                    <li><a href="research.html#overview">By Topic</a></li>
+                                    <li><a href="publication_year.html">Publications</a></li>
+                                    <li><a href="projects.html">Projects</a></li>
+                                    <li><a href="blogs.html">Blogs & Slides</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Connect</h6>
+                                <ul class="footer-links">
+                                    <li><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></li>
+                                    <li><a href="https://github.com/tianshijing" target="_blank">GitHub</a></li>
+                                    <li><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank">LinkedIn</a></li>
+                                    <li><a href="https://huggingface.co/Juanxi" target="_blank">Huggingface</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Social Media & Newsletter -->
+                        <div class="col-lg-3">
+                            <div class="footer-section">
+                                <h6 class="footer-section-title">Stay Connected</h6>
+                                <p class="footer-description">
+                                    Stay informed on my latest research, publications, and insights shaping the future of AI.
+                                </p>
+                                
+                                <!-- Social Media Icons -->
+                                <div class="footer-social">
+                                    <a href="https://x.com/JuanxiTian" target="_blank" class="social-icon x-social" title="X">
+                                        <svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/tianshijing" target="_blank" class="social-icon github" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" class="social-icon linkedin" title="LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="social-icon scholar" title="Google Scholar">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </a>
+                                    <a href="https://www.xiaohongshu.com/user/profile/60f135af000000000101c75d" target="_blank" class="social-icon xiaohongshu" title="RedNote / XiaoHongShu">
+                                        <i class="fas fa-camera"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Research Stats with Visitor Tracker -->
+                                <div class="footer-stats-wrapper">
+                                    <a href="https://mapmyvisitors.com/web/1c2m7" title="Visit tracker" class="visitor-tracker">
+                                        <img src="https://mapmyvisitors.com/map.png?d=B59CunbzJ3EhDmqQ6dhs_hjms0EVEAbriBCjwElBw7w&cl=ffffff" alt="Visit tracker">
+                                    </a>
+                                    <div class="footer-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-number">10+</div>
+                                            <div class="stat-label">Publications</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-number">500+</div>
+                                            <div class="stat-label">Citations</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <p class="footer-copyright">
+                                &copy; 2026 Juanxi Tian. All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="footer-floating-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div>
+        </footer>
+        <!-- End of Modern Footer -->
+
+        <!-- Top Button -->
+        <a id="back-to-top" href="projects.html#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        <!-- End of Top Button -->
+
+
+        <!-- Core Javascripts -->
+        <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/vendor/typed.js/lib/typed.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="assets/vendor/rellax/rellax.min.js"></script>
+        <script src="assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="assets/js/theme.js"></script>
+        <script src="assets/js/custom-enhancements.js"></script>
+        <script src="assets/js/projects.js"></script>
+        <script src="assets/js/top.js"></script>
+    </body>
+</html>
