@@ -1933,10 +1933,11 @@
 
 .footer-logo-container {
     position: relative;
-    display: block;
+    display: inline-block;
     margin-bottom: 1.5rem;
-    max-width: 200px;
+    max-width: none;
     text-align: inherit !important;
+    line-height: 0;
 }
 
 .footer-logo {
@@ -1945,6 +1946,11 @@
     max-width: 200px;
     transition: all 0.3s ease;
     filter: brightness(1.2);
+}
+
+.footer-logo--crest {
+    width: 108px !important;
+    max-width: 108px;
 }
 
 .footer-logo-glow {
@@ -2365,6 +2371,11 @@
     
     .footer-logo {
         max-width: 150px;
+    }
+
+    .footer-logo--crest {
+        width: 92px !important;
+        max-width: 92px;
     }
     
     .footer-name {
@@ -3238,6 +3249,11 @@
 .project-repo-path i {
     flex: 0 0 auto;
     color: #343a40;
+}
+
+.project-repo-path span {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .project-stars {
