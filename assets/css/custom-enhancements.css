@@ -503,7 +503,38 @@
     position: relative;
     font-weight: 500;
     letter-spacing: 0.5px;
+    white-space: nowrap;
     transition: all 0.3s ease;
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .spyre-navbar .navbar-nav .nav-item.navbar-text.pl-5 {
+        padding-left: 2rem !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .spyre-navbar .navbar-brand.navbar-brand-lockup {
+        gap: 0.55rem;
+        margin-right: 1.25rem !important;
+    }
+
+    .spyre-navbar .navbar-brand-lockup .navbar-brand-logo--ntu {
+        width: 150px;
+    }
+
+    .spyre-navbar .navbar-brand-lockup .navbar-brand-logo--openenvision {
+        width: 58px;
+        height: 58px;
+    }
+
+    .spyre-navbar .navbar-nav .nav-item.navbar-text.pl-5 {
+        padding-left: 0.95rem !important;
+    }
+
+    .spyre-navbar .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
 }
 
 .navbar-nav .nav-link::after {
@@ -1407,6 +1438,342 @@
     transform: translateY(-2px);
 }
 
+/* Service Page */
+.dropdown-item[aria-current="page"],
+.dropdown-menu-link[aria-current="page"] {
+    color: #c00000 !important;
+    font-weight: 700;
+}
+
+.service-page-main {
+    background: #ffffff;
+}
+
+.service-page-hero {
+    align-items: flex-end;
+    background: #111418;
+    display: flex;
+    min-height: 68vh;
+    padding: 9rem 0 4.5rem;
+}
+
+.service-page-hero-bg,
+.service-page-hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.service-page-hero-bg {
+    background-position: center 46%;
+    background-size: cover;
+    transform: scale(1.02);
+}
+
+.service-page-hero-overlay {
+    background:
+        linear-gradient(90deg, rgba(9, 12, 16, 0.86) 0%, rgba(9, 12, 16, 0.58) 46%, rgba(9, 12, 16, 0.18) 100%),
+        linear-gradient(0deg, rgba(9, 12, 16, 0.72) 0%, rgba(9, 12, 16, 0.08) 58%, rgba(9, 12, 16, 0.34) 100%);
+}
+
+.service-page-hero-row {
+    min-height: calc(68vh - 13.5rem);
+}
+
+.service-page-eyebrow {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.service-page-title {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 0.98;
+    margin-bottom: 1.5rem;
+}
+
+.service-page-lead {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    max-width: 700px;
+}
+
+.service-hero-metrics {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+    display: grid;
+    gap: 0;
+    overflow: hidden;
+}
+
+.service-hero-metric {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1.15rem 1.25rem;
+}
+
+.service-hero-metric:last-child {
+    border-bottom: 0;
+}
+
+.service-hero-metric-number {
+    color: #ffffff;
+    display: block;
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.service-hero-metric-label {
+    color: rgba(255, 255, 255, 0.72);
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+}
+
+.service-page-section {
+    padding: 7rem 0;
+    position: relative;
+}
+
+.service-page-section--muted {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.service-page-section--muted::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(192, 0, 0, 0.04) 0%, transparent 46%),
+        radial-gradient(circle at 88% 82%, rgba(52, 58, 64, 0.05) 0%, transparent 44%);
+    pointer-events: none;
+}
+
+.service-section-intro {
+    max-width: 370px;
+    position: sticky;
+    top: 120px;
+}
+
+.service-section-intro--right {
+    margin-left: auto;
+}
+
+.service-section-kicker,
+.service-feature-label {
+    color: #c00000;
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.service-section-intro h2 {
+    color: var(--brand-ink);
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.service-section-intro p {
+    color: #495057;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.service-feature-panel {
+    background: #ffffff;
+    border: 1px solid rgba(192, 0, 0, 0.12);
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.service-feature-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #c00000, #ff4757);
+}
+
+.service-feature-panel--community {
+    border-color: rgba(52, 58, 64, 0.14);
+}
+
+.service-feature-panel--community::before {
+    background: linear-gradient(90deg, #343a40, #6c757d);
+}
+
+.service-feature-panel--journal {
+    border-color: rgba(52, 58, 64, 0.14);
+}
+
+.service-feature-panel--journal::before {
+    background: linear-gradient(90deg, #c00000, #343a40);
+}
+
+.service-feature-header {
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.service-feature-icon {
+    align-items: center;
+    background: linear-gradient(135deg, #c00000, #ff4757);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(192, 0, 0, 0.25);
+    color: #ffffff;
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 1.45rem;
+    height: 64px;
+    justify-content: center;
+    width: 64px;
+}
+
+.service-feature-icon--dark {
+    background: linear-gradient(135deg, #343a40, #6c757d);
+    box-shadow: 0 12px 30px rgba(52, 58, 64, 0.22);
+}
+
+.service-feature-icon--journal {
+    background: linear-gradient(135deg, #c00000, #343a40);
+    box-shadow: 0 12px 30px rgba(52, 58, 64, 0.22);
+}
+
+.service-feature-header h3 {
+    color: var(--brand-ink);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.service-feature-text {
+    color: #495057;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.service-feature-text strong {
+    color: #c00000;
+    font-weight: 700;
+}
+
+.review-venue-grid,
+.conference-grid {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.review-venue-grid--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.review-venue-chip,
+.conference-chip {
+    background: #fbfbfc;
+    border: 1px solid rgba(192, 0, 0, 0.12);
+    border-left: 4px solid #c00000;
+    border-radius: 8px;
+    min-height: 92px;
+    padding: 1rem 1.1rem;
+}
+
+.review-venue-chip--journal {
+    border-color: rgba(52, 58, 64, 0.14);
+    border-left-color: #343a40;
+}
+
+.review-venue-chip span,
+.conference-chip span {
+    color: #c00000;
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.45rem;
+}
+
+.review-venue-chip--journal span {
+    color: #343a40;
+}
+
+.review-venue-chip small,
+.conference-chip small {
+    color: #5c636a;
+    display: block;
+    font-size: 0.83rem;
+    line-height: 1.45;
+}
+
+.service-role-list {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.service-role-item {
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid rgba(52, 58, 64, 0.1);
+    border-radius: 8px;
+    color: #343a40;
+    display: flex;
+    font-weight: 600;
+    gap: 0.9rem;
+    padding: 1rem 1.1rem;
+}
+
+.service-role-item i {
+    color: #c00000;
+    font-size: 1rem;
+    width: 20px;
+}
+
+.service-page-close {
+    background:
+        linear-gradient(135deg, rgba(192, 0, 0, 0.96), rgba(52, 58, 64, 0.96)),
+        url("../img/backgrounds/ntu-hive-yunnan.jpg") center/cover;
+    color: #ffffff;
+    padding: 6rem 0;
+}
+
+.service-page-close h2 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-page-close p {
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto 2rem;
+    max-width: 720px;
+}
+
 /* Call to Action Card */
 .cta-card {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -1502,6 +1869,43 @@
     .timeline-card {
         margin-left: 1rem;
     }
+
+    .service-page-hero {
+        min-height: auto;
+        padding: 8.5rem 0 4rem;
+    }
+
+    .service-page-hero-row {
+        min-height: 0;
+    }
+
+    .service-page-title {
+        font-size: 4rem;
+    }
+
+    .service-hero-metrics {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 2rem;
+    }
+
+    .service-hero-metric {
+        border-bottom: 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .service-hero-metric:last-child {
+        border-right: 0;
+    }
+
+    .service-section-intro {
+        max-width: 680px;
+        position: relative;
+        top: auto;
+    }
+
+    .service-section-intro--right {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -1543,6 +1947,65 @@
     
     .cta-card {
         padding: 2rem 1.5rem;
+    }
+
+    .service-page-hero {
+        padding: 7.5rem 0 3.5rem;
+    }
+
+    .service-page-title {
+        font-size: 3.25rem;
+    }
+
+    .service-page-lead {
+        font-size: 1.05rem;
+    }
+
+    .service-page-section {
+        padding: 5rem 0;
+    }
+
+    .service-hero-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-hero-metric:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .service-section-intro h2 {
+        font-size: 2rem;
+    }
+
+    .service-feature-panel {
+        padding: 1.65rem;
+    }
+
+    .service-feature-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .service-feature-header h3 {
+        font-size: 1.45rem;
+    }
+
+    .service-feature-text {
+        font-size: 1rem;
+    }
+
+    .review-venue-grid,
+    .conference-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-page-close {
+        padding: 4.5rem 0;
+    }
+
+    .service-page-close h2 {
+        font-size: 1.9rem;
     }
     
     .cta-title {
@@ -1595,6 +2058,34 @@
     
     .timeline-date .year {
         font-size: 1.1rem;
+    }
+
+    .service-page-hero {
+        padding: 7rem 0 3rem;
+    }
+
+    .service-page-title {
+        font-size: 2.9rem;
+    }
+
+    .service-hero-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .service-hero-metric {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        border-right: 0;
+        padding: 1rem;
+    }
+
+    .service-feature-panel {
+        padding: 1.35rem;
+    }
+
+    .review-venue-chip,
+    .conference-chip,
+    .service-role-item {
+        padding: 0.9rem;
     }
 }
 
@@ -2441,6 +2932,7 @@
     
     .timeline-card,
     .about-card,
+    .service-feature-panel,
     .cta-card {
         border: 2px solid #000000;
     }
