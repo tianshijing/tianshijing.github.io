@@ -3772,32 +3772,11 @@
     gap: 0.5rem;
 }
 
-.project-pageviews {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex: 0 0 auto;
-    padding: 0.45rem 0.8rem;
-    border-radius: 8px;
-    background: rgba(52, 58, 64, 0.05);
-    border: 1px solid rgba(52, 58, 64, 0.12);
-    color: #343a40;
-    font-size: 0.86rem;
-    font-weight: 700;
-    line-height: 1;
-    white-space: nowrap;
-}
-
 .project-stars i {
     color: #edb120;
 }
 
-.project-pageviews i {
-    color: #c00000;
-}
-
-.project-star-count,
-.project-pageview-count {
+.project-star-count {
     font-variant-numeric: tabular-nums;
 }
 
