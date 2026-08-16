@@ -947,13 +947,6 @@
     vertical-align: -0.2em;
 }
 
-/* Experience Logos */
-.experience-logos .exp-logo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
 .community-links {
     display: flex;
     gap: 0.6em;
@@ -1014,19 +1007,6 @@
     height: 31px;
 }
 
-.exp-logo-img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    border-radius: 4px;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-}
-
-.exp-logo-link:hover .exp-logo-img {
-    transform: scale(1.15);
-}
-
 /* Contact Info */
 .contact-info {
     background: #f8f9fa;
@@ -1063,6 +1043,109 @@
 
 .wechat-info i {
     font-size: 1.2rem;
+}
+
+/* Cooperation & Internship Logo Marquee */
+.cooperation-showcase {
+    margin-top: 1.4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(52, 58, 64, 0.1);
+}
+
+.cooperation-title {
+    margin-bottom: 0.85rem;
+    color: var(--brand-ink);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.cooperation-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: 0.15rem 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.cooperation-track {
+    display: flex;
+    width: max-content;
+    animation: cooperation-scroll 44s linear infinite;
+    will-change: transform;
+}
+
+.cooperation-marquee:hover .cooperation-track,
+.cooperation-marquee:focus-within .cooperation-track {
+    animation-play-state: paused;
+}
+
+.cooperation-group {
+    display: flex;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.cooperation-logo-link {
+    width: 142px;
+    min-height: 70px;
+    padding: 0.7rem 0.8rem 0.55rem;
+    border: 1px solid rgba(52, 58, 64, 0.08);
+    border-radius: 11px;
+    background: #ffffff;
+    color: #5d6369;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.38rem;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+.cooperation-logo-link:hover,
+.cooperation-logo-link:focus-visible {
+    color: #c00000;
+    border-color: rgba(192, 0, 0, 0.24);
+    box-shadow: 0 8px 20px rgba(52, 58, 64, 0.1);
+    outline: none;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.cooperation-logo {
+    width: auto;
+    max-width: 64px;
+    height: 29px;
+    object-fit: contain;
+}
+
+.cooperation-logo--wide {
+    max-width: 104px;
+}
+
+.cooperation-logo--icon {
+    width: 30px;
+    height: 30px;
+}
+
+.cooperation-logo-link span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+@keyframes cooperation-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* Responsive Design for About Section */
@@ -1143,6 +1226,19 @@
     
     .contact-info .col-md-4 {
         margin-top: 1rem;
+    }
+
+    .contact-email,
+    .wechat-info {
+        justify-content: center;
+    }
+
+    .cooperation-title {
+        text-align: center;
+    }
+
+    .cooperation-logo-link {
+        width: 132px;
     }
 }
 
@@ -2955,6 +3051,17 @@
     
     .hero-particles {
         animation: none;
+    }
+
+    .cooperation-track {
+        animation: none;
+        transform: none;
+    }
+
+    .cooperation-marquee {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
     }
     
     .floating-element {
