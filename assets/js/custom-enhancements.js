@@ -203,6 +203,25 @@
      * News Section Interactions
      */
     function initNewsSection() {
+        const $newsList = $('#latest-news-list');
+        const $listToggle = $('#news-list-toggle');
+
+        $listToggle.prop('hidden', $newsList.children('.news-item').length <= 4);
+        $listToggle.on('click', function() {
+            const expanded = $listToggle.attr('aria-expanded') !== 'true';
+            $newsList.attr('data-collapsed', String(!expanded));
+            $listToggle.attr('aria-expanded', String(expanded));
+            $listToggle.find('.news-list-toggle-label').text(expanded ? 'Show less' : 'Show more');
+
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+
+            if (!expanded) {
+                this.scrollIntoView({ block: 'nearest' });
+            }
+        });
+
         // Smooth collapse functionality using Bootstrap API
         $('.news-header').on('click', function() {
             const $header = $(this);

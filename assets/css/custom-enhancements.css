@@ -2211,6 +2211,14 @@
     max-width: 100%;
 }
 
+.news-container[data-collapsed="true"] > .news-item:nth-child(n+5) {
+    display: none;
+}
+
+#news-list-toggle[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
 .news-item {
     background: #ffffff;
     border-radius: 15px;
