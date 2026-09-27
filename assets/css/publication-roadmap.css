@@ -1,0 +1,97 @@
+/* A small ordered tree: theme → research direction → publications and projects. */
+.publications-page .ntu-page-banner { padding: 48px 0 34px; }
+.publications-page .ntu-banner-title { font-size: clamp(44px, 5.4vw, 64px); margin-bottom: 10px; }
+.publications-page .ntu-banner-subtitle { margin-bottom: 0; }
+.publication-roadmap { padding: 48px 0 0; }
+.roadmap-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 40px; }
+.roadmap-heading h2 { font-size: 30px; line-height: 1.2; font-weight: 650; margin-bottom: 12px; }
+.roadmap-heading h2 > span { color: #df1f26; }
+.roadmap-heading p { margin: 0; font-size: 14px; color: #666; }
+.roadmap-scope { font: 11px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .04em; color: #777; padding-top: 6px; white-space: nowrap; }
+.roadmap-figure { margin: 0; }
+.roadmap-root { position: relative; display: flex; align-items: center; justify-content: center; gap: 10px; padding-bottom: 32px; }
+.roadmap-root p { font-size: 16px; font-weight: 600; letter-spacing: -.02em; margin: 0; }
+.roadmap-root-mark { width: 7px; height: 7px; background: #df1f26; }
+.roadmap-root::after { content: ''; position: absolute; bottom: 0; left: 50%; height: 22px; width: 1px; background: #c9c9c9; }
+.roadmap-tracks { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; list-style: none; padding: 0; margin: 0; }
+.roadmap-track { position: relative; padding-top: 34px; min-width: 0; }
+.roadmap-track::before { content: ''; position: absolute; top: 0; left: -12px; right: -12px; border-top: 1px solid #c9c9c9; }
+.roadmap-track:first-child::before { left: 50%; }
+.roadmap-track:last-child::before { right: 50%; }
+.roadmap-track::after { content: ''; position: absolute; top: 0; left: 50%; width: 1px; height: 24px; background: #c9c9c9; }
+.roadmap-track-top { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid #050505; }
+.roadmap-track-number { font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; color: #c51a20; }
+.roadmap-track-verb { color: #6a6a6a; font-size: 12px; }
+.roadmap-track h3 { margin: 17px 0 10px; }
+.roadmap-topic-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; padding: 0; border: 0; background: transparent; text-align: left; color: #050505; font-family: inherit; font-size: 23px; font-weight: 650; line-height: 1.25; letter-spacing: -.035em; }
+.roadmap-count { font: 12px/22px ui-monospace, SFMono-Regular, Consolas, monospace; color: #777; border: 1px solid #ddd; width: 24px; height: 24px; text-align: center; flex-shrink: 0; }
+.roadmap-track-description { color: #666; font-size: 13px; line-height: 1.65; min-height: 44px; margin: 0 0 23px; }
+.roadmap-papers { list-style: none; padding: 0 0 0 16px; border-left: 1px solid #ddd; margin: 0; }
+.roadmap-papers > li { position: relative; margin: 0 0 14px; }
+.roadmap-papers > li:last-child { margin-bottom: 0; }
+.roadmap-papers > li::before { content: ''; position: absolute; width: 16px; height: 1px; background: #ddd; top: 29px; left: -16px; }
+.roadmap-papers > .roadmap-subtrack::before { top: 15px; }
+.roadmap-subtrack-title { display: flex; align-items: center; gap: 8px; margin: 0 0 14px; padding-top: 5px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -.02em; }
+.roadmap-subtrack-title::before { content: ''; width: 5px; height: 5px; flex-shrink: 0; background: #df1f26; }
+.roadmap-paper { scroll-margin-top: 110px; display: block; padding: 14px 16px 16px; background: #fafafa; border: 1px solid #e6e6e6; color: #050505; text-decoration: none; }
+a.roadmap-paper:hover, a.roadmap-paper:focus-visible { background: #fff; border-color: #df1f26; color: #050505; text-decoration: none; }
+.roadmap-paper--upcoming { background: #fff; border-style: dashed; }
+.roadmap-paper--placeholder { display: flex; align-items: center; min-height: 60px; color: #777; font-size: 13px; }
+.roadmap-paper-meta { display: block; font-size: 10px; color: #777; letter-spacing: .025em; margin-bottom: 5px; }
+.roadmap-paper-name { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 17px; line-height: 1.4; letter-spacing: -.025em; font-weight: 650; }
+.roadmap-paper-name svg { width: 16px; height: 16px; flex-shrink: 0; fill: none; stroke: #c51a20; stroke-width: 1.3; }
+.roadmap-paper-description { display: block; color: #666; font-size: 12px; line-height: 1.6; margin-top: 8px; }
+.roadmap-figure figcaption { display: flex; justify-content: space-between; gap: 20px; padding: 24px 0 30px; margin-top: 26px; border-bottom: 1px solid var(--line); color: #777; font-size: 11px; line-height: 1.6; }
+.publication-list-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 30px; scroll-margin-top: 100px; }
+.publication-list-heading h2 { font-size: 28px; font-weight: 650; margin-bottom: 8px; }
+.publication-list-heading p { margin: 0; color: #666; font-size: 13px; }
+.publication-list-section .pub-paper-item { scroll-margin-top: 105px; }
+@media (min-width: 992px) {
+ .roadmap-topic-title { font-size: 21px; min-height: 53px; }
+ .roadmap-track-description { min-height: 65px; }
+}
+.publication-tech-report { padding: 0 0 48px; scroll-margin-top: 110px; }
+.publication-tech-report .publication-list-heading { margin-bottom: 20px; }
+.tech-report-name { font-size: 19px; line-height: 1.5; font-weight: 650; margin: 0 0 8px; }
+.tech-report-team { color: #666; margin: 0 0 5px; }
+.tech-report-role { margin: 0 0 14px; }
+.tech-report-links { display: flex; flex-wrap: wrap; gap: 20px; }
+.tech-report-links a { font-size: 13px; }
+.tech-report-links span { margin-left: 4px; }
+@media (max-width: 991.98px) {
+ .roadmap-tracks { gap: 20px; }
+ .roadmap-track::before { left: -10px; right: -10px; }
+ .roadmap-topic-title { font-size: 20px; }
+ .roadmap-track-description { min-height: 65px; }
+ .roadmap-paper { padding: 12px; }
+ .roadmap-paper-name { font-size: 15px; }
+ .publication-list-section .col-lg-4 { display: none; }
+}
+@media (max-width: 991.98px) {
+ .publications-page .ntu-page-banner { padding: 36px 0 28px; }
+ .publication-roadmap { padding-top: 34px; }
+ .roadmap-heading { display: block; margin-bottom: 26px; }
+ .roadmap-heading h2 { font-size: 27px; }
+ .roadmap-scope { display: block; margin-top: 15px; }
+ .roadmap-root { justify-content: flex-start; padding: 0 0 25px; }
+ .roadmap-root p { font-size: 15px; }
+ .roadmap-root::after { left: 3px; bottom: 0; height: 16px; }
+ .roadmap-tracks { display: block; border-left: 1px solid #c9c9c9; margin-left: 3px; padding-left: 24px; }
+ .roadmap-track { padding-top: 0; padding-bottom: 32px; }
+ .roadmap-track:last-child { padding-bottom: 0; }
+ .roadmap-track::before, .roadmap-track:first-child::before, .roadmap-track:last-child::before { top: 9px; left: -24px; right: auto; width: 17px; }
+ .roadmap-track::after { display: none; }
+ .roadmap-track-description { min-height: 0; margin-bottom: 18px; }
+ .roadmap-topic-title { font-size: 22px; min-height: 32px; }
+ .roadmap-paper-name { font-size: 17px; }
+ .roadmap-paper { padding: 14px; }
+ .roadmap-figure figcaption { display: block; margin-top: 22px; }
+ .roadmap-figure figcaption span { display: block; margin-bottom: 5px; }
+ .publication-list-heading { flex-wrap: wrap; gap: 16px; }
+ .publication-list-heading h2 { font-size: 26px; }
+}
+@media print {
+ .roadmap-topic-title { color: #050505 !important; }
+ .roadmap-track, .pub-paper-item { break-inside: avoid; }
+}
+.publications-page #back-to-top { color: #fff; width: 40px; height: 40px; padding: 8px; font-size: 14px; }

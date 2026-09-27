@@ -34,7 +34,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Vendor Stylesheets -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        
         <link href="assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
@@ -53,6 +53,7 @@
 
             gtag('config', 'UA-22940424-1');
         </script>
+        <link href="assets/css/minimal-design.css?v=20260928" rel="stylesheet">
     </head>
 
     <body>
@@ -68,126 +69,26 @@
         <!-- End of Preloader -->
 
         <!-- Header -->
-        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand navbar-brand-lockup mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
-                    <img src="assets/img/favicons/icon.svg" alt="NTU Logo" class="navbar-brand-logo navbar-brand-logo--ntu" />
-                    <img src="assets/img/logos/openenvision_logo.png" alt="OpenEnvision Logo" class="navbar-brand-logo navbar-brand-logo--openenvision" />
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <nav role="navigation" aria-label="Primary navigation">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link text-400">Home</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="publication_year.html" class="nav-link text-400">Publications</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link text-400">Blogs | Slides</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="projects.html" class="nav-link text-400">Projects</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="service.html" class="nav-link" aria-current="page">Service</a></li>
-                        <li class="pl-5 nav-item navbar-text dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Links
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
-                                <a class="dropdown-item text-white" href="https://github.com/OpenEnvision" target="_blank">OpenEnvision</a>
-                                <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/index.html" target="_blank">ScalingOpt</a>
-                                <a class="dropdown-item text-white" href="https://openenvision.github.io/BlogrXiv/site/index.html" target="_blank">BlogrXiv</a>
-                                <a class="dropdown-item text-white" href="https://openenvision.github.io/ScholarTube/" target="_blank">ScholarTube</a>
-                            </div>
-                        </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="menu-toggle d-block d-lg-none">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Spyrenav Overlay -->
-            <div class="spyre-navbar-overlay overlay-slide">
-                <div class="container">
-                    <div class="row">
-                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
-                            <nav class="spyre-navbar-nav">
-                                <ul class="spyre-nav">
-                                    <li class="spyre-nav-item"><a href="index.html" class="spyre-nav-link">Home</a></li>
-                                    <li class="spyre-nav-item"><a href="research.html" class="spyre-nav-link">Research</a></li>
-                                    <li class="spyre-nav-item dropdown">
-                                        <a href="index.html#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li class="dropdown-menu-item"><a href="research.html#overview" class="dropdown-menu-link">By Topic</a></li>
-                                            <li class="dropdown-menu-item"><a href="publication_year.html" class="dropdown-menu-link">By Year</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
-                                    <li class="spyre-nav-item"><a href="projects.html" class="spyre-nav-link">Projects</a></li>
-                                    <li class="spyre-nav-item"><a href="service.html" class="spyre-nav-link" aria-current="page">Service</a></li>
-                                    <li class="spyre-nav-item dropdown">
-                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
-                                        <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
-                                            <li class="dropdown-menu-item"><a href="https://github.com/OpenEnvision" class="dropdown-menu-link" target="_blank">OpenEnvision</a></li>
-                                            <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/index.html" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
-                                            <li class="dropdown-menu-item"><a href="https://openenvision.github.io/BlogrXiv/site/index.html" class="dropdown-menu-link" target="_blank">BlogrXiv</a></li>
-                                            <li class="dropdown-menu-item"><a href="https://openenvision.github.io/ScholarTube/" class="dropdown-menu-link" target="_blank">ScholarTube</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-
-                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
-                            <div class="d-flex flex-column h-100">
-                                <div class="d-flex h-100">
-                                    <div class="align-self-center">
-                                        <div class="text-uppercase"
-                                            data-background-text="service"
-                                            data-color="#8a8f94"
-                                            data-opacity="0.03"
-                                            data-font-size="150px"
-                                            data-font-weight="500"
-                                            data-offset-x="12%"
-                                            data-letter-spacing="5px"
-                                        ></div>
-                                        <div class="text-uppercase"
-                                            data-background-text="reviewing"
-                                            data-color="#8a8f94"
-                                            data-opacity="0.04"
-                                            data-font-size="110px"
-                                            data-font-weight="500"
-                                            data-offset-x="28%"
-                                            data-padding="10vh 0 2vh 0"
-                                            data-letter-spacing="5px"
-                                        ></div>
-                                    </div>
-                                </div>
-
-                                <div class="mt-auto">
-                                    <ul class="nav flex-nowrap float-right">
-                                        <li class="nav-item">
-                                            <a class="nav-link px-2" href="https://x.com/JuanxiTian" target="_blank">
-                                                <svg class="x-icon text-white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" fill="currentColor"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Spyrenav Overlay -->
-        </header>
+        <header class="site-header">
+ <div class="container site-header-inner">
+  <a class="site-wordmark" href="index.html" aria-label="Juanxi Tian — Home">Juanxi Tian<span aria-hidden="true">.</span></a>
+  <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu <span aria-hidden="true">☰</span></button>
+  <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation">
+   <a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publication_year.html">Publications</a>
+<a href="blogs.html">Blogs | Slides</a>
+<a href="projects.html">Projects</a>
+<a href="service.html" aria-current="page">Service</a>
+   <details class="site-links"><summary>Links</summary><div class="site-links-menu">
+    <a href="https://openenvision.github.io/" target="_blank" rel="noopener noreferrer">OpenEnvision</a>
+    <a href="https://tianshijing.github.io/ScalingOpt/index.html" target="_blank" rel="noopener noreferrer">ScalingOpt</a>
+    <a href="https://openenvision.github.io/BlogrXiv/site/index.html" target="_blank" rel="noopener noreferrer">BlogrXiv</a>
+    <a href="https://openenvision.github.io/ScholarTube/" target="_blank" rel="noopener noreferrer">ScholarTube</a>
+   </div></details>
+  </nav>
+ </div>
+</header>
         <!-- End of Header -->
 
         <!-- Main Content -->
@@ -199,14 +100,14 @@
                 <div class="container position-relative">
                     <div class="row align-items-end service-page-hero-row">
                         <div class="col-lg-8">
-                            <p class="service-page-eyebrow" data-aos="fade-up">Academic and Community Service</p>
-                            <h1 class="service-page-title text-white" data-aos="fade-up" data-aos-delay="100">Service</h1>
-                            <p class="service-page-lead text-white-75" data-aos="fade-up" data-aos-delay="200">
+                            <p class="service-page-eyebrow">Academic and Community Service</p>
+                            <h1 class="service-page-title text-white">Service</h1>
+                            <p class="service-page-lead text-white-75">
                                 Reviewing for leading AI and computer vision conferences and journals, and contributing to tools and communities that support scholarly collaboration.
                             </p>
                         </div>
                         <div class="col-lg-4">
-                            <div class="service-hero-metrics" data-aos="fade-up" data-aos-delay="300" aria-label="Service highlights">
+                            <div class="service-hero-metrics" aria-label="Service highlights">
                                 <div class="service-hero-metric">
                                     <span class="service-hero-metric-number">2024</span>
                                     <span class="service-hero-metric-label">Reviewing Since</span>
@@ -235,7 +136,7 @@
                 <div class="container">
                     <div class="row align-items-start">
                         <div class="col-lg-4 mb-5 mb-lg-0">
-                            <div class="service-section-intro" data-aos="fade-right">
+                            <div class="service-section-intro">
                                 <span class="service-section-kicker">Academic Services</span>
                                 <h2>Reviewer</h2>
                                 <p>
@@ -245,7 +146,7 @@
                             </div>
                         </div>
                         <div class="col-lg-8">
-                            <div class="service-feature-panel service-feature-panel--academic" data-aos="fade-up">
+                            <div class="service-feature-panel service-feature-panel--academic">
                                 <div class="service-feature-header">
                                     <div class="service-feature-icon">
                                         <i class="fas fa-user-check"></i>
@@ -293,7 +194,7 @@
                                 </div>
                             </div>
 
-                            <div class="service-feature-panel service-feature-panel--journal mt-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-feature-panel service-feature-panel--journal mt-4">
                                 <div class="service-feature-header">
                                     <div class="service-feature-icon service-feature-icon--journal">
                                         <i class="fas fa-book-open"></i>
@@ -329,7 +230,7 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-7 order-2 order-lg-1">
-                            <div class="service-feature-panel service-feature-panel--community" data-aos="fade-up">
+                            <div class="service-feature-panel service-feature-panel--community">
                                 <div class="service-feature-header">
                                     <div class="service-feature-icon service-feature-icon--dark">
                                         <i class="fas fa-users"></i>
@@ -360,7 +261,7 @@
                             </div>
                         </div>
                         <div class="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0">
-                            <div class="service-section-intro service-section-intro--right" data-aos="fade-left">
+                            <div class="service-section-intro service-section-intro--right">
                                 <span class="service-section-kicker">Community Service</span>
                                 <h2>Supporting Better Research Collaboration</h2>
                                 <p>
@@ -377,7 +278,7 @@
             <section class="service-page-close" aria-label="Connect">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8 text-center" data-aos="fade-up">
+                        <div class="col-lg-8 text-center">
                             <h2>Service Through Research Community</h2>
                             <p>
                                 I am glad to support peer review, open collaboration, and tools that make research easier to write, share, and improve.
@@ -530,6 +431,6 @@
 
         <!-- Theme Javascripts -->
         <script src="assets/js/theme.js"></script>
-        <script src="assets/js/custom-enhancements.js"></script>
+        <script src="assets/js/custom-enhancements.js?v=20260928"></script>
     </body>
 </html>

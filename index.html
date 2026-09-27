@@ -34,7 +34,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Vendor Stylesheets -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        
         <link href="assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
         <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -54,6 +54,7 @@
 
             gtag('config', 'UA-22940424-1');
         </script>
+        <link href="assets/css/minimal-design.css?v=20260928-swan" rel="stylesheet">
     </head>
 
     <body>
@@ -70,243 +71,44 @@
 
 
         <!-- Header -->
-        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff" role="banner" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand navbar-brand-lockup mr-lg-5 mr-xl-7 mt-auto" href="index.html" aria-label="Juanxi Tian - Home">
-                    <img src="assets/img/favicons/icon.svg" alt="NTU Logo" class="navbar-brand-logo navbar-brand-logo--ntu" />
-                    <img src="assets/img/logos/openenvision_logo.png" alt="OpenEnvision Logo" class="navbar-brand-logo navbar-brand-logo--openenvision" />
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <nav role="navigation" aria-label="Primary navigation">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="pl-2 nav-item navbar-text"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-                            <!-- <li class="pl-5 nav-item navbar-text"><a href="team.html" class="nav-link text-400">Team</a></li> -->
-                            <li class="pl-5 nav-item navbar-text"><a href="research.html" class="nav-link text-400">Research</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="publication_year.html" class="nav-link text-400">Publications</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="blogs.html" class="nav-link">Blogs | Slides</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="projects.html" class="nav-link text-400">Projects</a></li>
-                            <li class="pl-5 nav-item navbar-text"><a href="service.html" class="nav-link text-400">Service</a></li>
-                        <li class="pl-5 nav-item navbar-text dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="friendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Links
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="friendLinksDropdown" style="background-color: rgba(52, 58, 64, 0.95); border: 1px solid rgba(192, 0, 0, 0.3);">
-                                <a class="dropdown-item text-white" href="https://openenvision.github.io/" target="_blank" rel="noopener noreferrer">OpenEnvision</a>
-                                <a class="dropdown-item text-white" href="https://tianshijing.github.io/ScalingOpt/index.html" target="_blank">ScalingOpt</a>
-                                <a class="dropdown-item text-white" href="https://openenvision.github.io/BlogrXiv/site/index.html" target="_blank">BlogrXiv</a>
-                                <a class="dropdown-item text-white" href="https://openenvision.github.io/ScholarTube/" target="_blank">ScholarTube</a>
-                            </div>
-                        </li>
-                        <!-- <li class="pl-5 nav-item navbar-text"><a href="careers.html" class="nav-link text-400">Join Us</a></li> -->
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="menu-toggle d-block d-lg-none">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Spyrenav Overlay -->
-            <div class="spyre-navbar-overlay overlay-slide">
-                <div class="container">
-                    <div class="row">
-                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
-                            <nav class="spyre-navbar-nav">
-                                <ul class="spyre-nav">
-                                    <li class="spyre-nav-item"><a href="index.html" class="spyre-nav-link">Home</a></li>
-                                    <li class="spyre-nav-item"><a href="research.html" class="spyre-nav-link">Research</a></li>
-                                    <!-- <li class="spyre-nav-item"><a href="team.html" class="spyre-nav-link">Team</a></li> -->
-                                    <li class="spyre-nav-item dropdown">
-                                        <a href="index.html#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li class="dropdown-menu-item"><a href="research.html#overview" class="dropdown-menu-link">By Topic</a></li>
-                                            <li class="dropdown-menu-item"><a href="publication_year.html" class="dropdown-menu-link">By Year</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="spyre-nav-item"><a href="blogs.html" class="spyre-nav-link">Blogs and Slides</a></li>
-                                    <li class="spyre-nav-item"><a href="projects.html" class="spyre-nav-link">Projects</a></li>
-                                    <li class="spyre-nav-item"><a href="service.html" class="spyre-nav-link">Service</a></li>
-                                    <li class="spyre-nav-item dropdown">
-                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="mobileFriendLinksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
-                                        <ul class="dropdown-menu" aria-labelledby="mobileFriendLinksDropdown">
-                                            <li class="dropdown-menu-item"><a href="https://openenvision.github.io/" class="dropdown-menu-link" target="_blank" rel="noopener noreferrer">OpenEnvision</a></li>
-                                            <li class="dropdown-menu-item"><a href="https://tianshijing.github.io/ScalingOpt/index.html" class="dropdown-menu-link" target="_blank">ScalingOpt</a></li>
-                                            <li class="dropdown-menu-item"><a href="https://openenvision.github.io/BlogrXiv/site/index.html" class="dropdown-menu-link" target="_blank">BlogrXiv</a></li>
-                                            <li class="dropdown-menu-item"><a href="https://openenvision.github.io/ScholarTube/" class="dropdown-menu-link" target="_blank">ScholarTube</a></li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="spyre-nav-item"><a href="careers.html" class="spyre-nav-link">Join Us</a></li> -->
-                                </ul>
-                            </nav>
-                        </div>
-        
-                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
-                            <div class="d-flex flex-column h-100">
-                                <div class="d-flex h-100">
-                                    <div class="align-self-center">
-                                        <div class="text-uppercase"
-                                            data-background-text="computer vision"
-                                            data-color="#8a8f94"
-                                            data-opacity="0.02"
-                                            data-font-size="85px"
-                                            data-font-weight="500"
-                                            data-offset-x="-5%"
-                                            data-letter-spacing="5px"
-                                        ></div>
-                                        <div class="text-uppercase"
-                                            data-background-text="machine learning"
-                                            data-color="#8a8f94"
-                                            data-opacity="0.04"
-                                            data-font-size="175px"
-                                            data-font-weight="500"
-                                            data-offset-x="29%"
-                                            data-padding="7vh 0 2vh 0"
-                                            data-letter-spacing="5px"
-                                        ></div>
-                                        <div class="text-uppercase"
-                                            data-background-text="deep learning"
-                                            data-color="#8a8f94"
-                                            data-opacity="0.03"
-                                            data-font-size="140px"
-                                            data-font-weight="500"
-                                            data-offset-x="15%"
-                                            data-letter-spacing="5px"
-                                        ></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="mt-auto">
-                                    <ul class="nav flex-nowrap float-right">
-                                        <li class="nav-item">
-                                            <a class="nav-link px-2" href="https://x.com/JuanxiTian" target="_blank">
-                                                <svg class="x-icon text-white" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" fill="currentColor"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Spyrenav Overlay -->
-        </header>
+        <header class="site-header">
+ <div class="container site-header-inner">
+  <a class="site-wordmark" href="index.html" aria-label="Juanxi Tian — Home">Juanxi Tian<span aria-hidden="true">.</span></a>
+  <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu <span aria-hidden="true">☰</span></button>
+  <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation">
+   <a href="index.html" aria-current="page">Home</a>
+<a href="research.html">Research</a>
+<a href="publication_year.html">Publications</a>
+<a href="blogs.html">Blogs | Slides</a>
+<a href="projects.html">Projects</a>
+<a href="service.html">Service</a>
+   <details class="site-links"><summary>Links</summary><div class="site-links-menu">
+    <a href="https://openenvision.github.io/" target="_blank" rel="noopener noreferrer">OpenEnvision</a>
+    <a href="https://tianshijing.github.io/ScalingOpt/index.html" target="_blank" rel="noopener noreferrer">ScalingOpt</a>
+    <a href="https://openenvision.github.io/BlogrXiv/site/index.html" target="_blank" rel="noopener noreferrer">BlogrXiv</a>
+    <a href="https://openenvision.github.io/ScholarTube/" target="_blank" rel="noopener noreferrer">ScholarTube</a>
+   </div></details>
+  </nav>
+ </div>
+</header>
         <!-- End of Header -->
 
 
         <!-- Main Content -->
         <main id="main-content" class="main minh-100vh" role="main" aria-label="Main content">
             <!-- Hero Section -->
-            <section class="hero-section py-0 overflow-hidden text-center position-relative" aria-label="Hero introduction">
-                <!-- Animated Background -->
-                <div class="hero-bg-container">
-                    <div class="hero-gradient-overlay"></div>
-                    <div class="hero-particles"></div>
-                    <div class="bg-container overlay overlay-dark-30 parallax" data-rellax-percentage="0.5" style="background-image: url(assets/img/backgrounds/ntu-hive-01.jpg); background-position: center 40%;"></div>
-                </div>
-                
-                <!-- Corner decorations -->
-                <div class="ntu-banner-decor ntu-banner-decor--top-left" style="z-index: 10;"></div>
-                <div class="ntu-banner-decor ntu-banner-decor--bottom-right" style="z-index: 10;"></div>
-                
-                <span class="ntu-photo-credit" style="z-index: 10;">Photo: The Hive, NTU &copy; Supanut Arunoprayote / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></span>
-
-                <!-- Hero Content -->
-                <div class="container position-relative">
-                    <div class="row h-100vh justify-content-center align-items-center">
-                        <div class="col-lg-10 col-xl-8">
-                            <!-- Main Title with Animation -->
-                            <div class="hero-title-container mb-4">
-                                <h1 class="hero-main-title text-white mb-3" data-aos="fade-up" data-aos-duration="800">
-                                    <span class="hero-name-highlight">Juanxi Tian</span>
-                                </h1>
-                                <div class="hero-subtitle-container">
-                                    <p class="hero-subtitle text-white-75 mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-                                        PhD Student<br>
-                                        <span class="hero-affiliation">NTU</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Research Focus Tags -->
-                            <div class="hero-tags mb-5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
-								<span class="hero-tag">Efficient AI</span>
-                                <span class="hero-tag">Generative AI</span>
-                                <span class="hero-tag">Foundation Models</span>
-                                <span class="hero-tag">World Models</span>
-                            </div>
-
-                            <!-- CTA Buttons -->
-                            <div class="hero-cta-container" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-                                <div class="row justify-content-center">
-                                    <div class="col-auto">
-                                        <a href="#section-1" class="btn btn-hero-primary mx-2 px-6 mb-3" data-smooth-scroll data-smooth-scroll-hash="false">
-                                            <span>EXPLORE</span>
-                                            <i class="fas fa-arrow-down ml-2"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="research.html" class="btn btn-hero-secondary px-6 mx-2 mb-3">
-                                            <span>Research</span>
-                                            <i class="fas fa-arrow-right ml-2"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Campus Label -->
-                            <div class="mt-4 mb-3" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800" style="position: relative; z-index: 10;">
-                                <div class="ntu-banner-campus-label">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>The Hive &middot; Nanyang Technological University, Singapore</span>
-                                </div>
-                            </div>
-
-                            <!-- Social Links -->
-                            <div class="hero-social-links mt-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
-                                <a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&hl=zh-CN" target="_blank" class="hero-social-link" title="Google Scholar">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </a>
-                                <a href="https://github.com/tianshijing" target="_blank" class="hero-social-link" title="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://x.com/JuanxiTian" target="_blank" class="hero-social-link" title="X">
-                                    <svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" fill="currentColor"/>
-                                    </svg>
-                                </a>
-                                <a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" class="hero-social-link" title="LinkedIn">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Scroll Indicator -->
-                        <div class="hero-scroll-indicator d-none d-lg-block">
-                            <a href="#section-1" class="scroll-down-link" data-smooth-scroll data-smooth-scroll-hash="true">
-                                <div class="scroll-down-animation">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <p class="scroll-text">Scroll Down</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section class="minimal-hero" aria-label="Hero introduction">
+ <div class="container hero-layout">
+ <div class="hero-copy">
+  <h1 class="calligraphy-name">Juanxi Tian<span aria-hidden="true">.</span> <span class="calligraphy-chinese" lang="zh-Hans">（田隽熙）</span></h1>
+  <p class="minimal-hero-subtitle">PhD Student <span aria-hidden="true">·</span> NTU</p>
+  <ul class="minimal-interests" aria-label="Research interests"><li>Efficient AI</li><li>Generative AI</li><li>Foundation Models</li><li>World Models</li></ul>
+  <div class="minimal-actions"><a href="#section-1" class="minimal-button minimal-button-primary">Explore <i class="fas fa-arrow-down" aria-hidden="true"></i></a><a href="research.html" class="minimal-button">Research <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+  <div class="minimal-social"><a href="https://scholar.google.com/citations?user=6QB6Q8gAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://github.com/tianshijing" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://x.com/JuanxiTian" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.linkedin.com/in/juanxi-tian/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+ </div>
+ <figure class="hero-swan"><img src="assets/img/images/hero-black-swan.png" alt="A black swan painted in ink, with a red beak and delicate water ripples" width="1254" height="1254" decoding="async" fetchpriority="high"></figure>
+ </div>
+</section>
             <!-- End of Hero Section -->
 
             <!-- About Section -->
@@ -315,10 +117,10 @@
                     <!-- Section Header -->
                     <div class="row justify-content-center mb-6">
                         <div class="col-lg-8 text-center">
-                            <h2 class="section-title mb-4" data-aos="fade-up">
+                            <h2 class="section-title mb-4">
                                 <span class="text-gradient-primary">About Me</span>
                             </h2>
-                            <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="100">
+                            <p class="section-subtitle text-muted">
                                 Researcher & PhD Student
                             </p>
                         </div>
@@ -326,7 +128,7 @@
 
                     <div class="row align-items-center">
                         <!-- Profile Image -->
-                        <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="800">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
                             <div class="profile-image-container">
                                 <div class="profile-image-wrapper">
                                     <img src="assets/img/images/avatar.jpg" alt="Juanxi Tian" class="profile-image">
@@ -341,11 +143,11 @@
                         </div>
 
                         <!-- About Content -->
-                        <div class="col-lg-8" data-aos="fade-left" data-aos-duration="800">
+                        <div class="col-lg-8">
                             <div class="about-card">
                                 <!-- Name and Title -->
                                 <div class="about-header mb-4">
-                                    <h3 class="about-name mb-2">Juanxi Tian <span class="chinese-name">田隽熙</span></h3>
+                                    <h3 class="about-name calligraphy-name mb-2">Juanxi Tian <span class="chinese-name calligraphy-chinese" lang="zh-Hans">田隽熙</span></h3>
                                     <p class="about-title text-primary mb-3">PhD Student</p>
                                     <p class="about-affiliation text-muted">NTU</p>
                                 </div>
@@ -468,7 +270,7 @@
                                     </div>
 
                                     <div class="cooperation-showcase" aria-labelledby="cooperation-title">
-                                        <h6 id="cooperation-title" class="cooperation-title">Cooperation &amp; Internship</h6>
+                                        <h6 id="cooperation-title" class="cooperation-title">Cooperation</h6>
                                         <div class="cooperation-marquee">
                                             <div class="cooperation-track">
                                                 <div class="cooperation-group">
@@ -488,6 +290,22 @@
                                                         <img src="assets/img/logos/ant-group.png" alt="" class="cooperation-logo cooperation-logo--icon">
                                                         <span>Ant Group</span>
                                                     </a>
+                                                    <a href="https://hunyuan.tencent.com/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="Tencent Hunyuan">
+                                                        <img src="assets/img/logos/tencent-hunyuan.svg" alt="" class="cooperation-logo cooperation-logo--icon">
+                                                        <span>Tencent Hunyuan</span>
+                                                    </a>
+                                                    <a href="https://arc.tencent.com/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="Tencent ARC">
+                                                        <img src="assets/img/logos/tencent-arc.png" alt="" class="cooperation-logo cooperation-logo--arc">
+                                                        <span>Tencent ARC</span>
+                                                    </a>
+                                                    <a href="https://seed.bytedance.com/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="ByteDance Seed">
+                                                        <img src="assets/img/logos/bytedance-seed.png" alt="" class="cooperation-logo cooperation-logo--wide">
+                                                        <span>ByteDance Seed</span>
+                                                    </a>
+                                                    <a href="https://www.minimax.io/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="MiniMax">
+                                                        <img src="assets/img/logos/minimax.webp" alt="" class="cooperation-logo cooperation-logo--wide">
+                                                        <span>MiniMax</span>
+                                                    </a>
                                                     <a href="https://www.shlab.org.cn/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="Shanghai AI Lab">
                                                         <img src="assets/img/logos/shanghai-ai-lab.png" alt="" class="cooperation-logo cooperation-logo--wide">
                                                         <span>Shanghai AI Lab</span>
@@ -496,26 +314,19 @@
                                                         <img src="assets/img/logos/princeton.svg" alt="" class="cooperation-logo cooperation-logo--wide">
                                                         <span>PrincetonU</span>
                                                     </a>
-                                                    <a href="https://ucsd.edu/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="UC San Diego">
+                                                    <a href="https://ucsd.edu/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="UCSD">
                                                         <img src="assets/img/logos/ucsd.svg" alt="" class="cooperation-logo cooperation-logo--wide">
                                                         <span>UCSD</span>
                                                     </a>
-                                                    <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="Tsinghua University">
-                                                        <img src="assets/img/logos/tsinghua.svg" alt="" class="cooperation-logo cooperation-logo--icon">
-                                                        <span>Tsinghua</span>
+                                                    <a href="https://www.nus.edu.sg/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="NUS">
+                                                        <img src="assets/img/logos/nus.svg" alt="" class="cooperation-logo cooperation-logo--wide">
+                                                        <span>NUS</span>
                                                     </a>
-                                                    <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="Peking University">
-                                                        <img src="assets/img/logos/pku.png" alt="" class="cooperation-logo cooperation-logo--icon">
-                                                        <span>Peking University</span>
-                                                    </a>
-                                                    <a href="https://hkust.edu.hk/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="The Hong Kong University of Science and Technology">
-                                                        <img src="assets/img/logos/hkust.svg" alt="" class="cooperation-logo cooperation-logo--icon">
-                                                        <span>HKUST</span>
-                                                    </a>
-                                                    <a href="https://www.cuhk.edu.hk/english/" target="_blank" rel="noopener noreferrer" class="cooperation-logo-link" aria-label="The Chinese University of Hong Kong">
-                                                        <img src="assets/img/logos/cuhk.svg" alt="" class="cooperation-logo cooperation-logo--wide">
-                                                        <span>CUHK</span>
-                                                    </a>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
                                                 </div>
                                                 <div class="cooperation-group" aria-hidden="true">
                                                     <a href="https://www.nvidia.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
@@ -534,6 +345,22 @@
                                                         <img src="assets/img/logos/ant-group.png" alt="" class="cooperation-logo cooperation-logo--icon">
                                                         <span>Ant Group</span>
                                                     </a>
+                                                    <a href="https://hunyuan.tencent.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link" aria-label="Tencent Hunyuan">
+                                                        <img src="assets/img/logos/tencent-hunyuan.svg" alt="" class="cooperation-logo cooperation-logo--icon">
+                                                        <span>Tencent Hunyuan</span>
+                                                    </a>
+                                                    <a href="https://arc.tencent.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link" aria-label="Tencent ARC">
+                                                        <img src="assets/img/logos/tencent-arc.png" alt="" class="cooperation-logo cooperation-logo--arc">
+                                                        <span>Tencent ARC</span>
+                                                    </a>
+                                                    <a href="https://seed.bytedance.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link" aria-label="ByteDance Seed">
+                                                        <img src="assets/img/logos/bytedance-seed.png" alt="" class="cooperation-logo cooperation-logo--wide">
+                                                        <span>ByteDance Seed</span>
+                                                    </a>
+                                                    <a href="https://www.minimax.io/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link" aria-label="MiniMax">
+                                                        <img src="assets/img/logos/minimax.webp" alt="" class="cooperation-logo cooperation-logo--wide">
+                                                        <span>MiniMax</span>
+                                                    </a>
                                                     <a href="https://www.shlab.org.cn/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
                                                         <img src="assets/img/logos/shanghai-ai-lab.png" alt="" class="cooperation-logo cooperation-logo--wide">
                                                         <span>Shanghai AI Lab</span>
@@ -542,26 +369,19 @@
                                                         <img src="assets/img/logos/princeton.svg" alt="" class="cooperation-logo cooperation-logo--wide">
                                                         <span>PrincetonU</span>
                                                     </a>
-                                                    <a href="https://ucsd.edu/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
+                                                    <a href="https://ucsd.edu/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link" aria-label="UCSD">
                                                         <img src="assets/img/logos/ucsd.svg" alt="" class="cooperation-logo cooperation-logo--wide">
                                                         <span>UCSD</span>
                                                     </a>
-                                                    <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
-                                                        <img src="assets/img/logos/tsinghua.svg" alt="" class="cooperation-logo cooperation-logo--icon">
-                                                        <span>Tsinghua</span>
+                                                    <a href="https://www.nus.edu.sg/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link" aria-label="NUS">
+                                                        <img src="assets/img/logos/nus.svg" alt="" class="cooperation-logo cooperation-logo--wide">
+                                                        <span>NUS</span>
                                                     </a>
-                                                    <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
-                                                        <img src="assets/img/logos/pku.png" alt="" class="cooperation-logo cooperation-logo--icon">
-                                                        <span>Peking University</span>
-                                                    </a>
-                                                    <a href="https://hkust.edu.hk/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
-                                                        <img src="assets/img/logos/hkust.svg" alt="" class="cooperation-logo cooperation-logo--icon">
-                                                        <span>HKUST</span>
-                                                    </a>
-                                                    <a href="https://www.cuhk.edu.hk/english/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="cooperation-logo-link">
-                                                        <img src="assets/img/logos/cuhk.svg" alt="" class="cooperation-logo cooperation-logo--wide">
-                                                        <span>CUHK</span>
-                                                    </a>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -574,180 +394,46 @@
             </section>
             <!-- End of About Section --> 
 
-            <!-- Experience Section -->
-            <section id="experience-section" class="py-8 py-lg-10" aria-label="Professional experience">
+            <!-- Education and Internship -->
+            <section id="experience-section" aria-label="Education and internship">
                 <div class="container">
-                    <!-- Section Header -->
-                    <div class="row justify-content-center mb-6">
-                        <div class="col-lg-8 text-center">
-                            <h2 class="section-title mb-4" data-aos="fade-up">
-                                <span class="text-gradient-primary">Experience</span>
-                            </h2>
-                            <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="100">
-                                Key milestones in my academic and professional journey
-                            </p>
+                    <section id="education" class="career-group" aria-labelledby="education-title">
+                        <h2 id="education-title" class="section-title">Education</h2>
+                        <div class="career-entries">
+                            <article class="career-entry">
+                                <p class="career-dates"><time datetime="2026-08">2026.08</time> – <time datetime="2030-06">2030.06</time></p>
+                                <div class="career-identity"><div class="career-logo"><img src="assets/img/favicons/ntu-crest.svg" alt="" width="88" height="64" loading="lazy"></div><div><h3>Nanyang Technological University</h3><p>PhD · Expected completion in June 2030</p></div></div>
+                            </article>
+                            <article class="career-entry">
+                                <p class="career-dates"><time datetime="2021-08">2021.08</time> – <time datetime="2025-06">2025.06</time></p>
+                                <div class="career-identity"><div class="career-logo"><img src="assets/img/logos/hkbu.svg" alt="" width="88" height="64" loading="lazy"></div><div><h3>Hong Kong Baptist University</h3><p>BSc (Honours) in Artificial Intelligence</p></div></div>
+                            </article>
                         </div>
-                    </div>
-
-                    <!-- Timeline -->
-                    <div class="timeline-container">
-                        <div class="timeline-line"></div>
-                        
-                        <!-- Tencent Qingyun Internship Offer -->
-                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800">
-                            <div class="timeline-marker">
-                                <div class="timeline-marker-inner">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">
-                                        <span class="month">Sept</span>
-                                        <span class="year">2026</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title">Received Tencent Qingyun Internship Offer</h4>
-                                        <p class="timeline-text">
-                                            I received an internship offer through the <strong>Tencent Qingyun Talent Program</strong>
-                                            at <strong>Tencent IEG-ARC Lab (now New ARC Lab)</strong>.
-                                            My research will focus on <strong>Game World Model</strong> and <strong>Interactive Video Generation</strong>.
-                                        </p>
-                                        <div class="timeline-tags">
-                                            <span class="timeline-tag">Tencent</span>
-                                            <span class="timeline-tag">Qingyun Talent Program</span>
-                                            <span class="timeline-tag">Game World Model</span>
-                                            <span class="timeline-tag">Interactive Video Generation</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </section>
+                    <section id="internship" class="career-group" aria-labelledby="internship-title">
+                        <h2 id="internship-title" class="section-title">Internship</h2>
+                        <div class="career-entries">
+                            <article class="career-entry">
+                                <p class="career-dates"><time datetime="2026-09">2026.09</time> – Now</p>
+                                <div class="career-identity"><div class="career-logo"><img src="assets/img/logos/tencent.png" alt="" width="88" height="64" loading="lazy"></div><div><h3>Tencent</h3><p>Research Intern</p></div></div>
+                            </article>
+                            <article class="career-entry">
+                                <p class="career-dates"><time datetime="2026-01">2026.01</time> – <time datetime="2026-07">2026.07</time></p>
+                                <div class="career-identity"><div class="career-logo"><img src="assets/img/logos/alibaba.png" alt="" width="88" height="64" loading="lazy"></div><div><h3>Alibaba</h3><p>Research Intern</p></div></div>
+                            </article>
+                            <article class="career-entry">
+                                <p class="career-dates"><time datetime="2025-07">2025.07</time> – <time datetime="2025-12">2025.12</time></p>
+                                <div class="career-identity"><div class="career-logo"><img src="assets/img/logos/shanghai-ai-lab.png" alt="" width="88" height="64" loading="lazy"></div><div><h3>Shanghai AI Lab</h3><p>Research Intern</p></div></div>
+                            </article>
+                            <article class="career-entry">
+                                <p class="career-dates"><time datetime="2025-01">2025.01</time> – <time datetime="2025-06">2025.06</time></p>
+                                <div class="career-identity"><div class="career-logo"><img src="assets/img/logos/cuhk.svg" alt="" width="88" height="64" loading="lazy"></div><div><h3>The Chinese University of Hong Kong · MMLab</h3><p>Research Intern</p></div></div>
+                            </article>
                         </div>
-
-                        <!-- Experience Item 0 -->
-                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800">
-                            <div class="timeline-marker">
-                                <div class="timeline-marker-inner">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">
-                                        <span class="month">May</span>
-                                        <span class="year">2026</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title">Received NTU PhD Offer</h4>
-                                        <p class="timeline-text">
-                                            I received the PhD offer from <strong>Nanyang Technological University (NTU)</strong>.
-                                            My next research focus centers on <strong>vision intelligence in multimodal systems</strong>,
-                                            <strong>world models</strong>, and <strong>Phys AI</strong>.
-                                        </p>
-                                        <div class="timeline-tags">
-                                            <span class="timeline-tag">NTU</span>
-                                            <span class="timeline-tag">PhD Offer</span>
-                                            <span class="timeline-tag">Vision Intelligence</span>
-                                            <span class="timeline-tag">World Models</span>
-                                            <span class="timeline-tag">Phys AI</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 1 -->
-                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                            <div class="timeline-marker">
-                                <div class="timeline-marker-inner">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">
-                                        <span class="month">Jan</span>
-                                        <span class="year">2026</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title">Research Internship at Ant Group (Alibaba)</h4>
-                                        <p class="timeline-text">
-                                            I am currently serving as a research intern at Ant Group (Alibaba), 
-                                            dedicated to researching <strong>Native Multimodal Foundation Model</strong>.
-                                        </p>
-                                        <div class="timeline-tags">
-                                            <span class="timeline-tag">Research</span>
-                                            <span class="timeline-tag">MLLM</span>
-                                            <span class="timeline-tag">Multimodal AI</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 2 -->
-                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                            <div class="timeline-marker">
-                                <div class="timeline-marker-inner">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">
-                                        <span class="month">Jul</span>
-                                        <span class="year">2025</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title">Research Internship at Shanghai AI Lab</h4>
-                                        <p class="timeline-text">
-                                            I am currently serving as a research intern at Shanghai AI Lab, 
-                                            dedicated to researching <strong>Unified Multimodal Models (UMM)</strong> for multimodal generation and understanding.
-                                        </p>
-                                        <div class="timeline-tags">
-                                            <span class="timeline-tag">Research</span>
-                                            <span class="timeline-tag">UMM</span>
-                                            <span class="timeline-tag">AI Lab</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 3 -->
-                        <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                            <div class="timeline-marker">
-                                <div class="timeline-marker-inner">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-card">
-                                    <div class="timeline-date">
-                                        <span class="month">Jun</span>
-                                        <span class="year">2025</span>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <h4 class="timeline-title">Bachelor's Degree Completion</h4>
-                                        <p class="timeline-text">
-                                            Successfully obtained an <strong>Honours Bachelor of Science degree</strong> 
-                                            in Artificial Intelligence from Hong Kong Baptist University. 
-                                            This milestone marks the completion of my undergraduate studies and 
-                                            the beginning of my PhD journey. Looking forward to the future!
-                                        </p>
-                                        <div class="timeline-tags">
-                                            <span class="timeline-tag">Education</span>
-                                            <span class="timeline-tag">HKBU</span>
-                                            <span class="timeline-tag">AI Degree</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                 </div>
             </section>
-            <!-- End of Experience Section -->
+            <!-- End of Education and Internship -->
 
             <!-- News Section -->
             <section id="news-section" class="py-8 py-lg-10 bg-light" aria-label="Latest news and updates">
@@ -755,10 +441,10 @@
                     <!-- Section Header -->
                     <div class="row justify-content-center mb-6">
                         <div class="col-lg-8 text-center">
-                            <h2 class="section-title mb-4" data-aos="fade-up">
+                            <h2 class="section-title mb-4">
                                 <span class="text-gradient-primary">Latest News</span>
                             </h2>
-                            <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="100">
+                            <p class="section-subtitle text-muted">
                                 Recent updates, achievements, and announcements
                             </p>
                         </div>
@@ -769,8 +455,8 @@
                         <div class="col-lg-10">
                             <div class="news-container" id="latest-news-list" data-collapsed="true">
                                 <!-- News Item: September 2026 Tencent Offer -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-september-2026-tencent">
+                                <div class="news-item">
+                                    <div class="news-header" role="button" tabindex="0" aria-expanded="false" aria-controls="news-september-2026-tencent">
                                         <div class="news-date">
                                             <span class="date-day">Sept</span>
                                             <span class="date-month">2026</span>
@@ -797,8 +483,8 @@
                                 </div>
 
                                 <!-- News Item: September 2026 NeurIPS -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-september-2026-neurips">
+                                <div class="news-item">
+                                    <div class="news-header" role="button" tabindex="0" aria-expanded="false" aria-controls="news-september-2026-neurips">
                                         <div class="news-date">
                                             <span class="date-day">Sept</span>
                                             <span class="date-month">2026</span>
@@ -824,8 +510,8 @@
                                 </div>
 
                                 <!-- News Item: August 2026 -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-august-2026">
+                                <div class="news-item">
+                                    <div class="news-header" role="button" tabindex="0" aria-expanded="false" aria-controls="news-august-2026">
                                         <div class="news-date">
                                             <span class="date-day">August</span>
                                             <span class="date-month">2026</span>
@@ -852,8 +538,8 @@
                                 </div>
 
                                 <!-- News Item 1 -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-1">
+                                <div class="news-item">
+                                    <div class="news-header" role="button" tabindex="0" aria-expanded="false" aria-controls="news-1">
                                         <div class="news-date">
                                             <span class="date-day">July</span>
                                             <span class="date-month">2026</span>
@@ -880,8 +566,8 @@
                                 </div>
 
                                 <!-- News Item 2 -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-2">
+                                <div class="news-item">
+                                    <div class="news-header" role="button" tabindex="0" aria-expanded="false" aria-controls="news-2">
                                         <div class="news-date">
                                             <span class="date-day">June</span>
                                             <span class="date-month">2026</span>
@@ -907,8 +593,8 @@
                                 </div>
 
                                 <!-- News Item 3 -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-3">
+                                <div class="news-item">
+                                    <div class="news-header" role="button" tabindex="0" aria-expanded="false" aria-controls="news-3">
                                         <div class="news-date">
                                             <span class="date-day">May</span>
                                             <span class="date-month">2026</span>
@@ -935,33 +621,6 @@
                                     </div>
                                 </div>
 
-                                <!-- News Item 4 -->
-                                <div class="news-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-                                    <div class="news-header" aria-expanded="false" aria-controls="news-4">
-                                        <div class="news-date">
-                                            <span class="date-day">05</span>
-                                            <span class="date-month">Jan 2026</span>
-                                        </div>
-                                        <div class="news-title">
-                                            <h5>Started an internship at Ant Group.</h5>
-                                            <span class="news-category">Research</span>
-                                        </div>
-                                        <div class="news-toggle">
-                                            <i class="fas fa-chevron-down"></i>
-                                        </div>
-                                    </div>
-                                    <div class="collapse news-content" id="news-4">
-                                        <div class="news-body">
-                                            <p>I'm thrilled to begin my research internship at Ant Group, joining the Native Multimodal Foundation Model (Ant Ling) team. Focuses on Native MLLM Pre/Post-training.</p>
-                                            <div class="news-tags">
-                                                <span class="news-tag">Publications</span>
-                                                <span class="news-tag">Top Venues</span>
-                                                <span class="news-tag">Reviewer</span>
-                                                <span class="news-tag">Research Community</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
                             <div class="text-center mt-4">
@@ -973,7 +632,7 @@
 
                             <!-- Call to Action -->
                             <div class="row justify-content-center mt-8">
-                                <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                                <div class="col-lg-8 text-center">
                                     <div class="cta-card">
                                         <h4 class="cta-title mb-3">Interested in Collaborating or Connecting?</h4>
                                         <p class="cta-text mb-4">
@@ -1000,7 +659,7 @@
             <!-- End of News Section --> 
             <!-- Section -->
 
-                        <!-- <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                        <!-- <div class="col-lg-4 mb-4 mb-lg-6">
                             <a href="https://rese1f.github.io/STEVE/" target="_blank" class="mb-3 d-block position-relative">
                                 <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
                                     <i class="fas fa-link fa-2x"></i>
@@ -1010,7 +669,7 @@
                         </div>
 
                         
-                        <div class="col-lg-8 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="col-lg-8 mb-4 mb-lg-6">
                             <p>
                                 <span class="text-primary"><b>See and Think: Embodied Agent in Virtual Environment</b></span> 
                                         <br />
@@ -1035,7 +694,7 @@
 
             <!-- Section -->
                     <!-- <div class="row justify-content-center">
-                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="col-lg-4 mb-4 mb-lg-6">
                             <a href="research.html" class="mb-3 d-block position-relative">
                                 <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
                                     <i class="fas fa-link fa-2x"></i>
@@ -1044,7 +703,7 @@
                             </a>
                             <h4 class="text-center"><a href="research.html" class="text-body">Our Research</a></h4>
                         </div>
-                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="col-lg-4 mb-4 mb-lg-6">
                             <a href="publication_year.html" class="mb-3 d-block position-relative">
                                 <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
                                     <i class="fas fa-link fa-2x"></i>
@@ -1053,7 +712,7 @@
                             </a>
                             <h4 class="text-center">Publications by <a href="research.html#overview" class="text-body">Topic</a> | <a href="publication_year.html" class="text-body">Year</a></h4>
                         </div>
-                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="col-lg-4 mb-4 mb-lg-6">
                             <a href="downloads.html" class="mb-3 d-block position-relative">
                                 <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-dark rounded text-white">
                                     <i class="fas fa-link fa-2x"></i>
@@ -1207,6 +866,6 @@
 
         <!-- Theme Javascripts -->
         <script src="assets/js/theme.js"></script>
-        <script src="assets/js/custom-enhancements.js"></script>
+        <script src="assets/js/custom-enhancements.js?v=20260928"></script>
     </body>
 </html>
