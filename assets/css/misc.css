@@ -1,0 +1,255 @@
+/* Personal interests, within the shared white, ink and red visual system. */
+.misc-intro {
+    padding: 64px 0 44px;
+}
+
+.misc-intro h1 {
+    margin: 0 0 12px;
+    font-size: clamp(52px, 6.5vw, 80px);
+    font-weight: 750;
+    line-height: 1.1;
+    letter-spacing: -.055em;
+}
+
+.misc-intro h1 span {
+    color: var(--brand-red);
+}
+
+.misc-intro > p {
+    margin: 0;
+    color: var(--brand-muted);
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.misc-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.misc-jump-links a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.misc-jump-links span {
+    margin-left: 4px;
+}
+
+.misc-section {
+    border-top: 1px solid var(--line);
+    padding: 38px 0 44px;
+}
+
+.misc-section h2 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.035em;
+}
+
+.misc-section-lead {
+    margin: 0;
+    color: var(--brand-muted);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.misc-writers {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.misc-writers li::before {
+    display: block;
+    width: 44px;
+    height: 3px;
+    margin-bottom: 20px;
+    background: var(--brand-red);
+    content: "";
+}
+
+.misc-writer-portrait {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.misc-writer-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.misc-writer-copy {
+    min-width: 0;
+}
+
+.misc-writers h3 {
+    margin: 0 0 6px;
+    font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: .04em;
+}
+
+.misc-writers p {
+    margin: 0;
+    color: var(--brand-muted);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.misc-art {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 2.1fr);
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+}
+
+.misc-art-intro,
+.misc-latentia {
+    min-width: 0;
+}
+
+.misc-artwork {
+    margin: 0 0 26px;
+}
+
+.misc-artwork-link,
+.misc-artwork img {
+    display: block;
+    width: 100%;
+}
+
+.misc-artwork img {
+    height: auto;
+    aspect-ratio: 1923 / 818;
+}
+
+.misc-artwork figcaption {
+    margin-top: 8px;
+    color: var(--brand-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.misc-latentia-copy h3 {
+    margin: 0 0 10px;
+    font-size: 44px;
+    font-weight: 750;
+    line-height: 1.1;
+    letter-spacing: -.045em;
+}
+
+.misc-latentia-tagline {
+    margin: 0 0 4px;
+    color: #c51a20;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.misc-latentia-chinese {
+    margin: 0 0 10px;
+    color: var(--brand-muted);
+    font-family: "Songti TC", "Noto Serif CJK TC", serif;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.misc-latentia-description {
+    margin: 0 0 18px;
+    color: var(--brand-muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.misc-main + .modern-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 991.98px) {
+    .misc-art {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .misc-intro {
+        padding: 44px 0 32px;
+    }
+
+    .misc-intro > p {
+        font-size: 18px;
+    }
+
+    .misc-section {
+        padding: 30px 0;
+    }
+
+    .misc-section h2 {
+        font-size: 30px;
+    }
+
+    .misc-writers {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 26px;
+    }
+
+    .misc-writers li::before {
+        grid-column: 1 / -1;
+        margin-bottom: 14px;
+    }
+
+    .misc-writers li {
+        display: grid;
+        grid-template-columns: 112px minmax(0, 1fr);
+        column-gap: 20px;
+        align-items: center;
+    }
+
+    .misc-writer-portrait {
+        margin-bottom: 0;
+    }
+
+    .misc-writers h3 {
+        font-size: clamp(22px, 6.5vw, 26px);
+    }
+
+    .misc-writers p {
+        font-size: 16px;
+    }
+
+    .misc-art {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 44px;
+    }
+
+    .misc-latentia-copy h3 {
+        font-size: 38px;
+    }
+
+    .misc-latentia-tagline {
+        font-size: 19px;
+    }
+
+    .misc-latentia-chinese {
+        font-size: 21px;
+    }
+}

@@ -59,7 +59,7 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
 .minimal-hero h1 { font-size: clamp(56px, 7.4vw, 96px); font-weight: 750; line-height: 1.05; letter-spacing: -.065em; margin: 0 0 22px; }
 .minimal-hero h1 span { color: #df1f26; }
 @font-face { font-family: "Juanxi Script"; src: url("../fonts/name-calligraphy/juanxi-latin.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
-@font-face { font-family: "Juanxi Brush"; src: url("../fonts/name-calligraphy/juanxi-chinese.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Juanxi Brush"; src: url("../fonts/name-calligraphy/juanxi-chinese-name.woff2") format("woff2"), url("../fonts/name-calligraphy/juanxi-chinese.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
 .minimal-hero h1.calligraphy-name, .about-name.calligraphy-name { font-family: "Juanxi Script", "Snell Roundhand", cursive; font-weight: 400; letter-spacing: 0; line-height: 1.2; }
 .minimal-hero h1 .calligraphy-chinese, .calligraphy-name .calligraphy-chinese { display: inline-block; font-family: "Juanxi Brush", "Kaiti SC", KaiTi, cursive; font-size: .53em; font-weight: 400; letter-spacing: .02em; color: #050505; white-space: nowrap; }
 .about-name.calligraphy-name { font-size: 38px; }
