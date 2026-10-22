@@ -61,7 +61,7 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
 @font-face { font-family: "Juanxi Script"; src: url("../fonts/name-calligraphy/juanxi-latin.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
 @font-face { font-family: "Juanxi Brush"; src: url("../fonts/name-calligraphy/juanxi-chinese-name.woff2") format("woff2"), url("../fonts/name-calligraphy/juanxi-chinese.woff") format("woff"); font-style: normal; font-weight: 400; font-display: swap; }
 .minimal-hero h1.calligraphy-name, .about-name.calligraphy-name { font-family: "Juanxi Script", "Snell Roundhand", cursive; font-weight: 400; letter-spacing: 0; line-height: 1.2; }
-.minimal-hero h1 .calligraphy-chinese, .calligraphy-name .calligraphy-chinese { display: inline-block; font-family: "Juanxi Brush", "Kaiti SC", KaiTi, cursive; font-size: .53em; font-weight: 400; letter-spacing: .02em; color: #050505; white-space: nowrap; }
+.minimal-hero h1 .calligraphy-chinese, .calligraphy-name .calligraphy-chinese { display: inline-block; font-family: "Juanxi Brush", "Kaiti TC", KaiTi, cursive; font-size: .53em; font-weight: 400; letter-spacing: .02em; color: #050505; white-space: nowrap; }
 .about-name.calligraphy-name { font-size: 38px; }
 .about-name.calligraphy-name .calligraphy-chinese { font-size: .7em; }
 .minimal-hero-subtitle { color: #595959; font-size: 27px; letter-spacing: -.025em; line-height: 1.5; margin-bottom: 22px; }
@@ -75,6 +75,10 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
 .minimal-social { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 35px; font-size: 13px; }
 .minimal-social a { color: #595959; }
 .minimal-social a:hover { color: #df1f26; }
+.hero-quote { margin: 32px 0 0; padding: 0 0 0 20px; border-left: 2px solid var(--brand-red); }
+.hero-quote p { margin: 0; }
+.hero-quote-chinese { font-family: "Songti TC", "Noto Serif CJK TC", "MingLiU", serif; font-size: 20px; font-weight: 400; line-height: 1.85; letter-spacing: .025em; color: var(--brand-ink); }
+.hero-quote .hero-quote-english { margin-top: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-style: italic; font-weight: 400; line-height: 1.75; color: var(--brand-muted); }
 /* Open sections and typographic hierarchy. */
 #section-1, #experience-section, #news-section { background: #fff; padding: 64px 0 !important; overflow: visible; }
 #section-1::before, #experience-section::before, #news-section::before { display: none; }
@@ -129,6 +133,8 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
 .career-identity > div:last-child { min-width: 0; }
 .career-logo { display: flex; align-items: center; justify-content: center; flex: 0 0 88px; height: 72px; }
 .career-logo img { display: block; width: 88px; height: 64px; object-fit: contain; filter: none; }
+/* Show the official symbol above the logo's embedded Simplified Chinese wordmark. */
+.career-logo--shanghai img { height: 32px; object-fit: cover; object-position: center top; }
 @media (max-width: 575.98px) {
  .career-entry { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
  .career-entry h3 { font-size: 18px; }
@@ -136,6 +142,7 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
  .career-identity { gap: 16px; }
  .career-logo { flex-basis: 64px; height: 64px; }
  .career-logo img { width: 64px; height: 56px; }
+ .career-logo--shanghai img { height: 24px; }
 }
 .timeline-container { max-width: none; margin: 0; padding: 0; }
 .timeline-line, .timeline-marker { display: none; }
@@ -205,17 +212,18 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
 .service-feature-icon, .service-feature-icon--dark, .service-feature-icon--journal { background: #fff; color: #c51a20; border: 0; border-radius: 0; box-shadow: none; }
 .conference-chip, .review-venue-chip--journal, .service-role-item { background: #fff; border-color: var(--line); border-radius: 0; }
 .conference-chip span, .review-venue-chip--journal span, .service-feature-text strong { color: #050505; }
-/* A flat black footer anchors the white content. */
-.modern-footer { background: #050505; color: #fff; margin-top: 64px; }
+/* Ink-black footer with a dedicated, painterly flame panorama. */
+.modern-footer { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "content" "embers" "copyright"; isolation: isolate; background: #050505; color: #fff; margin-top: 64px; }
 .modern-footer::before, .footer-section-title::after { display: none; }
-.footer-main { background: #050505; padding: 60px 0 40px; }
+.modern-footer::after { content: ""; display: block; grid-area: embers; width: 100%; aspect-ratio: 3 / 1; min-height: 240px; max-height: 520px; background: #050505 url("../img/backgrounds/footer-flames.png") center 60% / cover no-repeat; background-blend-mode: lighten; pointer-events: none; }
+.footer-main { grid-area: content; background: #050505; padding: 60px 0 0; }
 .footer-name { color: #fff; font-size: 26px; }
 .footer-title, .footer-affiliation, .footer-description, .footer-contact, .contact-item, .footer-links a, .footer-copyright { color: #aaa; }
 .footer-section-title { color: #fff; font-size: 13px; font-weight: 600; letter-spacing: 0; text-transform: none; }
 .footer-logo-container { display: none; }
 .footer-links a:hover { color: #fff; transform: none; padding-left: 0; }
 .footer-links a::before { display: none; }
-.footer-bottom { background: #050505; border-top: 1px solid #292929; padding: 24px 0; }
+.footer-bottom { grid-area: copyright; background: #050505; border-top: 1px solid #292929; padding: 24px 0; }
 .footer-copyright { text-align: left; font-size: 12px; }
 .social-icon, .social-icon:hover { border: 1px solid #444; border-radius: 0; background: none; box-shadow: none; transform: none; color: #fff; }
 .contact-item i { color: #aaa; }
@@ -241,6 +249,9 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
  .minimal-interests { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; font-size: 13px; margin-bottom: 28px; }
  .minimal-button { padding: 10px 19px; gap: 20px; }
  .minimal-social { gap: 22px; font-size: 12px; }
+ .hero-quote { margin-top: 26px; padding-left: 16px; }
+ .hero-quote-chinese { font-size: 18px; }
+ .hero-quote .hero-quote-english { font-size: 14px; }
  #section-1, #experience-section, #news-section { padding: 32px 0 !important; }
  .minimal-hero + section > .container, #experience-section > .container, #news-section > .container { padding-top: 36px; }
  .section-title { font-size: 30px; }
@@ -261,7 +272,8 @@ a,button,summary { -webkit-tap-highlight-color: transparent; }
  .project-repo-path span { overflow-wrap: anywhere; }
  .service-page-hero { padding: 48px 0; }
  .service-feature-panel { padding: 22px; }
- .footer-main { padding: 44px 0 20px; }
+ .footer-main { padding: 44px 0 0; }
+ .modern-footer::after { aspect-ratio: auto; height: 230px; min-height: 0; background-position: 64% bottom; }
  .modern-footer { margin-top: 32px; }
 }
 @media (prefers-reduced-motion: reduce) {
